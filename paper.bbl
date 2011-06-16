@@ -1,0 +1,287 @@
+\begin{thebibliography}{10}
+
+\bibitem{Fabbri:Kimia:EMMCVPR05}
+R.~Fabbri and B.~B. Kimia, ``High-order differential geometry of curves for
+  multiview reconstruction and matching,'' in {\em Proceedings of the IEEE
+  Conference on Energy Minimization Methods in Computer Vision and Pattern
+  Recognition}, pp.~645--660, Springer Verlag, November 2005.
+
+\bibitem{Hartley:Zisserman:multiple:view}
+R.~Hartley and A.~Zisserman, {\em Multiple View Geometry in Computer Vision}.
+\newblock Cambridge University Press, 2000.
+
+\bibitem{Giblin:Motion:Book}
+R.~Cipolla and P.~Giblin, {\em Visual Motion of Curves and Surfaces}.
+\newblock Cambridge University Press, 1999.
+
+\bibitem{Cole:etal:SIGGRAPH09}
+F.~Cole, K.~Sanik, D.~DeCarlo, A.~Finkelstein, T.~Funkhouser, S.~Rusinkiewicz,
+  and M.~Singh, ``How well do line drawings depict shape?,'' in {\em ACM
+  Transactions on Graphics (Proc. SIGGRAPH)}, August 2009.
+
+\bibitem{Ablan:3DPhoto:book}
+D.~Ablan, {\em {Digital photography for 3D imaging and animation}}.
+\newblock Wiley, 2007.
+
+\bibitem{Kitagawa:Mocap:book}
+M.~Kitagawa and B.~Windsor, {\em {MoCap for Artists: Workflow and Techniques
+  for Motion Capture}}.
+\newblock Focal Press, 2008.
+
+\bibitem{Gay:etal:ACVA10}
+E.~Gay, K.~Galor, D.~Cooper, A.~Willis, B.~Kimia, S.~Karumuri, G.~Taubin,
+  W.~Doutre, D.~Sanders, and S.~Liu, ``{REVEAL} intermediate report,'' in {\em
+  Proceedings of CVPR Workshop on Applications of Computer Vision in
+  Archaeology (ACVA'10)}, June 2010.
+
+\bibitem{Luhmann:Photogrammetry:book}
+T.~Luhmann, S.~Robson, S.~Kyle, and I.~Harley, {\em {Close range
+  photogrammetry: principles, methods, and applications}}.
+\newblock Wiley, 2007.
+
+\bibitem{Dobbert:Matchmoving:book}
+T.~Dobbert, {\em {Matchmoving: The Invisible Art of Camera Tracking}}.
+\newblock Sybex, 2005.
+
+\bibitem{Argarwal:Snavely:etal:ICCV09}
+S.~Agarwal, N.~Snavely, I.~Simon, S.~M. Seitz, and R.~Szeliski, ``Building
+  {Rome} in a day,'' in {\em ICCV '09: Proceedings of the Twelvth IEEE
+  International Conference on Computer Vision}, IEEE Computer Society, 2009.
+
+\bibitem{Horn:Robot:Vision}
+B.~K.~P. Horn, {\em Robot Vision}.
+\newblock McGraw Hill, 1986.
+
+\bibitem{Pollefeys:VanGool:etal:handheld:IJCV2004}
+M.~Pollefeys, L.~Van~Gool, M.~Vergauwen, F.~Verbiest, K.~Cornelis, J.~Tops, and
+  R.~Koch, ``Visual modeling with a hand-held camera,'' {\em International
+  Journal of Computer Vision}, vol.~59, no.~3, pp.~207--232, 2004.
+
+\bibitem{mikolajczyk:schmid:IJCV04}
+K.~Mikolajczyk and C.~Schmid, ``Scale and affine invariant interest point
+  detectors,'' {\em IJCV}, vol.~60, no.~1, pp.~63--86, 2004.
+
+\bibitem{Mikolajczyk:Schmid:PAMI05}
+K.~Mikolajczyk and C.~Schmid, ``A performance evaluation of local
+  descriptors.,'' {\em IEEE Trans. Pattern Anal. Mach. Intell.}, vol.~27,
+  no.~10, pp.~1615--1630, 2005.
+
+\bibitem{Elder:Edges:IJCV99}
+J.~Elder, ``Are edges incomplete?,'' {\em International Journal of Computer
+  Vision}, vol.~34, pp.~1--23, August 1999.
+
+\bibitem{Papadopoulo:Faugeras:ECCV96}
+T.~Papadopoulo and O.~D. Faugeras, ``Computing structure and motion of general
+  3{D} curves from monocular sequences of perspective images,'' in {\em
+  Proceedings of the $4^{th}$ European Conference on Computer Vision}, (London,
+  UK), pp.~696--708, Springer-Verlag, 1996.
+
+\bibitem{Papadopoulo:PhD:96}
+T.~Papadopoulo, ``Motion analysis of 3d rigid curves from monocular image
+  sequences,'' Tech. Rep. RR--2779 (PhD Thesis), INRIA, jan 1996.
+
+\bibitem{Fabbri:PHD:2010}
+R.~Fabbri, ``Multiview differential geometry in application to computer
+  vision,'' {Ph.D.} dissertation, Division Of Engineering, Brown University,
+  Providence, RI, 02912, July 2010.
+
+\bibitem{Tamrakar:Kimia:ICCV07}
+A.~Tamrakar and B.~B. Kimia, ``No grouping left behind: From edges to curve
+  fragments,'' in {\em ICCV '07: Proceedings of the Eleventh IEEE International
+  Conference on Computer Vision}, (Rio de Janeiro, Brazil), IEEE Computer
+  Society, October 2007.
+
+\bibitem{Fabbri:Kimia:CVPR10}
+R.~Fabbri and B.~B. Kimia, ``{3D} curve sketch: Flexible curve-based stereo
+  reconstruction and calibration,'' in {\em Proceedings of the IEEE Conference
+  on Computer Vision and Pattern Recognition}, (San Francisco, California,
+  USA), IEEE Computer Society Press, 2010.
+
+\bibitem{Tek:1998}
+H.~Tek and B.~Kimia, ``Curve evolution, wave propagation, and mathematical
+  morphology,'' in {\em Mathematical Morphology and its Applications to Image
+  and Signal Processing} (H.~J. Heijmans and J.~B. Roerdink, eds.), vol.~12 of
+  {\em Computational Imaging and Vision}, pp.~115--126, Amsterdam, The
+  Netherlands: Kluwer Academic, 1998.
+
+\bibitem{Cao:1998}
+F.~Cao, ``Partial differential equations and mathematical morphology,'' {\em
+  Journal de Mathematiques Pures Et Appliques}, vol.~77, no.~9, pp.~909--941,
+  1998.
+
+\bibitem{Meyer:1999}
+F.~Meyer and P.~Maragos, ``Multiscale morphological segmentation based on
+  watershed, flooding, and eikonal {PDE},'' in {\em Scale-Space Theories in
+  Computer Vision}, vol.~v.1682 of {\em Lecture Notes in Computer Science},
+  pp.~351--362, 1999.
+
+\bibitem{Sapiro:1993}
+G.~Sapiro, B.~Kimia, R.~Kimmel, D.~Shaked, and A.~Bruckstein, ``Implementing
+  continuous-scale morphology,'' {\em Pattern Recognition}, vol.~26, no.~9,
+  pp.~1363--1372, 1993.
+
+\bibitem{Perona:1990}
+P.~Perona and J.~Malik, ``Scale-space and edge detection using anisotropic
+  diffusion,'' {\em IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, vol.~12, pp.~629--639, 1990.
+
+\bibitem{Cao:2003}
+F.~Cao, {\em Geometric Curve Evolution and Image Processing}, vol.~1805.
+\newblock Lecture Notes in Mathematics, Springer Verlag, 2003.
+
+\bibitem{Kimia:1991}
+B.~Kimia, {\em Toward a Computational Theory of Shape}.
+\newblock PhD thesis, McGill University, Electrical Engineering Dept.,
+  Montreal, Canada, 1991.
+\newblock 171 pages.
+
+\bibitem{Kimia:1996}
+B.~Kimia and K.~Siddiqi, ``Geometric heat equation and nonlinear diffusion of
+  shapes and images,'' {\em CVGIP--Image Understanding}, vol.~64, no.~3,
+  pp.~305--322, 1996.
+
+\bibitem{Falcao:1999}
+A.~Falcão and R.~Lotufo, ``The image foresting transform,'' {\em IEEE
+  Transactions on Pattern Analysis and Machine Intelligence}, 1999.
+\newblock accepted.
+
+\bibitem{Lotufo:2001}
+R.~Lotufo and F.~Zampirolli, ``Fast multi-dimensional parallel euclidean
+  distance transform based on mathematical morphology,'' in {\em Proccedings of
+  SIBGRAPI, XIV Brazilian Sympo­ sium on Computer Graphics and Image
+  Processing}, pp.~100--105, IEEE Computer Society, 2001.
+
+\bibitem{Fabbri:EDT:survey:ACMCSurv08}
+R.~Fabbri, L.~da~F.~Costa, J.~C. Torelli, and O.~M. Bruno, ``{2D Euclidean}
+  distance transform algorithms: A comparative survey,'' {\em ACM Computing
+  Surveys}, vol.~40, no.~1, pp.~2:1--2:44, 2008.
+
+\bibitem{Fabbri:EDT:distributed:IJPRAI10}
+J.~C. Torelli, R.~Fabbri, G.~Travieso, and O.~M. Bruno, ``A high performance
+  {3D} exact euclidean distance transform algorithm for distributed
+  computing,'' {\em International Journal of Pattern Recognition and Artificial
+  Intelligence}, vol.~24, no.~6, pp.~1--19, 2010.
+
+\bibitem{Sethian:1999}
+J.~Sethian, {\em Level Set Methods and Fast Marching Methods: Evolving
+  Interfaces in Computational Geometry}.
+\newblock Cambridge University Press, 1999.
+
+\bibitem{Fabbri:2002}
+R.~Fabbri, L.~Estrozi, and L.~Costa, ``On {V}oronoi diagrams and medial axes,''
+  {\em Journal of Mathematical Imaging and Vision}, vol.~17, pp.~27--40, jul
+  2002.
+
+\bibitem{Aurenhammer:1991}
+F.~Aurenhammer, ``{V}oronoi diagrams - a survey of a fundamental data
+  structure,'' {\em ACM Computing Surveys}, vol.~23, no.~3, pp.~345--405, 1991.
+
+\bibitem{Kimia:2003}
+B.~B. Kimia, ``On the role of medial geometry in human vision,'' {\em Journal
+  of Physiology}, 2003.
+\newblock Accepted for publication.
+
+\bibitem{Giblin:2003}
+P.~J. Giblin and B.~B. Kimia, ``On the local form and transitions of symmetry
+  sets, medial axes, and shocks,'' {\em International Journal of Computer
+  Vision}, 2003.
+
+\bibitem{Siddiqi:1999}
+K.~Siddiqi, B.~Kimia, A.~Tannenbaum, and S.~Zucker, ``Shapes, shocks and
+  wiggles,'' {\em Image and Vision Computing Journal}, vol.~17, pp.~365--373,
+  1999.
+
+\bibitem{Levine:1992}
+M.~D. Levine and F.~Leymarie, ``Simulating the grassfire transform using an
+  active contour model,'' {\em IEEE Transactions on Pattern Annalysis and
+  Machine Inteligence}, vol.~14, pp.~56--75, jan 1992.
+
+\bibitem{Siddiqi:2002}
+K.~Siddiqi, S.~Bouix, A.~Tannenbaum, and S.~Zucker, ``Hamilton-{J}acobi
+  skeletons,'' {\em International Journal of Computer Vision}, vol.~48,
+  pp.~215--231, jul 2002.
+
+\bibitem{Costa:1999}
+L.~Costa and L.~Estrozi, ``Multiresolution shape representation without border
+  shifting,'' {\em Electronics Letters}, vol.~35, no.~21, pp.~1829--1830, 1999.
+
+\bibitem{Falcao:2002}
+A.~X. Falcao, L.~F. Costa, and B.~S. da~Cunha, ``Multiscale skeletons by image
+  foresting transform and its application to neuromorphometry,'' {\em Pattern
+  Recognition}, vol.~35, pp.~1571--1582, jul 2002.
+
+\bibitem{Estrozi:2003}
+L.~F. Estrozi, {\em Estudo e Desenvolvimento de Tecnicas para o Calculo de
+  Curvaturas e Eixos de Simetria}.
+\newblock PhD thesis, Universidade De Sao Paulo, Instituto de Fisica de Sao
+  Carlos, Brazil, 2003.
+
+\bibitem{Antonin:1995}
+A.~Chambolle, ``Image segmentation by variational methods: Mumford and shah
+  functional and the discrete approximations,'' {\em Siam Journal on Applied
+  Mathematics}, vol.~55, no.~3, pp.~827--863, 1995.
+
+\bibitem{Teixeira:2001}
+R.~Teixeira, ``Introdução aos espaços de escala - {EDP}'s em processamento de
+  imagens,'' 2001.
+
+\bibitem{Kimia:1992b}
+B.~B. Kimia, A.~R. Tannenbaum, and S.~W. Zucker, ``On the evolution of curves
+  via a function of curvature, {I}: The classical case,'' {\em Journal of
+  Mathematical Analysis and Applications}, vol.~163, pp.~438--458, jan 1992.
+
+\bibitem{Kimia:1995}
+B.~B. Kimia, A.~R. Tannenbaum, and S.~W. Zucker, ``Shapes, shocks, and
+  deformations, {I}: Thecomponents of shape and the reaction-diffusion space,''
+  {\em International Journal of Computer Vision}, vol.~15, no.~3, pp.~189--224,
+  1995.
+
+\bibitem{Jackway:1996}
+P.~Jackway, ``Scale-space properties of the multiscale morphological
+  dilation-erosion,'' {\em IEEE T. Pattern Annal. Mach. Intell.}, vol.~18,
+  no.~1, pp.~38--51, 1996.
+
+\bibitem{lowe:distinctive:IJCV04}
+D.~G. Lowe, ``Distinctive image features from scale-invariant keypoints,'' {\em
+  Int. Journal of Computer Vision}, vol.~60, no.~2, pp.~91--110, 2004.
+
+\bibitem{schena95quantitative}
+M.~Schena, D.~Shalon, R.~Davis, and P.~Brown, ``Quantitative monitoring of gene
+  expression patterns with a complementary {D}{N}{A} microarray,'' {\em
+  Science}, vol.~70, pp.~270--467, 1995.
+
+\bibitem{phimister99naturegenetics}
+B.~Phiminster, ``Going global,'' {\em Supplement to Nature Genetics}, vol.~21,
+  no.~1, p.~1, 1999.
+
+\bibitem{barrera2001gridding}
+R.~Hirata, J.~Barrera, R.~F. Hashimoto, and D.~Dantas, ``Microarray gridding by
+  mathematical morphology,'' in {\em Proceedings of the 14$^{th}$ Brazilian
+  Symposium on Computer Graphics and Image Processing}, (Florianópolis-Brazil),
+  pp.~112--119, IEEE Computer Society, 2001.
+
+\bibitem{Baldi:2001}
+P.~Baldi, S.~Brunak, and S.~Brunak, {\em Bioinformatics (Adaptive Computation
+  and and Machine Learning)}.
+\newblock Mit Press, 2001.
+
+\bibitem{Mitchison:1999}
+G.~Mitchison, A.~Krogh, and S.~Eddy, {\em Biological Sequence Analysis:
+  Probabilistic Models of Proteins and Nucleic Acids}.
+\newblock Cambridge University Press, 1999.
+
+\bibitem{Jef:1990}
+H.~Jeffrey, ``Chaos game representation of gene structure,'' {\em Nucleic Acids
+  Research}, vol.~18, no.~8, pp.~2163--2170, 1990.
+
+\bibitem{Ashlock:2002}
+D.~Ashlock and J.~Golden, {\em Evolutionary Computation and Fractal
+  Visualization of Sequence Data}, ch.~11, pp.~231--255.
+\newblock Morgan Kaufmann, 2002.
+
+\bibitem{Coelho:1996}
+R.~Coelho and L.~Costa, ``On the application of the {B}ouligand-{M}inkowski
+  fractal dimension for shape characterisation,'' {\em Applied Signal
+  Processing}, vol.~3, pp.~163--176, 1996.
+
+\end{thebibliography}

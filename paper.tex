@@ -1,0 +1,1282 @@
+% Possíveis TODO
+% - linkar as seções de pesq à seção histórica
+\documentclass[a4paper,titlepage]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuges]{babel}
+% setspace - \doublespace \onehalfspace
+% fullpage - ??
+\usepackage{verbatim,url}
+\usepackage[dvips]{graphicx}
+\usepackage[bf]{subfigure}
+\usepackage[bf]{caption}
+\usepackage{amsmath, amssymb, algorithm, algorithmic,fullpage,setspace}
+\usepackage{mathtools,empheq}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+\newtheorem{definition}{Definição}
+\newtheorem{theorem}{Teorema}
+\newtheorem{notation}{Notação}
+\floatname{algorithm}{Algoritmo}
+
+\newenvironment{changemargin}[2]{\begin{list}{}{
+   \setlength{\topsep}{0pt}\setlength{\leftmargin}{0pt}
+   \setlength{\rightmargin}{0pt}
+   \setlength{\listparindent}{\parindent}
+   \setlength{\itemindent}{\parindent} \setlength{\parsep}{0pt plus 1pt}
+   \addtolength{\leftmargin}{#1}\addtolength{\rightmargin}{#2}
+}\item }{\end{list}}
+
+\newcommand{\scilab}{\textsc{Scilab}}
+\newcommand{\matlab}{\textsc{Matlab}}
+\newcommand{\sip}{SIP}
+\newcommand{\animal}{AnImaL}
+\newcommand{\eg}{{p.\ ex.}}
+\newcommand{\etc}{{\it etc}}
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\etal}{{\it et al.}}
+\newcommand{\id}{\text{\emph{Id}}}
+\newcommand{\dof}{\textsc{dof}}
+\newcommand{\ransac}{\textsc{ransac}}
+\newcommand{\sift}{\textsc{sift}}
+\newcommand{\svd}{\textsc{svd}}
+\newcommand{\sfm}{\textsc{sfm}}
+
+\newcommand{\Gama}{\boldsymbol{\Gamma}}
+\newcommand{\gama}{\boldsymbol{\gamma}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+%\newcommand{\Gama}{\Gamma}
+%\newcommand{\gama}{\gamma}
+\newcommand{\T}{\boldsymbol{T}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\NSurface}{\mathbf{N}}
+\newcommand{\Nlocal}{\overline{\N}} % normal in local coordinates
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\tDt}{t+\Delta t}
+\newcommand{\bpsi}{\boldsymbol{\boldsymbol{\psi}}}
+\newcommand{\bp}{\mathbf p}
+\newcommand{\deldt}[1]{\frac{\partial#1}{\partial t}}
+\newcommand{\ddt}[1]{\frac{d #1}{dt}}
+\newcommand{\delds}[1]{\frac{\partial#1}{\partial s}}
+\newcommand{\mybar}[1]{\overline{#1}}
+\newcommand{\norm}[1]{\|#1\|}
+\newcommand{\I}{\mathbf{I}}
+\newcommand{\brho}{\boldsymbol{\rho}}
+\newcommand{\lightrgb}{\boldsymbol{l}}
+\newcommand{\B}{\boldsymbol{B}}
+\renewcommand{\t}{\boldsymbol{t}}
+\newcommand{\n}{\boldsymbol{n}}
+\renewcommand{\b}{\boldsymbol{b}}
+\newcommand{\e}{\boldsymbol{e}}
+\newcommand{\f}{\boldsymbol{e}_3}
+\newcommand{\ff}{\mathbf{f}}
+\newcommand{\hf}{\boldsymbol{\hat{f}}}
+\newcommand{\g}{\boldsymbol{g}}
+\newcommand{\G}{\boldsymbol{G}}
+\newcommand{\bc}{\boldsymbol{c}}
+\newcommand{\Curve}{\Gamma}
+%\newcommand{\X}{\boldsymbol{X}}
+%\newcommand{\x}{\boldsymbol{x}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\tilx}{\tilde x}
+\newcommand{\tily}{\tilde y}
+\newcommand{\tilgama}{\tilde \gama}
+\newcommand{\ugama}{\hat{\gama}} %unit gama
+\newcommand{\br}{\bar r}
+\newcommand{\Kc}{\mathbf K_c}
+\newcommand{\Kim} {\mathcal K_{im}}
+\newcommand{\lepi}{\mathbf r}
+\newcommand{\itan}{\tan^{-1}}
+\newcommand{\uu}{\xi}
+\newcommand{\buu}{\bar \uu}
+\newcommand{\bvv}{\bar \vv}
+\newcommand{\vv}{\eta}
+\newcommand{\VV}{\mathbf{V}} % translational velocity
+\newcommand{\VVspeed}{V} % translational velocity
+\newcommand{\field}{\boldsymbol\chi}
+\newcommand{\ufield}{\hat{\boldsymbol{\chi}}}
+\newcommand{\fieldc}{\chi} % field component
+\newcommand{\transl}{\mathcal{T}}
+\newcommand{\rot}{\mathcal{R}}
+\newcommand{\albedo}{\alpha}
+\newcommand{\depth}{\rho}      % depth as z
+\newcommand{\udepth}{{\hat{\rho}}} % depth along ray
+\newcommand{\ttransl}{\T} % translation tangent
+\newcommand{\surface}{\mathcal{M}} % surface/manifold
+\newcommand{\surf}{\mathcal{M}} % surface/manifold short
+\newcommand{\jacm}{\mathtt{J}} % Jacobian matrix
+\newcommand{\xbar}{\bar x}
+\newcommand{\ybar}{\bar y}
+\newcommand{\zbar}{\bar z}
+
+\newcommand{\bdelta}{\boldsymbol \delta}
+%\newcommand{\X}{\boldsymbol{X}}
+%\newcommand{\x}{\boldsymbol{x}}
+%\newcommand{\X}{\mathbf{X}}
+%\newcommand{\x}{\mathbf{x}}
+\newcommand{\boldu}{\mathbf{u}}
+\newcommand{\boldv}{\mathbf{v}}
+\newcommand{\boldw}{\mathbf{w}}
+\newcommand{\tgtveloc}{\tilde\alpha} % real tangential velocity
+
+\begin{document}
+
+
+\begin{titlepage}
+%\begin{changemargin}{-0.5cm}{-1cm}
+\renewcommand{\title}{%
+  {\huge\textbf{\textsf{Projeto de Pesquisa}}}\\[60pt]
+%  \mbox{Integração, Implementação e Aplicação à Bioinformática}%
+%  Evolution digitaler Schaltkreise%
+}
+\renewcommand{\author}{{\Large \textsf{Ricardo Fabbri}}}
+\renewcommand{\date}{\textsf{IPRJ--UERJ}\\\textsf{Junho de 2011}}
+\newcommand{\info}{%
+%  \raisebox{4pt}[-4pt]{%
+%  \includegraphics[height=1.3cm]{figs/cvrg.epsi} }\\
+%
+%  Grupo de Visão Cibernética \\
+%  Instituto de Física de São Carlos\\
+%  Universidade de São Paulo\\[.3cm]
+%
+%  Instituto de Ciências Matemáticas \\
+%  e de Computação\\
+%  Universidade de São Paulo\\[1.5cm]
+ \date
+%  \textbf{Orientador}\\[4pt]
+%  Prof.\ Dr.\ Luciano da Fontoura Costa\\[4pt]
+%  \textbf{Processo}\\[4pt]
+%   01/09335-8
+}
+
+%% Abstand zwischen oberem Blattrand und Titel.
+\newlength{\topToTitle} 
+\setlength{\topToTitle}{90pt}
+
+%% Abstand zwischen linkem Blattrand und Titel.
+\newlength{\leftToTitle} 
+%\setlength{\leftToTitle}{-50pt}
+\setlength{\leftToTitle}{0pt}
+
+%% Abstand zwischen Titel und Info-Feld.
+\newlength{\titleToInfo} 
+\setlength{\titleToInfo}{14cm}
+
+%% \myTextWidth erhoehen, um Info-Feld weiter nach Rechts zu schieben.
+%\newlength{\myTextWidth}
+%\setlength{\myTextWidth}{\textwidth}
+%\advance\myTextWidth by 1.5cm
+
+
+\thispagestyle{empty}
+\vspace*{\topToTitle}
+\begin{center}
+%\begin{minipage}
+%\centering
+%  \sffamily
+%  \hspace*{\leftToTitle}\begin{minipage}{11cm}%{8.5cm}
+%    \Large\textbf{Memorialll}\\[1.5cm]
+    \vspace{1.5cm}
+    \title
+    \author
+%  \end{minipage}\\
+
+  %% \enlargethispage{} um ggfs. Titel und Info-Feld weiter
+  %% auseinanderziehen zu koennen.
+  \vspace*{\titleToInfo}
+
+%  \begin{minipage}{\textwidth}
+%    \flushright
+    \info
+%  \end{minipage}
+%\end{minipage}%
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{changemargin}
+\end{titlepage}
+
+\tableofcontents
+%\contentsline {section}{Refer\^{e}ncias}{16}
+\newpage
+%\doublespacing
+\onehalfspacing
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO  TODO TODO 
+%  - italico em spots e sub-arrays
+%  - XXX
+%  - @@@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+\section{Atividades de Pesquisa}
+As principais atividades de pesquisa realizadas em minha carreira são
+descritas nesta seção. Pode-se constatar que sempre procurei aplicar matemática
+avançada tais como geometria diferencial, geometria algébrica, e equações
+diferenciais. 
+
+\subsection{Reconstrução 3D a partir de Múltiplas Perspectivas e Calibragem de
+Câmeras usando-se Geometria Diferencial}\label{sec:3drec}
+
+Nest seção descrevo minha principal atividade de pesquisa, iniciada durante meu
+Ph.D.\ na Brown University. Essa atividade é descrita em  um nível de
+detalhe maior que as demais, dada sua a importância em minha carreira.
+
+\subsubsection{Introdução e Proposta}
+A calibragem de imagens tiradas a partir de múltiplos pontos de vista, como no caso de
+vídeo ou sistemas de múltiplas câmeras, e a reconstrução 3D de cenas a partir
+destas imagens são problemas fundamentais em Visão Computacional. Aplicações
+incluem a reconstrução de modelos 3D para uso em videogames~\cite{Ablan:3DPhoto:book},
+filmes~\cite{Ablan:3DPhoto:book,Kitagawa:Mocap:book},
+arqueologia~\cite{Gay:etal:ACVA10,Luhmann:Photogrammetry:book},
+arquitetura~\cite{Luhmann:Photogrammetry:book}, modelagem 3D urbana (\eg, Google
+Streetview); técnicas de \emph{match-moving} em cinematografia para fusão de
+conteúdo virtual e filmagem real~\cite{Dobbert:Matchmoving:book}, a organização
+de uma coleção de fotografias com relação a uma cena (\eg, o sistema
+\emph{Phototourism}~\cite{Argarwal:Snavely:etal:ICCV09} e a funcionalidade
+\emph{Look Around} do Google Panoramio e Steet View), manipulação
+robótica~\cite{Horn:Robot:Vision}, e a metrologia a partir de câmeras na
+indústria automobilística~\cite{Luhmann:Photogrammetry:book}.
+
+Uma tecnologia operacinal tem evoluido, mais recentemente para sistemas de grande
+escala~\cite{Argarwal:Snavely:etal:ICCV09,Pollefeys:VanGool:etal:handheld:IJCV2004},
+a partir do desenvolvimento da detecção robusta de
+\emph{features}~\cite{mikolajczyk:schmid:IJCV04,Mikolajczyk:Schmid:PAMI05}, o
+\emph{fitting} robusto e seleção de correspondências baseados em \ransac, e o
+desenvolvimento de métodos de geometria projetiva para calibrar duas ou três
+imagens e progressivamente adicionar imagens e extrair estrutura 3D dessas
+\emph{features} na forma de nuvens de pontos. A minha pesquisa reconhece a importância
+desses avanços, mas também identifica problemas que ocorrem na prática, como por
+exemplo a falta parcial ou total de \emph{features}. Minha pesquisa propõe,
+assim, desenvolver uma nova tecnologia baseada em fragmentos de curvas gerais,
+no lugar de pontos. Além de curvas, pesquiso também a reconstrução detalhada de
+superfícies gerais, em vez de apenas planos, como é comum na literatura em visão
+estéreo onde as câmeras já estão calibradas. O desenvolviento desta tecnologia
+requer uma mudança de foco além da tradicional geometria projetiva para a
+geometria diferencial, incluindo a geometria diferencial projetiva. A tecnologia
+desenvolvida nesta pesquisa para calibrar e reconstruir a partir de múltiplas
+vistas aumentará o arsenal atual da área, e é baseada na construção de um esboço
+de curvas 3D chamado o \emph{3D Curve Sketch}. Estas curvas delineam contornos e
+marcas das superfícies que formam a cena 3D a ser reconstruída, e formam uma
+estrutura de suporte sobre a qual as superfícies serão reconstruídas.
+
+A representação de formas 3D baseada em curvas 3D que delineam a forma, tais
+como crestas e vales (\eg, contornos de prédios, contornos de folhas e veias
+internas, linhas de quebras em fragmentos de potes), curvas de reflectância
+(padrões da zebra, escrita e outras marcas), e outras curvas 3D. Minha pesquisa
+tem como objetivo investigar e promover o uso de evidência de fragmentos de
+curvas que são imagens de curvas 3D projetadas, para calibragem, casamento
+(\emph{matching}) e reconstrução na forma de uma estrutura eficiente de curvas 3D, o
+\emph{3D Curve Sketch}. Essa estrutura pode então ser usada para reconstruir
+fragmentos de superfícies, seguidos de superfícies mais completas. Minha
+pesquisa propõe o desenvolvimento de uma \emph{pipeline} completa para
+calibragem, reconstrução e visão estéreo de múltiplas vistas baseada em
+fragmentos de curvas gerais, as quais restringem e guiam a reconstrução de
+superfícies. Enquanto a geometria projetiva clássica usada no atual estado da
+arte é adequada para a modelagem de pontos e, globalmente, retas, e outras
+curvas algébricas como cônicas, bem como superfícies planares, na minha pesquisa
+exploro a extensão do poder de modelagem na área visão computacional 3D com o desenvolvimento de uma teoria de geometria diferencial para curvas
+e superfícies gerais em múltiplas vistas.
+
+\paragraph{Problemas com pontos de interesse e intensidade}
+Métodos baseados em pontos de interesse alcançaram sucesso com imagems ricas em
+textura, tais como na aplicação do \emph{Phototourism}~\cite{Argarwal:Snavely:etal:ICCV09}. No
+entanto, em condições gerais, algumas de suas premissas não se aplicam.
+Primeiro, eles assumem uma abundância de pontos de interesse por objeto com
+movimento independente, o que é possível apenas com suficiente textura nas
+imagens projetadas. Tal riqueza de textura pode não estar presente em cenas
+com regiões homogêneas, tais como alguns ambientes feitos pelo homem, como na
+Figura~\ref{fig:jul04:xx1}(c--d), faces, ou quando objetos projetam em um número pequeno de
+píxels relativo à região de cálculo dos pontos de interesse,
+Figura~\ref{fig:jul04:xx1}(e). Mesmo quando objetos possuem textura suficiente em média para
+recuperar parâmetros de calibragem ou pose, é comum ter algumas partes do objeto
+que faltam textura e, assim, não podem ser bem reconstruídas. Em todos esses
+casos, pode haver estrutura suficiente nas curvas de borda para complementar
+pontos de interesse na reconstrução 3D e calibragem das câmeras. Ademais, ao
+modelar objetos não-rígidos no futuro desta pesquisa, pontos de interesse não
+são densos o suficiente em regiões locais, mesmo com cenas ricas em textura,
+Figura~\ref{fig:jul04:xx1}(f). Segundo, a estabilidade de pontos de interesse é reduzida
+significativamente na medida em que a separação entre as imagens excede
+$30^\circ$, Figura~\ref{fig:jul04:xx1}(b) e (g--h). Em contraste, curvas, tais como bordas
+\emph{sharp} em um prédio, persistem sob separações maiores. Terceiro, a
+reconstrução de pontos de interece resulta em uma nuvem não-estruturada de
+pontos 3D, Figura~\ref{fig:jul04:xx1}(a). No entanto, quando a geometria do objeto 3D é
+necessária, tal como em modelagem para arquitetura, arqueologia, reconhecimento
+de objetos, e manipulação robótica, seria útil ter a estrutura
+geométrica 3D explícita, como no meu \emph{3D curve sketch}.
+\begin{figure}
+\begin{center}
+   %/mnt/cortex-rfabbri/mvg/presents/multiview-vision-notes/figs/sift-vs-curves/mazda-img1-gray.png
+   %/home/rfabbri/mvg/doc/Fabbri-PhD-2010/figs/sift-fail/candle-plastic-image-1-big.png
+   % /home/rfabbri/work/sp/images/landing-ss-1.png
+   % /vision/video/rfabbri/nonrigid/snakes/snakepit/snakepit-10.png
+   \hspace{-0.075in}\includegraphics[width=1.01\linewidth]{figs/xxx1-jul04.eps}\\[0.5mm]
+  \hspace{0.13in}
+   \includegraphics[height=1.06in]{figs/sift-fail/wide-baseline-fragment.eps}
+   \hspace{0.3in}
+   \includegraphics[height=1.06in]{figs/sift-fail/wide-baseline-plant.eps}
+\end{center}
+   \vspace{-0.7truecm}
+   \caption{
+   (a) Abordagens baseadas em pontos de interesse produzem uma reconstrução
+   esparsa na forma de uma nuvem de pontos (de~\cite{Argarwal:Snavely:etal:ICCV09})
+  (b) Imagens de vistas com grande separação podem não ter pontos de interesse
+  em comum, mas normalmente têm estrutura de curvas em comum. Pode não haver
+  pontos de interesse suficiente em correspondência entre imagens de objetos
+  homogêneos tais como o carro em (c) ou a escultura em (d), mas há estruturas
+  curvilíneas o suficiente. (e) Cada objeto em movimento requer seu próprio
+  conjunto de pontos de interesse, que podem não ser suficiente. (f) Estruturas
+  não-rígidas compartilham do mesmo problema. (g-h) Exemplos adicionais de falha
+  no caso de grande separação.
+   }
+\label{fig:jul04:xx1}
+\end{figure}
+
+
+\paragraph{As vantagens das curvas.}
+As curvas provenientes de descontinuidade de bordas nas imagens são mais densas
+e mais bem-estruturadas do que pontos isolados, e representam eficientemente a
+imagem ou cena 3D subjacente. Elas fornecem um bom compromisso entre uma
+representação altamente redundante na forma de arrays de píxels, e uma
+representação altamente esparsa das nuvens de pontos de interesse. Isso permite
+o cálculo rápido de reconstruções 3D (os \emph{3D curve sketch}), que, apesar de
+não possuirem superfícies explícitas, são ainda reconhecíveis, estruturadas, e
+de eficiente manipulação e armazenagem. Essa efficiência representacional é
+evidenciada em uma tendência recente em computação gráfica de usar renderizações
+baseadas em curvas (\emph{line-based} rendering) para aplicações de internet que
+exigem eficiência, e também por razões estéticas. A riqueza estrutural de curvas
+é illustrada pelo fato de ser impossível registrar uma nova imagem não-calibrada
+com relação a uma nuvem de pontos 3D por si só, ao passo que essa tarefa se
+torna possível com curvas 3D dada a maior estruturação geométrica (\eg,
+reprojetando-se as curvas 3D na nova imagem e alinhando-as às curvas detectadas
+na imagem). Ademais, é bem sabido que representações basedas em bordas
+representam eficiente o conteúdo de uma imagem~\cite{Elder:Edges:IJCV99}, o que
+motiva uma reconstrução de curvas 3D eficiente para armazenar a informação
+geométrica mais relevante de uma cena 3D. Curvas também têm maior invariância do
+que pontos de interesse a mudanças de iluminação, são mais estáveis sob uma
+maior separação entre as imagens, e são mais precisamente
+localizadas na direção normal. Ademais, estrutura de curvas de bordas em uma
+imagem é correlacionada com propriedades das superfícies subjacentes: curvas
+estacioárias (como as de reflectância) são condições de contorno para
+reconstrução de superfícies, e a variação de contornos de oclusão sob diferentes
+pontos de vista indica a curvatura da superfície.
+
+\paragraph{Desafios no uso de curvas.} Há dois obstaculos fundamentais a
+serem ultrapassados para que fragmentos de curvas de imagens possam ser
+utilizados em reconstrução 3D e calibragem de câmeras. Primeiro, dado um par de
+fragmentos de curvas, cada um de uma vista diferente, existe ambiguidade na
+correspondência de pontos das curvas, ou seja, dado um ponto de uma curva, não é
+claro qual ponto da outra curva ele
+corresponde, Figura~\ref{fig:curve:challenges:scheme}(a). Em contraste, dois
+pontos de interesse podem ser casados sem ambiguidade. Segundo, o agrupamento de
+elementos locais de bordas (\emph{edgels}) em fragmentos longos de curva não é
+estável quanto a mudanças no ponto de vista, o que resulta em múltiplas
+transições, Figura~\ref{fig:curve:challenges:scheme}(b-c).
+
+\begin{figure}[h]
+\begin{center}
+   \centering
+    \includegraphics[height=1in]{figs/3d-curve-sketch/curve-match-ambiguity.eps}
+   \hspace{-0.07in}
+   \includegraphics[height=1in]{figs/3d-curve-sketch/curve-transition.eps}\\
+   \hspace{-0.22in}\includegraphics[width=1.03\linewidth]{figs/3d-curve-sketch/capitol-curve-transitions.eps}
+\end{center}
+   \vspace{-0.8truecm}
+   \caption{
+   Desafios no uso prático de curvas em múltiplas vistas:
+  (a) ambiguidade de correspondência pontual ao longo da curva, (b)
+  instabilidades com variação no ponto de vista, (c-h) exemplos reais de
+  instabilidades, tais como uma curva em uma imagem sendo quebrada em outra, uma
+  curva sendo ligada ao \emph{background}, uma curva detectada em uma imagem mas
+  não na outra, partes diferentes de uma curva sofrendo oclusão em imagens
+  diferentes, e uma curva sofrendo deformação de sua forma de um ponto de vista
+  ao outro.
+   }
+\label{fig:curve:challenges:scheme}
+\end{figure}
+
+\subsubsection{Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
+Desenvolvi em meu Ph.D.\ um estudo completo da geometria local de curvas
+gerais em múltiplas vistas (curvas seccionalmente diferenciáveis).  A teoria é
+de importância fundamental para qualquer aplicação que requer relações entre
+imagens e a estrutura 3D de curvas, tais como o casamento estereoscópico,
+rastreamento (\emph{tracking}) de curvas, e estimação de câmeras. Produzi uma
+abordagem unificada para modelagem de estruturas curvilíneas em múltiplas
+vistas, cobrindo curvas fixas, de oclusão, e não-rígidas, para os casos de um
+número discreto de pontos de vista e movimento diferenciável de câmera (como em um
+vídeo). Esse trabalho unifica e corrige resultados da literatura que
+anteriormente eram escassos e dispersosa, bem como fornece diversos novos
+resultados. Também desenvolvi um estudo preliminar no caso da geometria
+diferencial de superfícies curvas, sua variação local de iluminação, bem como o
+comportamento local de curvas em superfícies.
+
+\paragraph{Notação. } Seja $\Gama^w$ um ponto 3D em coordenadas globais (ou
+\emph{world} coordinates), e $\Gama$ em coordenadas de câmera. O trihedro de
+local de Frenet em $\Gama^w$ é dado por tangente $\T^w$, normal $\N^w$, e binormal
+$\B^w$; $G$ é a velocidade de parametrização, $K$ é curvatura, e $\tau$ torsão.
+Da mesma forma, seja $\gama$ um ponto de uma curva 2D, sendo $g$ velocidade de
+parametrização, $\t$ tangente, $\n$ normal, e $\kappa$ curvatura. O sistema de
+coordenadas associado à câmera tem origem em $\bc = [c^x,\, c^y,\,
+c^z]^\top$, o centro de projeção. Os vetores $\Gama$ e $\Gama^w$ são
+relacionados através de
+$\Gama = \rot (\Gama^w - \bc) = \rot\Gama^w + \transl$,
+onde $\rot$ é a matriz de rotação da câmera relativo ao sistema de coordenadas
+do mundo, e o vetor de translação é $\transl = -\rot\bc$. A projeção de um ponto
+3D $\Gama = [x,\, y,\, z]^\top$ no plano da imagem a $z = 1$ é o ponto $\gama =
+[\uu,\,\vv,\,1]^\top$ dado por $\Gama = \depth\gama$, onde $\gama$ pode ser
+convertido a unidades de píxels usando-se os parâmetros intrínsecos $\mathcal K$ da câmera.
+
+\paragraph{Resultados Teóricos. } Minha pesquisa até a presente data pode se
+resumir a três contribuições principais.  O primeiro resultado consiste em
+teoremas e fórmulas para obter as quantias de geometria diferencial de tangente,
+curvatura, e derivada de curvatura de uma curva planar
+(2D) em termos da tangente, curvatura, derivada da curvatura, e torsão da curva
+3D que projeta nesta curva 2D. Mais precisamente, dado um ponto 3D $\Gama$,
+tangente $\T$, normal $\N$, curvatura $K$ e derivada da curvatura com relação ao
+comprimento de arco $\dot K$, e a torsão $\tau$, demonstrei formulas da curva 2D
+com ponto $\gama$, tangente $\t$, normal $\n$, curvatura $\kappa$ e
+derivada da curvatura $\dot \kappa$ sob projeção perspectiva.
+
+No segundo e mais importante resultado, mostrei como a tangente, curvatura,
+derivada da curvatura, e torsão de uma curva 3D fixa podem ser reconstruídos a
+partir de duas projeções perspectivas de pontos de vista diferentes. A torção é
+essencial na modelagem de curvas não-planares, e a reconstrução
+da torção a partir de múltiplas projeções 2D em perspectiva é um resultado
+fundamental e inédito na literatura. Mais formalmente, dado um par de pontos em
+correspondência atribuídos de geometria diferencial até a terceira ordem,
+$(\gama_1,\t_1,\kappa_1,\dot\kappa_1)$, $(\gama_1,\t_1,\kappa_1,\dot\kappa_1)$, 
+a estrutura 3D pode ser recuperada também até a terceira ordem, ou seja, posição
+$\Gama$, tangente $\T$, curvatura $K$, derivada da curvatura $\dot K$, normal
+$\N$, binormal $\B$, e torção $\tau$. Em particular, provei que a torção $\tau$
+está codificada na derivada da curvatura da projeção 2D observada de dois pontos
+de vista. Ademais, demonstrei como relacionar a parametrização de uma curva
+projetada à parametrização da curva espacial, bem como as parametrizações de
+duas projeções perspectiva de uma mesma curva 3D.
+
+Minha terceira contribuição principal é o estudo unificado de como velocidades
+das curvas imageadas e suas derivadas espaciais se comportam em termos 
+do movimento diferenciavel da câmera e do movimento da curva 3D, para os casos
+de curvas rígidas/estacionárias, contornos de oclusão, e curvas não-rígidas
+em geral. Dentre os resultados mais importantes, extendi e corrigi um resultado
+fundamental~\cite{Papadopoulo:Faugeras:ECCV96,Papadopoulo:PhD:96} relativo a
+uma equação polinomial relacionando velocidades de curvas 2D observadas com
+parâmetros do movimento da câmera. Mais precisamente, dadas curvas rastreadas em
+um vídeo sem conhecimento das câmeras, e sem conheciento da correspondência
+ponto-a-ponto entre as curvas, esse resultado permite recuperar os parâmetros do
+movimento diferencial da câmera. Corrigi um termo que estava faltando nessa
+equação, e a extendi para incluir contornos de occlusão na modelagem.
+
+Também realizei um trabalho junto ao prof.\ Peter Giblin em que desenvolvemos um
+método para calibragem de câmera, dados medidas de geometria diferencial. Dada
+uma curva 3D, e uma projeção perspectiva 2D, bem como geometria diferencial
+(tangente, curvaturas, \etc) medida em ambas as curvas, desenvolvi um método que
+permite calibrar as câmeras, recuperando o centro de projeção relativo à curva
+3D, bem como a rotação da câmera, Figura~\ref{fig:pose:from:curves}. Este método é fundamental para o uso em um
+sistema de auto-calibração de grande escala, em que pontos de vista são
+calibrados um a um relativos a uma reconstrução inicial. 
+\begin{figure}
+\centering
+  \includegraphics[width=0.45\linewidth]{figs/pose-from-curves.eps}
+  \includegraphics[width=0.45\linewidth]{figs/pose-from-curves-tangents.eps}
+\caption{% 
+(a) O problema de se determinar a pose da câmera, $\rot$, $\transl$, dadas curvas
+espaciais em um sistema global de coordenadas e suas projeções em um sistema de
+coordenados da imagem. Minha abordagem consiste  em (b) dterminar a pose da
+câmera $\rot$, $\transl$, dados pontos-tangentes em 3D (ou seja, geometria
+diferencial local) em um sistema de coordenadas global e um sistema de
+coordenadas da imagem.
+}\label{fig:pose:from:curves}
+\end{figure}
+
+Os resultados teóricos acima, bem como diversos outros, foram recentemente
+submetidos ao \emph{International Journal of Computer Vision}, uma das 2 melhores
+revistas em visão computacional. Anteriormente a esse artigo submetido, tais
+resultados apareceram na minha tese~\cite{Fabbri:PHD:2010}, bem como publicados
+na \emph{Lecture Notes in Computer Science}~\cite{Fabbri:Kimia:EMMCVPR05} e
+apresentados no congresso Energy Minimization Methods in Computer Vision and
+Pattern Recognition (2005), o qual foi bastante seleto, contando com
+participações dos melhores pesquisadores da área.
+
+Após a conclusão da minha tese também escrevi um projeto de pesquisa à NSF, dos EUA,
+juntamente com meu orientador e o matemático prof.\ Peter Giblin, de Liverpool,
+propondo avanços ao conteúdo desta seção, bem como a confecção de um sistema
+pratico em grande escala para calibragem e reconstrução 3D automática baseado em
+curavs. O método supracitado de calibragem de uma imagem a partir da geometria
+diferencial de curvas será submetido ao IEEE International Conference in
+Computer Vision 2011, a principal conferência da minha área, sendo bastante
+seletiva. Na seção de colaborações futuras também descrevo um método relacionado
+para a calibragem trifocal, ou seja, de três câmeras.
+
+\subsubsection{3D Curve Sketch: Um Sistema Prático de Reconstrução 3D e
+Calibragem Baseado em Curvas}
+Desenvolvi uma abordagem, o \emph{3D Curve Sketch}, para o \emph{matching} e
+reconstrução de curvas a partir de múltiplas vistas de cenas gerais, e para
+otimizar a calibracão dessas câmeras também a partir de curvas. As curvas
+utilizadas são fragmentos de bordas obtidos através de um \emph{edge
+linker}~\cite{Tamrakar:Kimia:ICCV07}. Neste trabalho assumi que modelos iniciais
+de câmera são fornecidos, os quais típicamente são imprecisos, e produz uma
+coleção densa de curvas 3D, o \emph{3D Curve Sketch}, mostrado na
+Figura~\ref{fig:edgemaps:contours}(topo). O sistema otimiza as câmeras ao registrar as curvas
+reconstruídas com a informação de bordas observadas nas imagens, um processo
+chamado \emph{bundle adjustment} de curvas. As câmeras otimizadas são então
+utilizadas para uma nova reconstrução de curvas, gerando um \emph{3D curve
+sketch} final. Esta abordagem complementa métodos existentes baseados em pontos
+de interesse, bem como métodos de visão estéreo, fornecendo a geometria
+explícita de curvas, ao mesmo tempo extendendo aplicações onde a assunção destes
+métodos falha, mas o conteúdo curvilíneo na imagem é significativo.
+
+O sistema é dividido em dois estágios: casamento e reconstrução, e calibragem.
+Pares de curvas longas, de pontos de vistas diferentes, com suficiente sobreposição
+epipolar, formam uma hipótese de fragmento 3D. As duas vistas neste processo são
+chamadas \emph{vistas de hipótese}. Cada par de imagens do conjunto total de
+imagens disponíveis pode participar como vistas de hipótese para algum
+par de curvas em correspondência hipotética. Cada hipótese de fragmento 3D é
+então reprojetada no conjunto de outras vistas, as \emph{vistas de confirmação},
+e avaliadas quanto à concistência com a geometria diferencial das curvas destas
+vistas. As hipóteses com evidência o suficiente nestas vistas de confirmação são
+então reconstruídas. A Figura~\ref{fig:edgemaps:contours} ilustra algumas destas idéias na
+prática. Meu algoritmo de casamento usando-se estas vistas de confirmação é extremamente 
+confiável, como mostrado pela alta precisão (porcentagem de curvas corretamente
+casadas) nos gráficos de \emph{precision-recall}
+na Figura~\ref{fig:precision:recall}(canto inferior esquerdo). Descobri, através de uma série de
+experimentos, que fazendo uso da geometria diferencial (orientação tangencial,
+no caso) é crucial para a boa performance do casamento de curvas,
+Figura~\ref{fig:precision:recall}(canto inferior direito). Após este casamento, o sistema
+utiliza uma rotina que desenvolvi para otimizar a calibragem de câmeras a partir
+das curvas e sua geometria diferencial. Com as câmeras refinadas, um novo
+processo de casamento e reconstrução gera o resultado final.
+\begin{figure}[h!]
+\begin{center}
+%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
+\includegraphics[width=0.90\linewidth]{figs/3d-curve-sketch/capitol/capitol-edges3-nsf.eps}
+\end{center}
+   \vspace{-0.7truecm}
+   \caption{
+   (a) Um subconjunto de vistas da sequência ``Capitol''; 
+   (b) bordas sub-pixel com um limiar baixo, usadas para gerar 
+   curvas agrupadas (c) o mesmo a um limiar mais alto, usadas em vistas de
+   confirmação; (d) curvas com tamanho~$>$~40 usadas para uma reconstrução
+   inicial; (e) curvas menores usadas para reconstrução final; (f) uma curva é
+   selecionada na imagem 1 e as curvas candidatas na imagem 2 com suficiente
+   sobreposição epipolar são marcadas em azul. Nas próximas três imagens, a
+   hipótese de curva 3D reprojetada é mostrada em azul claro, confirmada em (g)
+   mas rejeitada em (h) e (i). O exemplo em (i) mostra a necessidade de
+   orientação na presença de ruído.}
+\label{fig:edgemaps:contours}
+\end{figure}
+\begin{figure}[h]
+\begin{center}
+   \begin{minipage}[c]{0.3\linewidth}
+   \vspace{-1.75in}
+   \includegraphics[width=1\linewidth]{figs/3d-curve-sketch/capitol-icon.eps}
+   \end{minipage}
+   \includegraphics[width=0.4\linewidth]{figs/3d-curve-sketch/recs/capitol-high/allrecs.eps}\\
+   \includegraphics[width=0.43\linewidth]{figs/3d-curve-sketch/pr-curves/capitol/ratio/best-curve.eps}
+   \includegraphics[width=0.43\linewidth]{figs/3d-curve-sketch/pr-curves/capitol/ratio/near-best_curve-distance-dtheta.eps}
+\end{center}
+   \vspace{-0.7truecm}
+   \caption{
+   \textbf{Acima:} a reconstrução \emph{3D Curve Sketch} para o \emph{capitol
+   building} de Providence, EUA. 
+   \textbf{Abaixo: } Curvas de \emph{precision/recall} para o algoritmo de
+   casamento de curvas, obtidas variando-se intensidade de suporte.
+   \textbf{Canto inferior esquerdo: } a curva ótima de avaliação é mostrada em
+   vermelho; \textbf{Canto inferior direito:} variando-se o limiar de
+   orientação $\tau_\theta$, obtém se várias curvas para demonstrar a utilidade do critério da
+   orientação. Eliminando-se a orientação ($\tau_\theta = 90^\circ$), a
+   performance é degradada (magenta).
+   } \label{fig:precision:recall}
+\end{figure}
+
+Este sistema prático foi apresentado e publicado na conferência IEEE Computer Vision and Pattern
+Recognition (CVPR) 2010~\cite{Fabbri:Kimia:CVPR10}, uma das duas mais
+importantes na minha área, sendo arbitrada e bastante seletiva. Um artigo
+relatando uma versão mais avançada deste sistema está sendo finalizado e será enviado para
+publicação na IEEE Pattern Analysis and Machine Intelligence, também uma das
+duas melhores publicações nesta área.
+
+\subsection{Evolução de Fronteiras e Busca de Caminhos Mínimos em Visão
+Computacional}\label{sec:evolucao:fronteiras}
+% usar projeto doutorado inicial aqui.
+
+\subsubsection{Introdução: Propagação de Fronteiras}~\label{sec:propag}
+Uma vez capturada uma imagem, geralmente ela consiste em uma matriz numérica
+representando a intensidade em cada ponto da cena (pixel).  Localizar e
+reconhecer objetos a partir desta representação puramente numérica é um
+processo complexo conhecido como análise de imagens.  Inicialmente, é
+realizada uma sequência de operações de baixo nível comumente denominada
+processamento de imagens. Essa etapa geralmente envolve filtros de realce
+seguidos de técnicas de segmentação (localização) de objetos. Tendo localizado
+os objetos, é necessário representá-los de forma suscinta e extrair
+características apropriadas para classificar e reconhecê-los.\footnote{É
+importante notar que pode haver \emph{feedback} entre essas etapas,
+principalmente em um sistema de visão ativa.}
+A etapa após a segmentação e antes da classificação
+é denominada análise de formas (\emph{shape analysis}).
+
+Recentemente, metodologias poderosas para a propagação de interfaces têm se
+consolidado, especialmente a partir da segunda metade da década de 90.  Essas
+abordagens fornecem uma base sólida e únificada para o projeto de vários
+operadores em análise de imagens, permitindo formulação correta e implementação
+eficiente e previsível. Segmentação por \emph{watersheds}, contornos ativos,
+eixos mediais, dimensão fractal, transformadas de distância e eliminação de
+ruído. Todos podem ser definidos e calculados através de propagação de contornos
+ou superfícies, apesar de serem comumente desenvolvidos e apresentados como
+métodos distintos. 
+
+Uma dessas abordagens de propagação é o uso da teoria de equações diferenciais
+parciais para modelar a propagação e fenômenos de difusão associados à análise
+de imagens. Como exemplos claros tem-se o método \emph{level-set} de Osher-Sethian para
+propagações bastante complexas e o \emph{fastmarching} para resolver
+numericamente a equação \emph{eikonal}.  Outros autores têm utilizado a equações
+diferenciais para modelar fenômenos originalmente propostos de forma
+discreta~\cite{Tek:1998,Cao:1998,Meyer:1999,Sapiro:1993} ou para propor novos
+tipos de operadores~\cite{Perona:1990,Cao:2003}.
+
+Abordagens discretas ou não-diferenciais para a propagação também têm
+apresentado significativo avanço recentemente. Algoritmos bastante eficientes e
+exatos para transformada de distância têm sido propostos, possuindo grande
+potencial para serem aplicados a outros operadores baseados em propagação (ver
+seção~\ref{sec:td}). Além disso, pesquisadores da UNICAMP propuseram a Image
+Foresting Transform (IFT), uma metodologia geral que utiliza a teoria de grafos
+para formular e implementar diversos métodos de análise de imagens. A IFT é, sem
+dúvida, um dos avanços recentes mais importantes nesta área, no sentido de
+unificá-la consolidá-la como uma ciência objetiva.
+
+Desenvolver e unificar as abordagens discretas, como a IFT, junto às abordagens
+por equações diferenciais, como \emph{level sets} e técnicas relacionadas, constitui o
+propósito geral desta linha de pesquisa.  Eu já
+trabalhei com a IFT na iniciação científica e mestrado, através da
+colaboração do prof. Luciano Costa com os pesquisadores da UNICAMP que
+inventaram a teoria. Tendo adquirido esse conhecimento, chegou-se à conclusão de
+que seria crucial passar ao estudo de teorias diferenciais e relacioná-las com a
+IFT e outras abordagens discretas para a propagação.  Alguns
+pesquisadores já iniciaram a unificação dessas metodologias, inclusive meu
+orientador de doutorado~\cite{Kimia:1991,
+Kimia:1996}, mas a IFT e outros métodos discretos desenvolvidos por
+pesquisadores brasileiros~\cite{Falcao:1999,Lotufo:2001} ainda não foram
+considerados.
+
+As próximas seções explicam como diversos operadores e representações de análise
+de imagens se relacionam com a propagação, mencionando a pesquisa que já
+realizei em cada um desses assuntos. 
+
+\subsubsection{Tansformada de Distância}\label{sec:td}
+A Transformada de distância (TD) é a operação que associa a cada ponto de uma imagem binária sua distância à borda dos objetos. Por abuso de linguagem, o conjunto imagem da TD é também chamado TD. Pode-se representar a TD por uma imagem monocromática ou por uma superfície cuja intensidade em cada pixel representa a distância deste à borda do objeto. A Figura~\ref{fig:td} mostra a TD de um neurônio.  
+\begin{figure}[htb]
+\centering
+   \subfigure[]{ %
+      \begin{minipage}[c]{0.33\linewidth}%
+         \centering
+         \scalebox{0.15}{\includegraphics{figs/neuron2.eps}}
+      \end{minipage}}%
+   \subfigure[]{ %
+      \begin{minipage}[c]{0.333\linewidth}%
+         \centering
+         \scalebox{0.3}{\includegraphics{figs/neuron-dt-surface-small.eps}}
+      \end{minipage}}%
+   \subfigure[]{%
+      \label{fig:td:propag}
+      \begin{minipage}[c]{0.33\linewidth}%
+      \centering
+         \scalebox{0.4}{\includegraphics{figs/neuron_dist_modulo7.eps}}
+      \end{minipage}}
+\caption{% 
+A imagem de um neurônio (a) e sua transformada de distância (b), 
+onde a altura da superfície é proporcional à distância de cada ponto
+à fronteira do neurônio. Em (c) tem-se a propagação evidenciada na TD
+fazendo-se distâncias módulo 7.
+}\label{fig:td}
+\end{figure}
+
+A TD é um dos operadores geométricos mais fundamentais em análise de formas,
+sendo utilizada em diversas aplicações como navegação robótica, \emph{matching}
+de formas e como base de certos algoritmos para calcular eixos de
+simetria~\cite{Fabbri:EDT:survey:ACMCSurv08}.
+
+A imagem da TD é uma representação de formas que evidencia uma propagação sucessiva do contorno do objeto. Para cada distância há um contorno propagado segundo seguinte equação, chamada equação \emph{eikonal}, como ilustrado na Figura~\ref{fig:td:propag}.
+
+\begin{equation}
+  \frac{\partial\mathcal{C}(s,t)}{\partial t} = c(x,y)\vec{N}(s,t)
+\end{equation}
+Onde o contorno propagante é, por simplicidade, representado por uma curva 2D $\mathcal{C}(s,t) = (x(s,t),y(s,t))$, onde s é o comprimento de arco, e t é o tempo.
+
+Por ser uma representação estática do processo de propagação, a TD é utilizada
+para extrair muitas outras representações definidas por esse processo, como
+esqueletos~\cite{Fabbri:EDT:survey:ACMCSurv08}. Muitas vezes esse é um conceito
+aparentemente errôneo pois está-se utilizando de uma representação para extrair
+o processo de propagação, sendo poderia ser utilizado o processo que gerou essa
+representação diretamente.  Muitos dos algoritmos de esqueletos que comumente
+dependem da transformada de distância recentemente têm sido substituídos por
+algoritmos mais eficientes que utilizam apenas o processo de propagação que
+gerou a transformada.
+
+Apesar da TD ter sido proposta em 1969, a maioria dos algoritmos rápidos e
+exatos para TD euclidiana (TDE) tem aparecido muito
+recentemente~\cite{Fabbri:EDT:survey:ACMCSurv08}. Durante meu mestrado, realizei um
+estudo comparativo detalhado, tanto teórico como experimental, dos seis
+algoritmos mais importantes de transformada de distância euclidiana exata,
+procurando extrair os princípios mais importantes que possam ser aplicados em
+outras áreas, bem como determinar as vantagens de cada algoritmo. Um 
+algoritmo baseado em diagramas de Voronoi, bem como outro baseado em
+intersecções de parábolas, emergeram como os melhores algoritmos em geral.
+Também desenvoli um conjunto de dados extensivo para comparar tais algoritmos,
+uma vez que a \emph{performance} depende fortemente da configuração da imagem de
+entrada. Meu artigo foi publicado na \emph{ACM Computing Surveys} e tem quase 50 citações até a presente data. 
+Além de meu mestrado, também trabalhei mais recentemente na implementação paralela
+distribuída de um algoritmo exato de transformada de distância euclidiana para imagens
+3D~\cite{Fabbri:EDT:distributed:IJPRAI10}, o que gerou uma publicação no
+\emph{International Journal of
+Pattern Recognition and Artificial Intelligence}.
+
+As singularidades formadas pela superfície
+da TDE exata põem em desvantagem o uso de soluções numéricas de equações
+diferenciais. Como descrito em~\cite{Sethian:1999}, no modelo por EDPs as
+singularidades são geralmente evitadas ao procurar-se soluções com viscosidade,
+que são suaves porém inexatas (ou fracas). Isso é desejável em algumas
+aplicações, porém não para a TDE exata.
+
+A novas propagações euclidianas discretas rápidas descritas em meu
+artigo~\cite{Fabbri:EDT:distributed:IJPRAI10}, apesar de ser voltadas à TDE, deveriam ser
+utilizadas ou generalizadas para qualquer processo baseado na propagação
+\emph{Eikonal} que gera uma
+representação discreta. Isso proporcionaria alta precisão e baixa complexidade
+computacional, e faz parte da minha pesquisa.  O uso dessas propagações
+discretas rápidas para calcular diversas representações de formas já foi
+iniciado por mim durante minha iniciação científica e mestrado, e tenho
+interesse em continuar esses desenvolvimentos.
+
+\begin{comment}
+Poder-se-ia também realizar o inverso: aplicar a propagação das
+recentes TDE's rápidas para calcular soluções discretas exatas
+para equações diferenciais. Os fenômenos modelados pela equação
+eikonal poderiam utilizar as novas soluções numéricas encontradas
+nos algoritmos recentes de TDE.
+\end{comment}
+
+Por outro lado, se a solução da equação Eikonal é uma propagação, e se os
+métodos recentes de TDE são na realidade processos altamente eficientes para
+propagação, então pode ser que esses métodos resolvam EDPs mais eficientemente
+que métodos clássicos de discretização.  É bastante evidente o potencial de
+unificação entre essas duas áreas desenvolvidas de modo independente, algo que é
+explorado em minha pesquisa.
+
+\subsubsection{Diagrama de Voronoi}~\label{sec:voronoi}
+Uma das estruturas geométricas mais elementares e importantes é o diagrama de
+Voronoi (DV). Seu conceito é melhor ilustrado graficamente na Figura~\ref{fig:voronoi:diagram}.
+\begin{figure}[htb]
+\centering
+   \subfigure[]{ %
+      \label{fig:voronoi:diagram}
+      \begin{minipage}[c]{0.33\linewidth}%
+         \centering
+         \scalebox{0.4}{\includegraphics{figs/voronoi_diagram_color.eps}}
+      \end{minipage}}%
+   \subfigure[]{ %
+      \label{fig:voronoi:propag}
+      \begin{minipage}[c]{0.333\linewidth}%
+         \centering
+         \scalebox{0.4}{\includegraphics{figs/voronoi_propag_overpose.eps}}
+      \end{minipage}}%
+   \subfigure[]{%
+      \label{fig:voronoi:label}
+      \begin{minipage}[c]{0.33\linewidth}%
+      \centering
+         \scalebox{0.21}{\includegraphics{figs/voronoi_diagram_label.eps}}
+      \end{minipage}}
+\caption{% 
+O diagrama de Voronoi para um conjunto de pontos e
+métrica euclideana (a);  Relação entre DV e propagação (b);
+Em (c), tem-se o DV discreto, também conhecido como transformada de rótulos ou
+\emph{labels}, onde cada rótulo está representado por uma cor distinta.
+}\label{fig:voronoi}
+\end{figure}
+
+Considere uma família $S$ de subconjuntos do $\mathbb{R}^n$, cada qual é chamado de \emph{site} ou elemento de Voronoi (EV).  Na Figura~\ref{fig:voronoi:diagram}, os EV's são pontos marcados em vermelho.
+
+  A \textbf{região de Voronoi} de um \emph{site} $s$ de $S$, denotada por $RV(s)$, é o conjunto de pontos mais próximos a $s$ do que a qualquer outro site de $S$:
+\[
+RV(s) \doteq \{\, p \in \mathbb{R}^{n} \mid d(p,s) < d(p,s'), 
+\quad \forall s' \ne  s, \, s' \in S \,\}
+\]
+
+O \textbf{diagrama de Voronoi} é dado pelos pontos fora de qualquer região de Voronoi:
+\[
+DV(S) \doteq \left[ \bigcup_{i} RV(s_{i}) \right]^{c}
+\]
+Em outras palavras, o diagrama de Voronoi é formado pelos pontos que não estão em nenhuma região de influência $RV$.  Na Figura~\ref{fig:voronoi:diagram}, a região de Voronoi de cada \emph{site} é uma região poligonal em torno do mesmo. As linhas separando as RVs formam o diagrama de Voronoi.
+
+Como mostrei na minha pesquisa~\cite{Fabbri:2002}, em meu artigo no
+\emph{Journal of
+Mathematical Imaging and Vision}, o DV é uma generalização dos
+eixos mediais explicados na próxima seção.  Trata-se do mesmo conceito, porém
+com a possibilidade agrupamento pela formação de novos \emph{sites} a partir da união
+de sites mais simples. Além disso, assim como os eixos mediais, o diagrama de
+Voronoi pode também ser definido como o choque entre propagações dos
+\emph{sites} na
+direção normal. A Figura~\ref{fig:voronoi:propag} ilustra este conceito.
+
+A propagação em imagens discretas é a mesma realizada pelos algoritmos de TD.
+Entretanto, em vez de se propagar distâncias e procurar pelos choques na
+descontinuidade da TDE, propaga-se rótulos (números) que identificam cada site
+de maneira única. Ao final da propagação, obtém-se a imagem de rótulos (ou
+labels), onde em cada pixel está armazenado o rótulo do EV mais próximo.  A
+propagação de rótulos é a maneira direta e eficiente de calcular o diagrama de
+Voronoi em uma grade discreta. Na Figura~\ref{fig:voronoi:label}, tem-se um
+exemplo de DV discreto onde cada cor representa uma RV diferente. 
+
+Deve-se notar que o DV possui diversas aplicações~\cite{Aurenhammer:1991}. A
+distância utilizada pode ser geral, levando em conta níveis de cinza, por
+exemplo, o que pode ser utilizado em segmentação de imagens. Ademais, os
+\emph{sites}
+podem ser compostos por mais de um ponto, gerando o conhecido DV generalizado ou
+SKIZ (Skeleton by Influence Zones). Por causa dessa generalidade, o DV é uma
+entidade abstrata fundamental assim como a propagação em si.  As árvores de
+caminho mínimo crescidas pela IFT, por exemplo, são nada menos que regiões de
+Voronoi dos pixels semente~\cite{Falcao:1999}. Na minha pesquisa de iniciação,
+bem como atualmente, busquei relações
+entre o conceito de diagramas de Voronoi e aplicações tradicionalmente modeladas por
+EDPs.
+
+\subsubsection{Esqueletos}~\label{sec:skl}
+O esqueleto é uma das representações de forma mais utilizadas e mais ricas em
+aplicações, havendo inclusive evidência de seu uso pela percepção
+humana~\cite{Kimia:2003}. Pode-se dizer que o conceito abstrato de esqueleto é o
+de uma linha essencial ou uma representação que dissocia a informação de largura
+do restante da estrutura do objeto, como topologia e simetria. Isso facilita
+diversos processamentos posteriores. Minha pesquisa na iniciação científica se
+concentrou bastante no estudo de esqueletos, a realização levantamento exaustivo da
+literatura, bem como de propriedades de geometria diferencial. Meu orientador de
+doutorado e meu colaborador prof.\ Peter Giblin são expoentes nessa área,
+inclusive formalizando conceitos de eixo medial 3D. Apesar de meu trabalho com
+eles se focar na reconstrução 3D, esta outra vertente de eixos mediais é também
+um forte ponto de colaboração, e durante meu período na Brown participei
+indiretamente de discussões e pesquisas a respeito.
+
+Define-se o esqueleto ou \emph{medial axis} como o conjunto dos centros dos círculos maximais nela inscritos. Circulo maximal é aquele que está contido na forma mas não é contido por nenhum outro círculo deste tipo. Por simplicidade, o termo ``forma'' aqui se refere a um compacto no plano, mas poderia ser qualquer subconjunto do $\mathbb{R}^n$~\cite{Fabbri:2002}. A Figura~\ref{fig:skl:r} ilustra o conceito da definição para a forma da letra $R$.
+\begin{figure}[htb]
+\centering
+   \subfigure[]{ %
+      \label{fig:skl:r}
+      \begin{minipage}[c]{0.4\linewidth}%
+         \centering
+         \scalebox{0.3}{\includegraphics{figs/r.eps}}
+      \end{minipage}}%
+   \subfigure[]{ %
+      \label{fig:skl:propag}
+      \begin{minipage}[c]{0.4\linewidth}%
+         \centering
+         \scalebox{0.47}{\includegraphics{figs/r_dt_propag_skel.eps}}
+      \end{minipage}}%
+\caption{% 
+O esqueleto (medial axis) como centro dos círculos maximais (a) e como
+os choques da propagação \emph{eikonal} do contorno (b).
+}\label{fig:skl}
+\end{figure}
+
+Nota-se como essa definição reflete razoávelmente o conceito abstrato de
+esqueleto de uma forma. O MA pode ser definido de forma equivalente como o lugar
+geométrico dos choques de propagação~\cite{Giblin:2003,Siddiqi:1999} do contorno
+na direção normal.  A Figura~\ref{fig:skl:propag} ilustra esse conceito.  
+
+Como visto na Seção~\ref{sec:td}, a transformada de distância euclidiana é
+também formada pela propagação Eikonal.  Os pontos de choque da propagação
+formam justamente as singularidades da TD. Inúmeros métodos utilizam da imagem
+da TDE, que é uma representação estática da propagação, para encontrar
+esqueletos.  Algumas técnicas realizam uma propagação \emph{sobre} a TDE, ou
+seja, propagação sobre propagação~\cite{Levine:1992,Siddiqi:2002}.  Porém, como
+mencionado na seção anterior, é mais sensato utilizar-se da propagação que gerou
+a TD para calcular o esqueleto diretamente. De fato, diversos métodos
+recentemente propostos realizam isto, através da propagação de rótulos que é a
+base da TD,
+calculando-se o diagrama de Voronoi discreto como na seção
+anterior~\cite{Costa:1999}.  Eis um exemplo em que a visão unificada dos
+conceitos relacionados à propagação beneficia o projeto de algoritmos em análise
+de imagens.
+
+O método de esqueletização multiescala de Costa e Estrozi, chamando de ``dilatação
+exata'', requer uma implementação da propagação \emph{eikonal} isotrópica. No entanto, a
+implementação original da dilatação exata é bastante ineficiente. Mais
+recentemente, durante minha iniciação, utilizei para isso a propagação da IFT, baseada na teoria de
+grafos, gerando um método rápido~\cite{Falcao:2002}. Também adaptei para essa
+tarefa outros métodos ainda mais rápidos estudados em meu
+artigo~\cite{Fabbri:EDT:survey:ACMCSurv08}
+
+Outros métodos relacionados aos eixos mediais são os esqueletos afins e a
+circularidade local.  Eles são definidos segundo uma propagação por
+paralelas-área~\cite{Estrozi:2003,Giblin:2003}, diferente da propagação Eikonal.
+Tais conceitos foram originalmente definidos e implementados com base em
+geometria diferencial. Técnicas discretas de morfologia matemática também foram
+utilizadas, com base no conceito de erosão afim. No entanto, ainda está pouco
+claro sua relação com equações diferenciais ou teoria dos grafos. Outra técnica
+parecida é a utilizada no grupo de meu orientador de doutorado, onde um complexo
+esquema geométrico explícito é utilizado para evoluir as fronteiras de uma forma
+e rastrear as singularidades, onde a fronteira da forma é aproximada por
+círculos e retas.
+
+Na minha pesquisa, acredito que não só encontrar um fator unificador entre
+esqueletos e outras entidades é um caminho rico para encontrar novos algoritmos
+e sedimentar a teoria, mas também estou interessado nas aplicações destas
+representações mediais para a detecção de objetos e análise de imagens em geral.
+
+\subsubsection{Segmentação}~\label{sec:segment}
+Grande parte das técnicas de segmentação são na realidade uma propagação de
+pixels iniciais, denominados \emph{sementes}.  Como exemplos tem-se
+\emph{watersheds}, contornos ativos (\emph{snakes}), e mesmo a extração de
+componentes conexos em imagens binárias.  Dado um conjunto de \emph{sementes},
+pixels de sua vizinhança são considerados segundo algum critério para compor o próximo passo da
+propagação. Esse critério pode levar em consideração brilho, côr, dentre outros
+fatores. Ao final da propagação tem-se os contornos desejados.
+
+As Figuras~\ref{fig:segment:wshed1} e ~\ref{fig:segment:wshed2} mostram um
+exemplo de segmentação utilizando \emph{watersheds} implementada na minha
+pesquisa via IFT~\cite{Falcao:1999}. Dado um conjunto de pixels sementes, ou
+\emph{markers}, é crescida a região de \emph{watershed} em torno de cada pixel,
+até se obter uma segmentação da imagem original. Outra técnica de segmentação
+realizada por propagação consiste em buscar caminhos geodésicos ao longo da
+borda do objeto~\cite{Falcao:1999}, a partir de dois pontos sementes iniciais.
+Nas Figuras~\ref{fig:segment:minmax1} e~\ref{fig:segment:minmax2}, tem-se ainda
+outro tipo de segmentação realizada por uma espécie de contorno ativo modelado
+por EDPs~\cite{Sethian:1999}.
+
+\begin{figure}[htb]
+\centering
+   \subfigure[]{ %
+      \label{fig:segment:wshed1}
+      \begin{minipage}[c]{0.24\linewidth}%
+         \centering
+         \scalebox{0.45}{\includegraphics{figs/electroph_mark.eps}}
+      \end{minipage}}%
+   \subfigure[]{ %
+      \label{fig:segment:wshed2}
+      \begin{minipage}[c]{0.24\linewidth}%
+         \centering
+         \scalebox{0.45}{\includegraphics{figs/electroph_segm.eps}}
+      \end{minipage}}%
+   \subfigure[]{%
+      \label{fig:segment:minmax1}
+      \begin{minipage}[c]{0.23\linewidth}%
+      \centering
+         \scalebox{0.45}{\includegraphics{figs/artery1.eps}}
+      \end{minipage}}
+   \subfigure[]{%
+      \label{fig:segment:minmax2}
+      \begin{minipage}[c]{0.23\linewidth}%
+      \centering
+         \scalebox{0.45}{\includegraphics{figs/artery2.eps}}
+      \end{minipage}}
+\caption{% 
+Segmentação de imagens via propagação. Em (a), tem-se uma imagem de
+gel com marcadores (condição inicial da propagação), cujo resultado da
+\emph{watershed} está em Figura (b). A condição inicial e o resultado
+da propagação por \emph{level sets} com velocidade proporcional ao
+gradiente da imagem de uma artéria estão mostrados em (c) e (d),
+respectivamente.
+}\label{fig:segment}
+\end{figure}
+
+Em minha pesquisa sempre tive interesse teórico em um método geral de propagação que poderia
+unificar esses métodos, bem como interesse prático em utilizar essas ideias para
+aprimorá-los.  Isso já foi iniciado independentemente pela IFT, \emph{level
+sets} e cálculo variacional~\cite{Antonin:1995}, porém não está claro a relação
+entre elas. Durante minha iniciação científica tive a chance de estudar tais
+métodos, inclusive a segmentação watershed, bem como implementar os algoritmos
+originais e implementa-los através da IFT. Também apliquei essas técnicas em
+imagens de bioniformática, contagem de grães de café, e estudei seu potencial
+na segmentação de hemácias, como descrito neste memorial.
+
+\subsubsection{Filtragem e Escala-Espaço}~\label{sec:suav}
+Uma operação fundamental em processamento de imagens é suavizar uma imagem para eliminar ruído. A convolução gaussiana, provavelmente o filtro passa baixa mais famoso, é a solução da equação de difusão ou equação do calor:
+\begin{equation}
+  \frac{\partial F(\mathbf{x},\sigma)}{\partial \sigma} = \nabla^2
+  F(\mathbf{x},\sigma)
+\end{equation}
+onde $\mathbf{x} \in \mathbb{R}^n$ e $\sigma \geq 0$ é o parâmetro de escala
+(ou tempo), com condição inical no sinal a ser propagado.
+
+A Figura~\ref{fig:suav:1d} ilustra a filtragem gaussiana de uma função 1D, de um contorno 2D e de uma imagem em níveis de cinza (função 2D).  Nota-se que ocorre eliminação sistemática de detalhes do objeto. No entanto, detalhes de maior escala são deslocados por essa filtragem e a posição de bordas não é preservada.
+\begin{figure}[htb] \centering
+   \subfigure[]{ %
+      \label{fig:suav:1d} \begin{minipage}[c]{0.27\linewidth}%
+         \centering
+         \scalebox{0.25}{\includegraphics{figs/sclspc-surf-small.eps}}
+      \end{minipage}}%
+   \subfigure[]{ %
+      \label{fig:suav:1dcont} \begin{minipage}[c]{0.27\linewidth}%
+         \centering
+         \scalebox{0.15}{\includegraphics{figs/neuron-sm-stack-highres.eps}}
+      \end{minipage}}\\
+   \subfigure[]{%
+      \label{fig:suav:letras} \begin{minipage}[c]{0.21\linewidth}%
+      \centering
+         \scalebox{0.25}{\includegraphics{figs/suav_minmax.eps}}
+      \end{minipage}}
+   \subfigure[]{%
+      \label{fig:suav:gaussian} \begin{minipage}[c]{0.21\linewidth}%
+      \centering
+         \scalebox{0.25}{\includegraphics{figs/suav_gauss.eps}}
+      \end{minipage}}
+   \subfigure[]{%
+      \label{fig:suav:minmax} \begin{minipage}[c]{0.21\linewidth}%
+      \centering
+         \scalebox{0.25}{\includegraphics{figs/suav_minmax_result.eps}}
+      \end{minipage}}
+\caption{%
+Suavização por difusão gaussiana (a), (b) e (d); E por propagação
+guiada pela curvatura média (e). Nota-se como neste último as bordas
+quase não foram deslocadas.
+}\label{fig:suav} \end{figure}
+
+Além da remoção de ruído, o filtro gaussiano é utilizado para ajustar o foco de
+atenção e nível de detalhes em sistemas de visão artificial e natural. Ademais,
+ele serve para identificar estruturas visuais nos primeiros estágios da visão,
+sem conhecimento a priori específico.  Essas aplicações da propagação Gaussiana
+são subprodutos da teoria clássica de espaços de escala ou
+\emph{scale-space}, como descrito no livro do prof.\ Ralph Teixeira do
+IMPA~\cite{Teixeira:2001}. A propagação é considerada em sucessivos parâmetros
+de escala, como na Figura~\ref{fig:suav:1dcont}.  Dependendo da aplicação, uma
+imagem detalhada com pouca suavização é necessária.  Por exemplo, em uma
+fotografia de floresta, é necessário pouca suavização para se detectar as folhas
+das árvores. Se, no entanto, o objetivo é detectar as árvores como um todo, uma
+imagem bastante suavizada é mais adequada e computacionalmente mais barata, por
+ser mais simples.  Recentemente, a teoria escala-espaço tem sido bastante
+desenvolvida e técnicas elaboradas para filtragem de imagem têm sido propostas.
+Como exemplo importante, tem-se a difusão anisotrópica~\cite{Perona:1990}, que
+permite lidar com problemas de localização e deslocamento de bordas através de
+filtros não-lineares.
+
+O movimento por curvatura baseado \emph{level sets} é outro poderoso filtro
+não-linear para eliminar ruídos. Sua grande vantagem é que durante a propagação
+o ruído é removido rapidamente, ao passo que as bordas evoluem mais lentamente.
+Isso se deve à hipótese de que o ruído possui curvatura mais alta que as bordas
+de interesse.  A Figura~\ref{fig:suav:minmax} ilustra a suavização realizada por
+este método.  Além da simples suavização, o movimento por curvatura possui
+diversas outras aplicações à visão computacional, apesar de não suplantar a
+propagação~\emph{eikonal}. Meu orientador de doutorado, prof.\ Benjamin Kimia,
+propôs uma teoria computacional de formas que utiliza o movimento por curvatura
+de maneira essencial~\cite{Kimia:1991,Kimia:1992b,Kimia:1995,Kimia:1996},
+juntamente com idéias da teoria dos espaços de escala.
+
+Normalmente modelados por EDPs, os espaços de escala também podem ser
+construídos por filtros discretos de morfologia matemática~\cite{Jackway:1996},
+com algumas vantagens. No entanto, a IFT ainda não foi aplicada a esse tipo de
+suavização.  Descobrir como isso poderia ser realizado é um passo em minha
+pesquisa na direção de
+unificar essas diferentes metodologias (EDPs, morfologia e IFT).
+
+Em minha iniciação científica inicieo o estudo de espaços de escala, tendo
+descoberto os espaços de escala discretos na literatura. Também realizei um
+estudo e implementação de estimação multi-escala de curvatura, bem como a
+esqueletização multi-escala. Durante meu doutorado uma técnica multi-escala para
+detectar pontos de interesse se tornou bastante utilizada na prática, a detecção
+de SIFT features~\cite{lowe:distinctive:IJCV04}.  Meu interesse nesta área é também teórico,
+pela grande relação da análise multiescala com matemática.
+
+\begin{comment}
+A reconstrução de equeletos fornece um equema de suavização que
+resolve o problema do deslocamento de bordas para formas 2D e
+possui diversas outras propriedades~\cite{Tek:2001,Costa:1999}.
+Para ilustrar esse tipo de filtragem, a Figura~\ref{fig:suav:1dcont:skl} ilustra
+sucessivas suavizações por eixos mediais pelo método de
+Costa-Estrozi\cite{Costa:1999}. Comparando-se com a suavização gaussiana
+na Figura~\ref{fig:suav:1dcont}, percebe-se a borda não é deslocada durante o
+processo de suavização, o que possibilita utilizar o conceito de
+escala-espaço de maneira simples.
+\end{comment}
+
+
+\subsection{Análise de Imagens em Bioinformática}\label{sec:bioinfo}
+
+Como resumido na seção relativa à minha graduação, pesquisei em
+bioinformática, aplicando técnicas de análise de imagens, tendo tido oportunidade
+de colaborar com o Hemocentro da USP--Ribeirão Preto no projeto Genoma, bem como
+com pesquisadores do IME-USP. Nesta seção descrevo em maiores detalhes essas
+atividades realizadas, sendo que para o futuro também tenho interesse em outras
+imagens e problemas relacionados à bioinformática.
+
+\subsubsection{Segmentação de Imagens de Microarrays}
+\paragraph{Introdução.}O Projeto Genoma é um dos mais importantes empreendimentos
+científicos da atualidade. Após completadas as sequências de
+diversos genomas, a pesquisa atual está cada vez mais voltada à
+função gênica, um campo denominado genômica funcional.
+
+Recentemente, arrays de hibridização de DNA foram desenvolvidos
+para a análise eficiente de características de gens em um tecido,
+como localização, mutação e expressão gênica. Tais experimentos
+têm gerado tanta informação que passa ser indispensável o auxílio do
+computador. Minha pesquisa concentra-se na análise automática
+de imagens capturadas de \emph{microarrays} de cDNA para expressão gênica.
+
+\emph{Microarrays} de cDNA, ou biochips, permitem a análise de milhares
+de gens em um único experimento~\cite{schena95quantitative}.
+Básicamente, um biochip consiste em um suporte de vidro sobre
+o qual há diversos pontos impressos, ou \emph{spots}. Cada
+ponto contém a sequência de DNA de um gene específico, chamada
+\emph{sonda}~\cite{phimister99naturegenetics}.  O objetivo de um
+experimento de microarray é medir o quanto que uma dada amostra
+de mRNA tem de cada gene (ou sequência) impresso, relativamente a
+uma amostra de referência. Por exemplo, pode-se verificar o perfil
+de expressão gênica de um tecido de tumor, relativamente ao de um
+tecido sadio, para identificar quais genes estão ligados ao câncer.
+
+Ambas amostras de mRNA são primeiramente convertidas em cDNA (DNA
+complementar) por transcrição reversa. Isso é necessário
+pois o mRNA é muito instável. Cada amostra é então marcada
+com corante fluorescente vermelho (a amostra a ser medida) ou verde
+(a amostra de referência).  Misturadas, um robô as-deposita em cada
+spot do biochip, onde elas sofrem hibridização competitiva
+com as sondas. 
+
+Em seguida, duas imagens são capturadas do microarray por um scanner
+de fluorescência, uma para cada côr de corante.  A intensidade
+de cada imagem é proporcional à quantidade de cDNA hibridizado
+da correspondente amostra. Dessa forma, a expressão relativa
+dessas amostras pode ser identificada pela predominância de côr.
+A Figura~\ref{Fig:marray} mostra uma imagem de microarray, em que
+os canais verde e vermelho estão combinados.  Os spots de coloração
+verde brilhante representam genes pouco expressados no tecido em
+estudo; os amarelos representam genes igualmente expressados na
+amostra em estudo e na de referência; e os vermelhos representam
+genes expressados especialmente na amostra em estudo.
+\begin{figure}[t]
+\centering
+\scalebox{0.6}{\includegraphics{figs/microarr.epsi}}%
+\hspace{1in}
+\includegraphics[scale=0.356,angle=90]{figs/BIAres.epsi}
+\caption{% 
+(Esquerda) Imagem típica de microarrays de
+expressão gênica. Os pontos de
+coloração verde brilhante representam genes pouco expressados
+no tecido em estudo; os amarelos genes
+igualmente expressados na amostra em estudo e na de referência; e os vermelhos 
+genes expressados especialmente na amostra em estudo.
+(Direita) Resultados da segmentação (\emph{gridding}) que desenvolvi.
+}\label{Fig:marray}
+\end{figure}
+
+O problema de processamento de imagens de \emph{microarrays} me surgiu a
+partir da minha interação com o Prof.\ Junior Barrera, do IME-USP.
+Ele já possui experiência com \emph{microarrays}, e em certa ocasião me
+apresentou o problema de \emph{gridding}, descrito a seguir.  O
+Prof.\ Barrera havia desenvolvido um método para o \emph{gridding} a partir
+das projeções da imagem, utilizando
+operadores de morfologia matemática~\cite{barrera2001gridding}. O
+Prof.\ Luciano Costa, meu orientador de iniciação científica,  notara que
+técnicas multi-escala baseadas em filtragem gaussiana e esqueletos são
+diretamente aplicáveis ao problema. No entanto, nesta pesquisa tentei aplicar
+inicialmente um método simples baseado em subtração de média local, o qual
+mostrou-se pouco robusto a diferenças entre imagens.  Já o \emph{gridding} baseado em
+esqueletos multi-escala que desenvolvi apresentou bons resultados, e o escala-espaço gaussiano
+mostrou ser promissor. Porfim, desenvolvi um modelo de otimização que
+funcionou ainda melhor que os métodos anteriores, e foi publicado no congresso
+internacional IEEE Digital Signal Processing 2002.
+
+\paragraph{O Gridding.} Em minha pesquisa, foram desenvolvidas duas novas técnicas para a
+segmentação inicial das imagens de \emph{microarray} (\emph{gridding}),
+juntamente com outras tentativas promissoras nesse sentido.
+O \emph{gridding} de \emph{microarrays} consiste em identificar cada \emph{sub-array}
+ou bloco e os
+\emph{spots} que o formam. Após o \emph{gridding}, é necessária uma segmentação
+mais acurada e a extração de intensidades. Para seguemtação acurada eu
+desenvolvi algumas técnicas baseadas em segmentação \emph{watershed} também em
+minha iniciação científica.
+
+O principal objetivo do \emph{gridding} é isolar cada \emph{spot} em um pequeno
+quadrado, ou \emph{célula},  de uma grade.  Cada célula deve conter
+um só \emph{spot}, de modo a ser possível assinalar coordenadas aos mesmos.
+Tais coordenadas são a linha e coluna do \emph{sub-array} (bloco) contendo
+o \emph{spot}, assim como a linha e coluna do \emph{spot} dentro do seu bloco. Por
+exemplo, na Figura~\ref{Fig:marray}, tem-se 8 blocos na vertical por
+4 blocos na horizontal.  Cada bloco tem $8\times8$ spots. Logo,
+um spot é identificado pelo bloco (6,2) e pela posição (3,7) dentro
+de tal bloco, por exemplo.  Em termos de processamento de imagens,
+para realizar essa tarefa primeiramente os blocos são segmentados,
+e em seguida os spots são segmentados para cada bloco separadamente.
+
+A maioria dos softwares disponíveis para tratar imagens de
+biochips necessitam de intervenção humana, o que
+é indesejável para experimentos em grande escala. O processo de
+gridding é típicamente a etapa mais trabalhosa para o usuário.
+Após entrar uma série de parâmetros sobre a geometria do array,
+o usuário deve ajustar manualmente a grade resultante aos spots.
+Esse procedimento é demorado e sujeito a introduzir vários
+erros no restante do processo.
+
+Quando iniciei minha pesquisa, um nova técnica de gridding baseada em morfologia
+matemática havia sido proposta~\cite{barrera2001gridding}.  
+Apesar da segmentação de spots ser automática,
+essa técnica necessita de assistência do usuário para a segmentação
+de blocos. Uma possível solução para esse problema é a principal
+contribuição do trabalho desenvolvido em minha pesquisa.
+Assim, minha pesquisa até agora se concentrou na segmentação de blocos, apesar
+da idéia também se aplicar ao \emph{gridding} de spots.
+
+Eu desenvolvi um método robusto de segmentação baseado em um modelo de
+otimização.  Além disso, desenvolvi duas técnicas multi-escala para
+detectar os blocos. A primeira, baseada em esqueletos multi-escala, foi bastante
+central às minhas atividades.
+A segunda técnica é baseada em escala-espaço gaussiano, sendo uma tentativa
+pouco explorada neste projeto, mas também promissora.
+Um artigo foi publicado nos \emph{proceedings} do congresso IEEE DSP2002.
+
+
+\subsection{Desenvolvimento de Software Livre para Visão
+Computacional}\label{sec:sip}
+Um dos pilares na minha pesquisa é o desenvolvimento de software livre. Durante
+minha carreira publiquei o código de três softwares na internet, bem como
+contribuí significativamente para a biblioteca C++ VxL. Liberar o software em código
+aberto contribuiu imensamente para aprimorar a qualidade desse código, para
+gerar colaborações, bem como para disseminar o nome das instituições de pesquisa
+do Brasil.
+
+O principal software que desenvolvi chama-se Scilab Image Processing toolbox
+(SIP), um pacote de ferramentas para análise de imagens para o Scilab, um
+software livre equivalente ao Matlab. Toda a comunidade do Scilab depende desse
+pacote para ler e escrever mais de 100 formatos de imagem, bem como para realizar um
+vasto conjunto de operações nesta imagem. Codifiquei funcionalidade no SIP que
+vai desde processamento de imagem de baixo nível, tais como filtragem, rotação,
+\emph{scaling}, e algoritmos de desenho, até algoritmos de mais alto nível como
+segmentação por watershed, transformadas de distância, esqueletos multiscala,
+morfologia matemática, seguidor de contornos, estimação de curvatura através da
+transformada de Fourier, dentre outros. Desenvolvi o SIP no início da graduação,
+motivado pela necessidade de ler imagens em qualquer formato. Até a presente
+data tenho desenvolvido esse pacote ativamente, o qual tem sido usado
+mundialmente em salas de aula e em pesquisa.  O SIP tem estado consistentemente
+entre os primeiros softwares mais baixados do site \texttt{sourceforge.net}, e
+pode ser baixado em \texttt{siptoolbox.sourceforge.net}.
+
+Também desenvolvi uma biblioteca em C para análise de imagens, a qual forma a
+base do SIP, mas que pode ser usada independentemente. Nela implementei diversos
+operadores, inclusive a Image Foresting Transform do prof.\ Alexandre Falcão da
+UNICAMP, que também foi utilizada como base para outras operaçoes. Os pontos
+fortes
+dessa biblioteca é a portabilidade e facilidade de uso.
+
+Atualmente, minha programação é predominantemente feita em C++, usando-se o
+conjunto de bibliotecas VxL. Como descrito na seção do doutorado, deste memorial, 
+esta biblioteca é utilizada por diversas empresas e universidades. Todo meu
+código de doutorado é baseado nesta biblioteca, o qual também pretendo liberar na
+internet. Durante o doutorado contribuí com código para biblioteca de calibragem
+de câmeras, bem como algoritmos rápidos de transformada da distância.
+
+No futuro, pretendo continuar o desenvolvimento de software livre, como uma
+forma de contribuir para a sociedade, gangariar colaborações,
+garantir um controle de qualidade, e disseminar a pesquisa.
+
+
+
+\nocite{Fabbri:2002}
+\addcontentsline{toc}{section}{Refer\^{e}ncias}
+%\bibliographystyle{ieeetr}
+%\bibliography{personal,strings,shading,multiview,motion,Kimia,catagorization,edge-linking,deformable,medical,graphics,active-contours,texture,imaging,tracking,shape-papers,bib-header,video,math-books,math,psych-books,metric,edge,leymarie_pami_scaffold,vision-books,vision,nn-search,multidimscaling,psychophysics,indexing,segmentation,image-databases,shape-matching,neuro,skeleton,skeleton2D,aspect-graphs,recognition,surface-networks,ridge,proceedings,perceptual-grouping,continuation,graph-matching-2,cooper}
+\input{paper.bbl}
+
+% Assinaturas:
+%\newpage
+%\ \\\vspace{7cm}
+%\center $\overline{\ \ \ Ricardo\ Fabbri\ \ \ }$
+%\ \\\vspace{4cm}
+%\center $\overline{\ \ \ Luciano\ da\ Fontoura\ Costa\ \ \ }$
+\end{document}
