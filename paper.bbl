@@ -22,6 +22,10 @@ M.~Pollefeys, L.~Van~Gool, M.~Vergauwen, F.~Verbiest, K.~Cornelis, J.~Tops, and
 K.~Mikolajczyk and C.~Schmid, ``Scale and affine invariant interest point
   detectors,'' {\em IJCV}, vol.~60, no.~1, pp.~63--86, 2004.
 
+\bibitem{Fabbri:Kimia:IJCV2010}
+R.~Fabbri and B.~B. Kimia, ``Multiview differential geometry of curves,'' {\em IJCV},
+\newblock 2011 (accepted).
+
 \bibitem{Tamrakar:Kimia:ICCV07}
 A.~Tamrakar and B.~B. Kimia, ``No grouping left behind: From edges to curve
   fragments,'' in {\em ICCV '07: Proceedings of the Eleventh IEEE International
@@ -33,5 +37,10 @@ R.~Fabbri and B.~B. Kimia, ``{3D} curve sketch: Flexible curve-based stereo
   reconstruction and calibration,'' in {\em Proceedings of the IEEE Conference
   on Computer Vision and Pattern Recognition}, (San Francisco, California,
   USA), IEEE Computer Society Press, 2010.
+
+\bibitem{Fabbri:2002}
+R.~Fabbri, L.~Estrozi, and L.~Costa, ``On {V}oronoi diagrams and medial axes,''
+  {\em Journal of Mathematical Imaging and Vision}, vol.~17, pp.~27--40, jul
+  2002.
 
 \end{thebibliography}

@@ -216,17 +216,13 @@
 
 O presente plano de pesquisa se refere a atividades propostas para a bolsa de
 produtividade em pesquisa do CNPq, a serem realizadas como professor 
-de nível Adjunto IV no Instituto Politécnico -- IPRJ da UERJ. Pretende-se
-trabalhar em conjunto com o grupo de pesquisa do Prof. Francisco Moura Neto, do Departamento de
-Modelagem Computacional, com atividade principal de pesquisa descrita na próxima
-seção.  Ademais, pretende-se colaborar com outros pesquisadores na
-realização de projetos e publicação de artigos, tanto no IPRJ como com pesquisadores das
-instituições de origem do pesquisador proponente: o ICMC (Instituto de Ciências
-Matemáticas e de Computação) e o IFSC (Instituto de Física) da USP de São
-Carlos, bem como a Brown University.  
-Também pretende-se contribuir nos programas de pós-graduação em Modelagem
-Computacional (Mestrado d Doutorado) e no curso de Engenharia de Computação,
-incluindo a apresentação de seminários.
+de nível Adjunto IV no Instituto Politécnico -- IPRJ da UERJ, Departamento de
+Modelagem Computacional. Pretende-se trabalhar em conjunto com o grupo de
+pesquisa do Prof. Francisco Moura Neto e com outros pesquisadores na
+realização de projetos e publicação de artigos, tanto no IPRJ como no ICMC
+(Instituto de Ciências Matemáticas e de Computação) e no IFSC (Instituto de
+Física) da USP de São Carlos, bem como a Brown University (EUA), a Universidade
+de Liverpool (Reino Unido), e a UFRJ.
 
 \section{Reconstrução 3D a partir de Múltiplas Perspectivas e Calibragem de
 Câmeras usando-se Geometria Diferencial}\label{sec:3drec}
@@ -254,11 +250,12 @@ a partir do desenvolvimento da detecção robusta de
 \emph{fitting} robusto e seleção de correspondências baseados em \ransac, e o
 desenvolvimento de métodos de geometria projetiva para calibrar duas ou três
 imagens e progressivamente adicionar imagens e extrair estrutura 3D dessas
-\emph{features} na forma de nuvens de pontos. A minha pesquisa reconhece a importância
+\emph{features} na forma de nuvens de pontos. O pesquisador
+proponente reconhece a importância
 desses avanços, mas também identifica problemas que ocorrem na prática, como por
-exemplo a falta parcial ou total de \emph{features}. Minha pesquisa propõe,
+exemplo a falta parcial ou total de \emph{features}. Esta pesquisa propõe,
 assim, desenvolver uma nova tecnologia baseada em fragmentos de curvas gerais,
-no lugar de pontos. Além de curvas, pesquiso também a reconstrução detalhada de
+no lugar de pontos. Além de curvas, este projeto engloba também a reconstrução detalhada de
 superfícies gerais, em vez de apenas planos, como é comum na literatura em visão
 estéreo onde as câmeras já estão calibradas. O desenvolviento desta tecnologia
 requer uma mudança de foco além da tradicional geometria projetiva para a
@@ -269,20 +266,22 @@ de curvas 3D chamado o \emph{3D Curve Sketch}. Estas curvas delineam contornos e
 marcas das superfícies que formam a cena 3D a ser reconstruída, e formam uma
 estrutura de suporte sobre a qual as superfícies serão reconstruídas.
 
-Minha pesquisa tem como objetivo investigar e promover o uso de evidência de
-fragmentos de curvas que são imagens de curvas 3D projetadas, para calibragem,
+A pesquisa proposta tem como objetivo investigar e promover o uso de evidência de
+fragmentos de curvas 2D que são imagens de curvas 3D, para calibragem,
 casamento (\emph{matching}) e reconstrução na forma de uma estrutura eficiente
 de curvas 3D, o \emph{3D Curve Sketch}. Essa estrutura pode então ser usada para
 reconstruir fragmentos de superfícies, seguidos de superfícies mais completas.
-Minha pesquisa propõe o desenvolvimento de uma \emph{pipeline} completa para
+\textbf{Este projeto propõe o desenvolvimento de uma \emph{pipeline} completa para
 calibragem, reconstrução e visão estéreo de múltiplas vistas baseada em
 fragmentos de curvas gerais, as quais restringem e guiam a reconstrução de
-superfícies. Enquanto a geometria projetiva clássica usada no atual estado da
+superfícies.} Enquanto a geometria projetiva clássica usada no atual estado da
 arte é adequada para a modelagem de pontos e, globalmente, retas, e outras
-curvas algébricas como cônicas, bem como superfícies planares, na minha pesquisa
-exploro a extensão do poder de modelagem na área visão computacional 3D com o
+curvas algébricas como cônicas, bem como superfícies planares, esta pesquisa
+continuará a extensão do poder de modelagem na área visão computacional 3D com o
 desenvolvimento de uma teoria de geometria diferencial para curvas e superfícies
-gerais em múltiplas vistas.
+gerais em múltiplas vistas. Este projeto dará continuidade e grande
+desenvolvimento a idéias pioneiras semeadas durante o Ph.D.\ na Brown University do pesquisador
+proponente.
 
 \paragraph{As vantagens das curvas.}
 As curvas provenientes de descontinuidade de bordas nas imagens são mais densas
@@ -313,27 +312,35 @@ reconstrução de superfícies, e a variação de contornos de oclusão sob diferentes
 pontos de vista indica a curvatura da superfície.
 
 \subsubsection{Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
-Darei continuidade ao que iniciei em meu Ph.D. -- um estudo completo da geometria local de curvas
+Será dada continuidade ao paradigma teórico que foi iniciado no Ph.D. do pesquisador proponente -- um estudo completo da geometria local de curvas
 gerais em múltiplas vistas (curvas seccionalmente diferenciáveis).  A teoria é
 de importância fundamental para qualquer aplicação que requer relações entre
 imagens e a estrutura 3D de curvas, tais como o casamento estereoscópico,
-rastreamento (\emph{tracking}) de curvas, e estimação de câmeras. Já produzi uma
+rastreamento (\emph{tracking}) de curvas, e estimação de câmeras. Anteriormente
+a este projeto, já foi
+produzida uma
 abordagem unificada para modelagem de estruturas curvilíneas em múltiplas
 vistas, cobrindo curvas fixas, de oclusão, e não-rígidas, para os casos de um
-número discreto de pontos de vista e movimento diferenciável de câmera. Também
-continuarei um estudo no caso da geometria diferencial de superfícies curvas,
+número discreto de pontos de vista e movimento diferenciável de câmera. Esssa
+abordagem foi submetida ao prestigioso International Journal of Computer Vision,
+tendo o artigo sido aceito para publicação~\cite{Fabbri:Kimia:IJCV2010}.
+Também
+será continuado um estudo no caso da geometria diferencial de superfícies curvas,
 sua variação local de iluminação, bem como o comportamento local de curvas em
 superfícies.
 
-Pretendo dar continuidade a uma linha de pesquisa que realizei junto ao prof.\ Peter Giblin 
-em que desenvolvemos um método para calibragem de câmera, dados
+Pretende-se dar continuidade a uma linha de pesquisa realizada junto ao prof.\
+Peter Giblin da Universidade de Liverpool
+em que um método foi desenvolvido para calibragem de câmera, dados
 medidas de geometria diferencial. Dada
 uma curva 3D, e uma projeção perspectiva 2D, bem como geometria diferencial
-(tangente, curvaturas, \etc) medida em ambas as curvas, desenvolvi um método que
+(tangente, curvaturas, \etc) medida em ambas as curvas, o método 
 permite calibrar as câmeras, recuperando o centro de projeção relativo à curva
 3D, bem como a rotação da câmera, Figura~\ref{fig:pose:from:curves}. Este método é fundamental para o uso em um
 sistema de auto-calibração de grande escala, em que pontos de vista são
-calibrados um a um relativos a uma reconstrução inicial. 
+calibrados um a um relativos a uma reconstrução inicial. Uma versão inicial
+deste método está sendo desenvolvida e será submetida à IEEE Pattern Analysis
+and Machine Intelligence (PAMI) durante este projeto.
 \begin{figure}
 \centering
   \includegraphics[width=0.35\linewidth]{figs/pose-from-curves.eps}
@@ -341,16 +348,19 @@ calibrados um a um relativos a uma reconstrução inicial.
 \caption{% 
 (a) O problema de se determinar a pose da câmera, $\rot$, $\transl$, dadas curvas
 espaciais em um sistema global de coordenadas e suas projeções em um sistema de
-coordenados da imagem. Minha abordagem consiste  em (b) determinar $\rot$,
+coordenados da imagem. A abordagem deste projeto consiste  em (b) determinar $\rot$,
 $\transl$, dados pontos-tangentes em (ou seja, geometria diferencial local) em
 um sistema de coordenadas global 3D e na imagem.
 }\label{fig:pose:from:curves}
 \end{figure}
-Durante minha estadia no IPRJ trabalharei em um
+Durante este projeto, também será abordado um
 problema similar para três câmeras, sem exigir o conhecimento de modelo de curva
 3D. Dados pontos de curva atribuídos de geometria diferencial (\eg, tangente) em
 correspondência entre três imagens, o objetivo é determinar a pose relativa das
-câmeras, Figura~\ref{fig:trifocal:pose}.
+câmeras, Figura~\ref{fig:trifocal:pose}. Pretende-se publicar este método em uma das
+principais revistas de computação: International Journal of Computer Vision
+(IJCV) ou
+IEEE Pattern Analysis and Machine Intelligence (PAMI).
 \begin{figure}
 \begin{center}
    \centering
@@ -366,14 +376,15 @@ correspondência.
 
 \subsubsection{3D Curve Sketch: Um Sistema de Reconstrução 3D e
 Calibragem com Curvas}
-Iniciei em meu Ph.D.\ uma abordagem, o \emph{3D Curve Sketch}, para o \emph{matching} e
-reconstrução de curvas a partir de múltiplas vistas de cenas gerais, e para
-otimizar a calibracão dessas câmeras também a partir de curvas. As curvas
-utilizadas são fragmentos de bordas obtidos através de um \emph{edge
-linker}~\cite{Tamrakar:Kimia:ICCV07}, veja a Figura~\ref{fig:edgemaps:contours}
-para uma idéia geral de alguns aspectos práticos do sistema. Neste trabalho inicial, modelos iniciais de
-câmera são fornecidos, os quais típicamente são imprecisos, e produz uma coleção
-densa de curvas 3D, o \emph{3D Curve Sketch}. Pretendo aplicar os métodos de
+Durante o Ph.D., o pesquisador proponente iniciou uma abordagem, o \emph{3D
+Curve Sketch}, para o \emph{matching} e reconstrução de curvas a partir de
+múltiplas vistas de cenas gerais, e para otimizar a calibracão dessas câmeras
+também a partir de curvas. As curvas utilizadas são fragmentos de bordas obtidos
+através de um \emph{edge linker}~\cite{Tamrakar:Kimia:ICCV07}, veja a
+Figura~\ref{fig:edgemaps:contours} para uma idéia geral de alguns aspectos
+práticos do sistema. Neste trabalho inicial, modelos iniciais de câmera são
+fornecidos, os quais típicamente são imprecisos, e produz uma coleção densa de
+curvas 3D, o \emph{3D Curve Sketch}. Pretende-se aplicar os métodos de
 autocalibragem da seção anterior para ajudar a produzir um sistema totalmente
 automático.
 
@@ -398,45 +409,53 @@ automático.
 \end{figure}
 
 O sistema prático inicial foi publicado na conferência IEEE Computer Vision and Pattern
-Recognition (CVPR) 2010~\cite{Fabbri:Kimia:CVPR10}. Pretende-se realizar no IPRJ
+Recognition (CVPR) 2010~\cite{Fabbri:Kimia:CVPR10}. Pretende-se realizar neste
+projeto
 um artigo
 relatando uma versão mais avançada deste sistema a ser enviado para
-publicação na IEEE Pattern Analysis and Machine Intelligence.
+publicação na IEEE Pattern Analysis and Machine Intelligence (PAMI).
 
 \subsection{Desenvolvimento de Software Livre para Visão
 Computacional}\label{sec:sip}
 
 Pretende-se continuar o desenvolvimento de software livre, como uma
 forma de contribuir para a sociedade, angariar colaborações,
-garantir um controle de qualidade, e disseminar a pesquisa.
+garantir um controle de qualidade, e disseminar a pesquisa. Para tanto, será
+visada uma colaboração com centros de software livre associados ao IPRJ, o
+ICMC-USP, e continuada a atuação junto ao Lab Macambira (http://labmacambira.tk)
+de desenvolvimento de software livre. Mais especificamente, continuar-se-á o
+desenvolvimento da toolbox SIP de processamento de imagens para o Scilab, o
+desenvolvimento de tecnologias livres de processamento de vídeo, e o código de
+reconstrução 3D desenvolvido neste projeto também será aberto. Isto aumentará em
+muito a visibilidade da pesquisa bem como das instituições involvidas.
 
 \section{Cronograma das Atividades}
 A tabela abaixo mostra o cronograma para as principais atividades descritas. Para a
-execução deste projeto, o período foi dividido em etapas aproximadamente
-trimestrais.
+execução deste projeto, o período foi dividido em etapas anuais.
 \begin{center}
-\begin{tabular} {||r|c|c|c|c||}
+\begin{tabular} {||r|c|c|c||}
 \hline
-\textbf{Etapas} & 1 & 2 & 3 & 4 \\
+\textbf{Etapas} & 1 & 2 & 3 \\
 \hline
-Auto-calibração Trifocal & X & X &   & \\
+Auto-calibração Trifocal & X &  & \\
 \hline
-Sistema 3D Curve Sketch &   & X & X & X \\
+Teoria de Geometria Diferencial Projetiva de Superfícies &  & X &  \\
 \hline
-Estudo de Geometria Algébrica & X & X &   &  \\
+Sistema 3D Curve Sketch &   & X & X \\
 \hline
-Experimentos de Larga escala &   &   & X & X\\
+Estudo de Geometria Algébrica & X & X & \\
 \hline
-Software livre &   & X & X & X\\
+Experimentos de Larga escala &   &   & X\\
 \hline
-Elaboração de Publicações &   & X & X & X\\
+Software livre & X & X & X \\
+\hline
+Elaboração de Publicações & X & X & X\\
 \hline
 \end{tabular}
 \end{center}
 
 
-
-%\nocite{Fabbri:2002}
+\nocite{Fabbri:2002}
 \addcontentsline{toc}{section}{Refer\^{e}ncias}
 %\bibliographystyle{ieeetr}
 %\bibliography{personal,strings,shading,multiview,motion,Kimia,catagorization,edge-linking,deformable,medical,graphics,active-contours,texture,imaging,tracking,shape-papers,bib-header,video,math-books,math,psych-books,metric,edge,leymarie_pami_scaffold,vision-books,vision,nn-search,multidimscaling,psychophysics,indexing,segmentation,image-databases,shape-matching,neuro,skeleton,skeleton2D,aspect-graphs,recognition,surface-networks,ridge,proceedings,perceptual-grouping,continuation,graph-matching-2,cooper}
