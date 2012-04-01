@@ -126,12 +126,13 @@
 \begin{titlepage}
 %\begin{changemargin}{-0.5cm}{-1cm}
 \renewcommand{\title}{%
-  {\huge\textbf{\textsf{Projeto de Pesquisa}}}\\[60pt]
+  {\huge\textbf{\textsf{Projeto de Pesquisa}}}\\[40pt]
+{\huge{\textsf{Curvas e Superfícies para Reconstrução 3D e Auto-Calibração em Cenas Gerais}}}\\[40pt]%
 %  \mbox{Integração, Implementação e Aplicação à Bioinformática}%
 %  Evolution digitaler Schaltkreise%
 }
 \renewcommand{\author}{{\Large \textsf{Ricardo Fabbri}}}
-\renewcommand{\date}{\textsf{IPRJ--UERJ}\\\textsf{Agosto de 2011}}
+\renewcommand{\date}{\textsf{IPRJ--UERJ}\\\textsf{Abril de 2012}}
 \newcommand{\info}{%
 %  \raisebox{4pt}[-4pt]{%
 %\includegraphics[height=0.8cm]{figs/logoIPRJbw2.eps}\\
@@ -162,7 +163,7 @@
 
 %% Abstand zwischen Titel und Info-Feld.
 \newlength{\titleToInfo} 
-\setlength{\titleToInfo}{13cm}
+\setlength{\titleToInfo}{11cm}
 
 %% \myTextWidth erhoehen, um Info-Feld weiter nach Rechts zu schieben.
 %\newlength{\myTextWidth}
@@ -200,7 +201,7 @@
 %\tableofcontents
 %\contentsline {section}{Refer\^{e}ncias}{16}
 %\newpage
-%\doublespacing
+\doublespacing
 %\onehalfspacing
 %
 
@@ -214,20 +215,18 @@
 
 \section{Contextualização}
 
-O presente plano de pesquisa se refere a atividades propostas para a bolsa de
-produtividade em pesquisa do CNPq, a serem realizadas como professor 
-de nível Adjunto IV no Instituto Politécnico -- IPRJ da UERJ, Departamento de
-Modelagem Computacional. Pretende-se trabalhar em conjunto com o grupo de
-pesquisa do Prof. Francisco Moura Neto e com outros pesquisadores na
-realização de projetos e publicação de artigos, tanto no IPRJ como no ICMC
-(Instituto de Ciências Matemáticas e de Computação) e no IFSC (Instituto de
-Física) da USP de São Carlos, bem como a Brown University (EUA), a Universidade
-de Liverpool (Reino Unido), e a UFRJ.
+O presente plano de pesquisa se refere a atividades propostas para o Axílio à
+Pesquisa (APQ 1) da FAPERJ, a serem realizadas como professor de nível Adjunto
+IV no Instituto Politécnico -- IPRJ da UERJ, Departamento de Modelagem
+Computacional.  Pretende-se trabalhar em conjunto com o grupo de pesquisa do
+Prof.\ Francisco Moura Neto e com outros pesquisadores na realização de projetos
+e publicação de artigos, tanto no IPRJ como no ICMC (Instituto de Ciências
+Matemáticas e de Computação) e IFSC (Instituto de Física) da USP de São Carlos,
+bem como a Brown University (EUA), a Universidade de Liverpool (Reino Unido), e
+a UFRJ.
 
-\section{Reconstrução 3D a partir de Múltiplas Perspectivas e Calibragem de
-Câmeras usando-se Geometria Diferencial}\label{sec:3drec}
 
-\subsubsection{Introdução e Proposta}
+\section{Introdução e Proposta}
 A calibragem de imagens tiradas a partir de múltiplos pontos de vista, como no caso de
 vídeo ou sistemas de múltiplas câmeras, e a reconstrução 3D de cenas a partir
 destas imagens são problemas fundamentais em Visão Computacional. Aplicações
@@ -311,7 +310,7 @@ estacionárias (como as de reflectância) são condições de contorno para
 reconstrução de superfícies, e a variação de contornos de oclusão sob diferentes
 pontos de vista indica a curvatura da superfície.
 
-\subsubsection{Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
+\section{Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
 Será dada continuidade ao paradigma teórico que foi iniciado no Ph.D. do pesquisador proponente -- um estudo completo da geometria local de curvas
 gerais em múltiplas vistas (curvas seccionalmente diferenciáveis).  A teoria é
 de importância fundamental para qualquer aplicação que requer relações entre
@@ -341,7 +340,7 @@ sistema de auto-calibração de grande escala, em que pontos de vista são
 calibrados um a um relativos a uma reconstrução inicial. Uma versão inicial
 deste método está sendo desenvolvida e será submetida à IEEE Pattern Analysis
 and Machine Intelligence (PAMI) durante este projeto.
-\begin{figure}
+\begin{figure}[h]
 \centering
   \includegraphics[width=0.35\linewidth]{figs/pose-from-curves.eps}
   \includegraphics[width=0.35\linewidth]{figs/pose-from-curves-tangents.eps}
@@ -374,7 +373,7 @@ correspondência.
 \label{fig:trifocal:pose}
 \end{figure}
 
-\subsubsection{3D Curve Sketch: Um Sistema de Reconstrução 3D e
+\section{3D Curve Sketch: Um Sistema de Reconstrução 3D e
 Calibragem com Curvas}
 Durante o Ph.D., o pesquisador proponente iniciou uma abordagem, o \emph{3D
 Curve Sketch}, para o \emph{matching} e reconstrução de curvas a partir de
@@ -391,19 +390,19 @@ automático.
 \begin{figure}[h!]
 \begin{center}
 %   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
-\includegraphics[width=0.90\linewidth]{figs/3d-curve-sketch/capitol/capitol-edges3-nsf.eps}
+%\includegraphics[width=0.94\linewidth]{figs/3d-curve-sketch/capitol/capitol-edges3-nsf.eps}
+\includegraphics[width=0.98\linewidth]{figs/capitol-edges3-nsf-redux.eps}
 \end{center}
    \vspace{-0.7truecm}
    \caption{
    (a) Um subconjunto de vistas da sequência ``Capitol''; 
    (b) bordas sub-pixel com um limiar baixo, usadas para gerar 
-   curvas agrupadas (c) o mesmo a um limiar mais alto, usadas em vistas de
-   confirmação; (d) curvas com tamanho~$>$~40 usadas para uma reconstrução
-   inicial; (e) curvas menores usadas para reconstrução final; (f) uma curva é
+   curvas agrupadas, um limiar mais alto sendo usado em vistas de
+   confirmação; (c) curvas usadas para reconstrução; (d) uma curva é
    selecionada na imagem 1 e as curvas candidatas na imagem 2 com suficiente
    sobreposição epipolar são marcadas em azul. Nas próximas três imagens, a
-   hipótese de curva 3D reprojetada é mostrada em azul claro, confirmada em (g)
-   mas rejeitada em (h) e (i). O exemplo em (i) mostra a necessidade de
+   hipótese de curva 3D reprojetada é mostrada em azul claro, confirmada em (e)
+   mas rejeitada em (f) e (g). O exemplo em (g) mostra a necessidade de
    orientação (geometria diferencial) na presença de ruído.}
 \label{fig:edgemaps:contours}
 \end{figure}
@@ -415,7 +414,7 @@ um artigo
 relatando uma versão mais avançada deste sistema a ser enviado para
 publicação na IEEE Pattern Analysis and Machine Intelligence (PAMI).
 
-\subsection{Desenvolvimento de Software Livre para Visão
+\section{Desenvolvimento de Software Livre para Visão
 Computacional}\label{sec:sip}
 
 Pretende-se continuar o desenvolvimento de software livre, como uma
@@ -429,30 +428,64 @@ desenvolvimento de tecnologias livres de processamento de vídeo, e o código de
 reconstrução 3D desenvolvido neste projeto também será aberto. Isto aumentará em
 muito a visibilidade da pesquisa bem como das instituições involvidas.
 
+\section{Conclusão}
+Este projeto propõe o desenvolvimento da tecnologia necessária para um novo
+paradigma baseado em curvas para reconstrução 3D e calibração, complementando as
+presentes técnicas baseadas em pontos, as quais estão sendo usadas em larga
+escala. As curvas 3D reconstruídas, além de serem diretamente úteis, também
+serão usadas como uma armação sobre a qual secções de superfícies serão
+reconstruídas. A tecnologia proposta extenderá a capacidade das técnicas atuais,
+permitindo o processamento de uma maior variedade de cenas, ao mesmo tempo
+impondo menos restrições na aquisição. Prevê-se, também, que a precisão da
+calibração será melhorada através das curvas. Ademais, a estrutura geométrica
+intermediária das curvas -- o 3D \emph{curve sketch} -- fornece mais potencial
+em aplicações do que as simples nuvens de pontos, como por exemplo nas tarefas
+de reconhecimento e registro de imagens.
+
+\section{Metodologia}
+\begin{itemize}
+\item Auto-calibração Trifocal
+\item Sistema 3D Curve Sketch
+\item Estudo de Geometria Algébrica
+\item Experimentos de Larga escala
+\item Escrita de Software livre
+\item Elaboração de Publicações
+\end{itemize}
+
 \section{Cronograma das Atividades}
 A tabela abaixo mostra o cronograma para as principais atividades descritas. Para a
-execução deste projeto, o período foi dividido em etapas anuais.
+execução deste projeto, o período foi dividido em etapas aproximadamente
+semestrais.
 \begin{center}
-\begin{tabular} {||r|c|c|c||}
+\begin{tabular} {||r|c|c|c|c||}
 \hline
-\textbf{Etapas} & 1 & 2 & 3 \\
+\textbf{Etapas semestrais} & 1 & 2 & 3 & 4 \\
 \hline
-Auto-calibração Trifocal & X &  & \\
+Auto-calibração Trifocal & X & X &   & \\
 \hline
-Teoria de Geometria Diferencial Projetiva de Superfícies &  & X &  \\
+Sistema 3D Curve Sketch &   & X & X & X \\
 \hline
-Sistema 3D Curve Sketch &   & X & X \\
+Estudo de Geometria Algébrica & X & X &   &  \\
 \hline
-Estudo de Geometria Algébrica & X & X & \\
+Experimentos de Larga Escala &   &   & X & X\\
 \hline
-Experimentos de Larga escala &   &   & X\\
+Escrita de Software Livre &   & X & X & X\\
 \hline
-Software livre & X & X & X \\
-\hline
-Elaboração de Publicações & X & X & X\\
+Elaboração de Publicações &   & X & X & X\\
 \hline
 \end{tabular}
 \end{center}
+
+\section{Recursos Necessários}
+
+Para este projeto, pretende-se orientar 2 alunos de mestrado, sendo necessários,
+assim, recursos para o trabalho de 3 pesquisadores (orientador e alunos). O
+principal instrumento de trabalho nesta área é o computador, o qual é
+imprescindível, seguido de periféricos tais como webcams e impressoras.
+Portanto, neste pedido à FAPERJ estamos prevendo a compra de laptops
+de ponta capaze de executar os experimentos e programas de reconstrução 3D, bem como
+de uma webcam PS3 eye e de tintas para impressora colorida. O orçamento está
+anexado em uma planilha eletrônica.
 
 
 \nocite{Fabbri:2002}
