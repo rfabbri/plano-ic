@@ -226,7 +226,7 @@ bem como a Brown University (EUA), a Universidade de Liverpool (Reino Unido), e
 a UFRJ.
 
 
-\section{Introdução e Proposta}
+\section{Introdução e Motivação}
 A calibragem de imagens tiradas a partir de múltiplos pontos de vista, como no caso de
 vídeo ou sistemas de múltiplas câmeras, e a reconstrução 3D de cenas a partir
 destas imagens são problemas fundamentais em Visão Computacional. Aplicações
@@ -240,7 +240,7 @@ de uma coleção de fotografias com relação a uma cena (\eg, o sistema
 \emph{Phototourism}~\cite{Argarwal:Snavely:etal:ICCV09} e a funcionalidade
 \emph{Look Around} do Google Panoramio e Steet View), manipulação
 robótica, e a metrologia a partir de câmeras na
-indústria automobilística.
+indústria automobilística e metal-mecânica.
 
 Uma tecnologia operacional tem evoluido, mais recentemente para sistemas de grande
 escala~\cite{Argarwal:Snavely:etal:ICCV09,Pollefeys:VanGool:etal:handheld:IJCV2004},
@@ -265,6 +265,7 @@ de curvas 3D chamado o \emph{3D Curve Sketch}. Estas curvas delineam contornos e
 marcas das superfícies que formam a cena 3D a ser reconstruída, e formam uma
 estrutura de suporte sobre a qual as superfícies serão reconstruídas.
 
+\section{Objetivos}
 A pesquisa proposta tem como objetivo investigar e promover o uso de evidência de
 fragmentos de curvas 2D que são imagens de curvas 3D, para calibragem,
 casamento (\emph{matching}) e reconstrução na forma de uma estrutura eficiente
@@ -281,36 +282,26 @@ desenvolvimento de uma teoria de geometria diferencial para curvas e superfícies
 gerais em múltiplas vistas. Este projeto dará continuidade e grande
 desenvolvimento a idéias pioneiras semeadas durante o Ph.D.\ na Brown University do pesquisador
 proponente.
+\begin{figure}
+\begin{center}
+%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
+   \includegraphics[width=1.0\linewidth]{figs/mega-system-drawing-pt.eps}
+\end{center}
+\vspace{-0.7truecm}
+   \caption{%
+   Uma visão geral do sistema automático de reconstrução 3D envisado pela nossa
+   pesquisa. A entrada consite em um conjunto de $N$ imagens (fotos ou vídeo)
+   tiradas de uma imagem, com $N$ sendo ao menos 3, mas típicamente muito maior,
+   e a saída é um conjunto de curvas e superfícies reconstruídas, junto com
+   modelos de câmeras (posição, rotação, \emph{focallength}, etc) otimizados.
+   Na prática, há o feedback entre os módulos.$^1$
+   }\label{fig:system:diagram}
+\end{figure}
+\footnotetext[1]{Os
+   termos na figura não foram traduzidos pois contêm um número considerável de
+   jargões que atualmente não possuem equivalentes satisfatórios em português.}
 
-\paragraph{As vantagens das curvas.}
-As curvas provenientes de descontinuidade de bordas nas imagens são mais densas
-e mais bem-estruturadas do que pontos isolados, e representam eficientemente a
-imagem ou cena 3D subjacente. Elas fornecem um bom compromisso entre uma
-representação altamente redundante na forma de arrays de píxels, e uma
-representação altamente esparsa das nuvens de pontos de interesse. Isso permite
-o cálculo rápido de reconstruções 3D (os \emph{3D curve sketch}), que, apesar de
-não possuirem superfícies explícitas, são ainda reconhecíveis, estruturadas, e
-de eficiente manipulação e armazenagem. Essa efficiência representacional é
-evidenciada em uma tendência recente em computação gráfica de usar renderizações
-baseadas em curvas (\emph{line-based} rendering) para aplicações de internet que
-exigem eficiência, e também por razões estéticas. A riqueza estrutural de curvas
-é illustrada pelo fato de ser impossível registrar uma nova imagem não-calibrada
-com relação a uma nuvem de pontos 3D por si só, ao passo que essa tarefa se
-torna possível com curvas 3D dada a maior estruturação geométrica (\eg,
-reprojetando-se as curvas 3D na nova imagem e alinhando-as às curvas detectadas
-na imagem). Ademais, é bem sabido que representações basedas em bordas
-representam eficiente o conteúdo de uma imagem, o que
-motiva uma reconstrução de curvas 3D eficiente para armazenar a informação
-geométrica mais relevante de uma cena 3D. Curvas também têm maior invariância do
-que pontos de interesse a mudanças de iluminação, são mais estáveis sob uma
-maior separação entre as imagens, e são mais precisamente
-localizadas na direção normal. Ademais, estrutura de curvas de bordas em uma
-imagem é correlacionada com propriedades das superfícies subjacentes: curvas
-estacionárias (como as de reflectância) são condições de contorno para
-reconstrução de superfícies, e a variação de contornos de oclusão sob diferentes
-pontos de vista indica a curvatura da superfície.
-
-\section{Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
+\subsection{Desenvolvimento da Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
 Será dada continuidade ao paradigma teórico que foi iniciado no Ph.D. do pesquisador proponente -- um estudo completo da geometria local de curvas
 gerais em múltiplas vistas (curvas seccionalmente diferenciáveis).  A teoria é
 de importância fundamental para qualquer aplicação que requer relações entre
@@ -373,7 +364,7 @@ correspondência.
 \label{fig:trifocal:pose}
 \end{figure}
 
-\section{3D Curve Sketch: Um Sistema de Reconstrução 3D e
+\subsection{Desenvolvimento do sistema 3D \emph{Curve Sketch}: Um Sistema de Reconstrução 3D e
 Calibragem com Curvas}
 Durante o Ph.D., o pesquisador proponente iniciou uma abordagem, o \emph{3D
 Curve Sketch}, para o \emph{matching} e reconstrução de curvas a partir de
@@ -414,9 +405,78 @@ um artigo
 relatando uma versão mais avançada deste sistema a ser enviado para
 publicação na IEEE Pattern Analysis and Machine Intelligence (PAMI).
 
-\section{Desenvolvimento de Software Livre para Visão
-Computacional}\label{sec:sip}
+\section{Justificativa: as vantagens das curvas.}
+Além de possibilitarem as inúmeras aplicações do sistema proposto citadas no início da
+Introdução, as curvas como \emph{features} básicas para reconstrução 3D e
+calibração têm as seguintes vantagens.  As curvas provenientes de
+descontinuidade de bordas nas imagens são mais densas e mais bem-estruturadas do
+que pontos isolados, e representam eficientemente a imagem ou cena 3D
+subjacente. Elas fornecem um bom compromisso entre uma representação altamente
+redundante na forma de arrays de píxels, e uma representação altamente esparsa
+das nuvens de pontos de interesse. Isso permite o cálculo rápido de
+reconstruções 3D (os \emph{3D curve sketch}), que, apesar de não possuirem
+superfícies explícitas, são ainda reconhecíveis, estruturadas, e de eficiente
+manipulação e armazenagem. Essa efficiência representacional é evidenciada em
+uma tendência recente em computação gráfica de usar renderizações baseadas em
+curvas (\emph{line-based} rendering) para aplicações de internet que exigem
+eficiência, e também por razões estéticas. A riqueza estrutural de curvas é
+illustrada pelo fato de ser impossível registrar uma nova imagem não-calibrada
+com relação a uma nuvem de pontos 3D por si só, ao passo que essa tarefa se
+torna possível com curvas 3D dada a maior estruturação geométrica (\eg,
+reprojetando-se as curvas 3D na nova imagem e alinhando-as às curvas detectadas
+na imagem). Ademais, é bem sabido que representações basedas em bordas
+representam eficiente o conteúdo de uma imagem, o que motiva uma reconstrução de
+curvas 3D eficiente para armazenar a informação geométrica mais relevante de uma
+cena 3D. Curvas também têm maior invariância do que pontos de interesse a
+mudanças de iluminação, são mais estáveis sob uma maior separação entre as
+imagens, e são mais precisamente localizadas na direção normal. Ademais,
+estrutura de curvas de bordas em uma imagem é correlacionada com propriedades
+das superfícies subjacentes: curvas estacionárias (como as de reflectância) são
+condições de contorno para reconstrução de superfícies, e a variação de
+contornos de oclusão sob diferentes pontos de vista indica a curvatura da
+superfície.
 
+\section{Metas}
+\paragraph{Elaboração de Publicações}
+Como metas específica deste projeto, tem-se a elaboração de, ao menos, 3
+publicações por ano nas principais revistas e conferências da área. Dentre as
+revistas visadas, temos: International
+Journal of Computer Vision, IEEE Pattern Analysis and Machine Intelligence, IEEE
+Transactions in Image Processing, Pattern Recognition, ACM Computing Surveys, e
+Journal of Mathematical Imaging and Vision. Também pretende-se enviar trabalhos
+completos (arigos) às mais importantes conferências na área, a saber: IEEE CVPR
+(Computer Vision and Pattern Recognition), IEEE ECCV (European Conference in
+Computer Vision), IEEE ICCV (International Conference in Computer Vision),  ACM
+SIGGRAPH, e o IEEE SIBIGRAPI.
+
+\section{Metodologia}
+A execução do projeto será dividida nas seguintes frentes, visando atingir as
+metas descritas na seção anterior, na ordem descrita na próxima seção:
+\begin{itemize}
+\item \textbf{Solução do problema de auto-calibração trifocal.} Isto será
+crucial como primeiro passo para permitir que a calibração do sistema se dê de
+maneira automática, conveniente e flexível. Esta etapa involve um
+desenvolvimento de algoritmo a partir de uma teoria clara de geometria algébrica
+de diferencial, a ser desenvolvida em conjunto com o matemático Peter J.\ Giblin
+da Universidade de Liverpool.
+\item \textbf{Estudo de Geometria Algébrica.} Pretende-se estudar a solução de
+sistemas de equações algébricas de maneira aprofundada, para auxiliar no item
+anterior. Esta etapa também contará com reuniões com o matemático Peter J.\
+Giblin.
+\item \textbf{Desenvolvimento do sistema 3D Curve Sketch.} Esta frente de
+atuação involve a implementação de diversos aspectos do sistema, de forma a melhorar  
+sua automação, conveniência e flexibilidade quanto ao tipo de cena. O método de
+auto-calibração trifocal será usado como núcleo para a calibração automática
+tanto incremental como global de de milhares de câmeras. Aqui, também,
+pretende-se iniciar a reconstrução 3D de superfícies.
+\item \textbf{Validação e Experimentos de Larga escala.} Pretende-se realizar
+experimentos na reconstrução em larga escala de exteriores e de interiores a
+partir de milhares de fotografias ou quadros de vídeo. A validação será
+realizada através de conjuntos de dados padrão utilizados na área, bem como
+através da montagem dos nossos próprios conjuntos de dados, comparando-se a
+reconstrução com àquela realizada através de sistemas tradicionais de calibração
+manual e reconstrução 3D de pontos de interesse.
+\item \textbf{Desenvolvimento de Software livre para Visão Computacional.}
 Pretende-se continuar o desenvolvimento de software livre, como uma
 forma de contribuir para a sociedade, angariar colaborações,
 garantir um controle de qualidade, e disseminar a pesquisa. Para tanto, será
@@ -427,34 +487,12 @@ desenvolvimento da toolbox SIP de processamento de imagens para o Scilab, o
 desenvolvimento de tecnologias livres de processamento de vídeo, e o código de
 reconstrução 3D desenvolvido neste projeto também será aberto. Isto aumentará em
 muito a visibilidade da pesquisa bem como das instituições involvidas.
-
-\section{Conclusão}
-Este projeto propõe o desenvolvimento da tecnologia necessária para um novo
-paradigma baseado em curvas para reconstrução 3D e calibração, complementando as
-presentes técnicas baseadas em pontos, as quais estão sendo usadas em larga
-escala. As curvas 3D reconstruídas, além de serem diretamente úteis, também
-serão usadas como uma armação sobre a qual secções de superfícies serão
-reconstruídas. A tecnologia proposta extenderá a capacidade das técnicas atuais,
-permitindo o processamento de uma maior variedade de cenas, ao mesmo tempo
-impondo menos restrições na aquisição. Prevê-se, também, que a precisão da
-calibração será melhorada através das curvas. Ademais, a estrutura geométrica
-intermediária das curvas -- o 3D \emph{curve sketch} -- fornece mais potencial
-em aplicações do que as simples nuvens de pontos, como por exemplo nas tarefas
-de reconhecimento e registro de imagens.
-
-\section{Metodologia}
-\begin{itemize}
-\item Auto-calibração Trifocal
-\item Sistema 3D Curve Sketch
-\item Estudo de Geometria Algébrica
-\item Experimentos de Larga escala
-\item Escrita de Software livre
-\item Elaboração de Publicações
+\item Elaboração de Publicações como descrito nas metas.
 \end{itemize}
 
 \section{Cronograma das Atividades}
-A tabela abaixo mostra o cronograma para as principais atividades descritas. Para a
-execução deste projeto, o período foi dividido em etapas aproximadamente
+A tabela abaixo mostra o cronograma para as principais frentes de atuação descritas na
+seção anterior. Para a execução deste projeto, o período foi dividido em etapas aproximadamente
 semestrais.
 \begin{center}
 \begin{tabular} {||r|c|c|c|c||}
@@ -476,17 +514,41 @@ Elaboração de Publicações &   & X & X & X\\
 \end{tabular}
 \end{center}
 
-\section{Recursos Necessários}
 
-Para este projeto, pretende-se orientar 2 alunos de mestrado, sendo necessários,
-assim, recursos para o trabalho de 3 pesquisadores (orientador e alunos). O
-principal instrumento de trabalho nesta área é o computador, o qual é
-imprescindível, seguido de periféricos tais como webcams e impressoras.
-Portanto, neste pedido à FAPERJ estamos prevendo a compra de laptops
-de ponta capaze de executar os experimentos e programas de reconstrução 3D, bem como
-de uma webcam PS3 eye e de tintas para impressora colorida. O orçamento está
-anexado em uma planilha eletrônica.
 
+\section{Equipe, Recursos Necessários e Orçamento}
+
+Para este projeto, pretende-se orientar ao menos 2 alunos de mestrado, sendo
+necessários, assim, recursos para o trabalho de ao menos 3 pesquisadores
+(orientador e alunos). Os principais equipamentos para o trabalho nesta área são
+os \emph{computadores de alto desempenho}, os quais são imprescindíveis para
+processamento gráfico, seguido de periféricos tais como webcams e impressoras.
+Portanto, neste pedido à FAPERJ estamos prevendo a compra de 2 laptops de ponta
+(necessários além do que já possuímos no laboratório), capazes de executar os
+experimentos e programas avançados de reconstrução 3D, tanto no laboratório como
+em campo para a aquisição em tempo real. O orçamento está detalhado em uma
+planilha eletrônica em anexo. Também anexamos um orçamento detalhado através do
+site da Apple.
+
+Conforme o orçamento em anexo, os laptops de processamento gráfico custarão
+$2\times US\$4.176,00$ dólares que, de acordo com a taxa de câmbio de 1/4/2012 resulta em 
+R\$15.234,04 reais. A taxa de importação prevista no orçamento é de 18\%,
+resultando em um custo adicional de R\$2,742.13 reais. Assim, \textbf{o total
+requisitado é de 17.976,17 reais.}
+
+\section{Conclusão}
+Este projeto propõe o desenvolvimento da tecnologia necessária para um novo
+paradigma baseado em curvas para reconstrução 3D e calibração, complementando as
+presentes técnicas baseadas em pontos, as quais estão sendo usadas em larga
+escala. As curvas 3D reconstruídas, além de serem diretamente úteis, também
+serão usadas como uma armação sobre a qual secções de superfícies serão
+reconstruídas. A tecnologia proposta extenderá a capacidade das técnicas atuais,
+permitindo o processamento de uma maior variedade de cenas, ao mesmo tempo
+impondo menos restrições na aquisição. Prevê-se, também, que a precisão da
+calibração será melhorada através das curvas. Ademais, a estrutura geométrica
+intermediária das curvas -- o 3D \emph{curve sketch} -- fornece mais potencial
+em aplicações do que as simples nuvens de pontos, como por exemplo nas tarefas
+de reconhecimento e registro de imagens.
 
 \nocite{Fabbri:2002}
 \addcontentsline{toc}{section}{Refer\^{e}ncias}
