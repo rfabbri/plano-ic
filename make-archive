@@ -1,0 +1,2 @@
+#!/bin/sh
+git archive HEAD --prefix='fabbri-bruno-etal-tsallis-physicaA/' | gzip -9 > fabbri-bruno-etal-tsallis-physicaA-`date +%H%Z-%Y%m%d`.tar.gz
