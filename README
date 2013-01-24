@@ -1,0 +1,35 @@
+
+Este é um modelo para projetos de iniciacao cientifica para instituicoes de
+fomento no Brasil, na area de computacao.
+
+
+== Compilando e Visualizando ==
+
+Para compilar
+
+  make 
+
+Para ver o resultado
+
+
+Em PDF:
+
+  evince paper.pdf
+ou
+  okular paper.pdf
+
+
+
+Em DVI:
+
+  xdvi paper.dvi
+
+ou
+
+  okular paper.dvi
+
+
+
+== Autores ==
+
+prof. Ricardo Fabbri, PhD - IPRJ/UERJ http://www.lems.brown.edu/~rfabbri
