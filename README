@@ -1,4 +1,3 @@
-
 Este é um modelo para projetos de iniciacao cientifica para instituicoes de
 fomento no Brasil, na area de computacao.
 
@@ -12,6 +11,15 @@ Para compilar
 Para ver o resultado
 
 
+Em DVI, que eh o formato utilizado neste modelo, o xdvi eh mais rapido:
+
+  xdvi paper.dvi
+
+ou tambem o okular, que eh mais amigavel porem mais pesado:
+
+  okular paper.dvi
+
+
 Em PDF:
 
   evince paper.pdf
@@ -19,15 +27,11 @@ ou
   okular paper.pdf
 
 
+== Gerando PDF a partir do DVI ==
 
-Em DVI:
+Recomenda-se dvipdfm:
 
-  xdvi paper.dvi
-
-ou
-
-  okular paper.dvi
-
+  dvipdfm paper
 
 
 == Autores ==
