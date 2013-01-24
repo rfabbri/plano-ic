@@ -1,42 +1,9 @@
 \begin{thebibliography}{1}
 
-\bibitem{Ablan:3DPhoto:book}
-D.~Ablan, {\em {Digital photography for 3D imaging and animation}}.
-\newblock Wiley, 2007.
-
-\bibitem{Dobbert:Matchmoving:book}
-T.~Dobbert, {\em {Matchmoving: The Invisible Art of Camera Tracking}}.
-\newblock Sybex, 2005.
-
-\bibitem{Argarwal:Snavely:etal:ICCV09}
-S.~Agarwal, N.~Snavely, I.~Simon, S.~M. Seitz, and R.~Szeliski, ``Building
-  {Rome} in a day,'' in {\em ICCV '09: Proceedings of the Twelvth IEEE
-  International Conference on Computer Vision}, IEEE Computer Society, 2009.
-
-\bibitem{Pollefeys:VanGool:etal:handheld:IJCV2004}
-M.~Pollefeys, L.~Van~Gool, M.~Vergauwen, F.~Verbiest, K.~Cornelis, J.~Tops, and
-  R.~Koch, ``Visual modeling with a hand-held camera,'' {\em International
-  Journal of Computer Vision}, vol.~59, no.~3, pp.~207--232, 2004.
-
-\bibitem{mikolajczyk:schmid:IJCV04}
-K.~Mikolajczyk and C.~Schmid, ``Scale and affine invariant interest point
-  detectors,'' {\em IJCV}, vol.~60, no.~1, pp.~63--86, 2004.
-
 \bibitem{Fabbri:Kimia:IJCV2010}
-R.~Fabbri and B.~B. Kimia, ``Multiview differential geometry of curves,'' {\em IJCV},
-\newblock 2011 (accepted).
-
-\bibitem{Tamrakar:Kimia:ICCV07}
-A.~Tamrakar and B.~B. Kimia, ``No grouping left behind: From edges to curve
-  fragments,'' in {\em ICCV '07: Proceedings of the Eleventh IEEE International
-  Conference on Computer Vision}, (Rio de Janeiro, Brazil), IEEE Computer
-  Society, October 2007.
-
-\bibitem{Fabbri:Kimia:CVPR10}
-R.~Fabbri and B.~B. Kimia, ``{3D} curve sketch: Flexible curve-based stereo
-  reconstruction and calibration,'' in {\em Proceedings of the IEEE Conference
-  on Computer Vision and Pattern Recognition}, (San Francisco, California,
-  USA), IEEE Computer Society Press, 2010.
+R.~F. B.~B. Kimia, ``Multiview differential geometry of curves,'' {\em IJCV},
+  2010 (submitted).
+\newblock accepted 2011.
 
 \bibitem{Fabbri:2002}
 R.~Fabbri, L.~Estrozi, and L.~Costa, ``On {V}oronoi diagrams and medial axes,''

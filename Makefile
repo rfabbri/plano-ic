@@ -8,7 +8,7 @@
 # - $ make clean      ... to clean auxiliary files
 # - $ make clean all  ... to clean everything generated
 
-latex_file = metaMails
+latex_file = paper
 
 pdf: dvi
 	dvipdf $(latex_file)
