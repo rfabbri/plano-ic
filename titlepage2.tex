@@ -1,0 +1,69 @@
+\begin{titlepage}
+\begin{changemargin}{-0.5cm}{-1cm}
+\renewcommand{\title}{%
+  {\LARGE Evolução de Fronteiras e Busca de Caminhos Mínimos em 
+  Visão Computacional}\\[4pt]
+  \mbox{Estudo, Unificação e Aplicação}%
+%  Evolution digitaler Schaltkreise%
+}
+\renewcommand{\author}{Ricardo Fabbri}
+\renewcommand{\date}{\today}
+\newcommand{\info}{%
+  \raisebox{4pt}[-4pt]{%
+  \includegraphics[height=1.3cm]{figs/cvrg.epsi} }\\
+
+  Grupo de Visão Cibernética \\
+  Instituto de Física de São Carlos\\
+  Universidade de São Paulo\\[.3cm]
+
+  Instituto de Ciências Matemáticas \\
+  e de Computação\\
+  Universidade de São Paulo\\[1.5cm]
+
+  \date\\[1.5cm]
+
+  \textbf{Orientador de Iniciação Científica}\\[4pt]
+  Prof.\ Dr.\ Luciano da Fontoura Costa\\[4pt]
+  \textbf{FAPESP Processo}\\[4pt]
+   01/09335-8
+}
+
+%% Abstand zwischen oberem Blattrand und Titel.
+\newlength{\topToTitle} 
+\setlength{\topToTitle}{30pt}
+
+%% Abstand zwischen linkem Blattrand und Titel.
+\newlength{\leftToTitle} 
+\setlength{\leftToTitle}{-50pt}
+
+%% Abstand zwischen Titel und Info-Feld.
+\newlength{\titleToInfo} 
+\setlength{\titleToInfo}{6cm}
+
+%% \myTextWidth erhoehen, um Info-Feld weiter nach Rechts zu schieben.
+\newlength{\myTextWidth}
+\setlength{\myTextWidth}{\textwidth}
+\advance\myTextWidth by 1.5cm
+
+
+\thispagestyle{empty}
+\vspace*{\topToTitle}
+\begin{minipage}{\myTextWidth}
+  \sffamily
+  \hspace*{\leftToTitle}\begin{minipage}{11cm}
+    \Large\textbf{Projeto de Doutorado}\\[1.5cm]
+    \title\\[1.5cm]
+    \author
+  \end{minipage}\\
+
+  %% \enlargethispage{} um ggfs. Titel und Info-Feld weiter
+  %% auseinanderziehen zu koennen.
+  \vspace*{\titleToInfo}
+
+  \begin{minipage}{\textwidth}
+    \flushright
+    \info
+  \end{minipage}
+\end{minipage}%
+\end{changemargin}
+\end{titlepage}
