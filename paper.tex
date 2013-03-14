@@ -157,7 +157,7 @@ LabMacambira.sourceforge.net para a tecnologia de software e PulaPirata.com
 para o design de jogos, dentre outros.
 
 
-\section{Introdução e Motivação}
+\section{Introdução e Justificativa}
 
 A computação atual compreende uma ampla diversidade de ambientes de software e
 hardware, coexistindo, por exemplo, 
@@ -278,49 +278,21 @@ versus Google PlayN, sendo essas as tecnologias mais promissoras de acordo com
 pesquisa preliminar realizada para este projeto involvendo listas de discussão e
 programação de um aplicativo simples.
 
-\section{Justificativa: as vantagens das curvas.}
-Além de possibilitarem as inúmeras aplicações do sistema proposto citadas no início da
-Introdução, as curvas como \emph{features} básicas para reconstrução 3D e
-calibração têm as seguintes vantagens.  As curvas provenientes de
-descontinuidade de bordas nas imagens são mais densas e mais bem-estruturadas do
-que pontos isolados, e representam eficientemente a imagem ou cena 3D
-subjacente. Elas fornecem um bom compromisso entre uma representação altamente
-redundante na forma de arrays de píxels, e uma representação altamente esparsa
-das nuvens de pontos de interesse. Isso permite o cálculo rápido de
-reconstruções 3D (os \emph{3D curve sketch}), que, apesar de não possuirem
-superfícies explícitas, são ainda reconhecíveis, estruturadas, e de eficiente
-manipulação e armazenagem. Essa efficiência representacional é evidenciada em
-uma tendência recente em computação gráfica de usar renderizações baseadas em
-curvas (\emph{line-based} rendering) para aplicações de internet que exigem
-eficiência, e também por razões estéticas. A riqueza estrutural de curvas é
-illustrada pelo fato de ser impossível registrar uma nova imagem não-calibrada
-com relação a uma nuvem de pontos 3D por si só, ao passo que essa tarefa se
-torna possível com curvas 3D dada a maior estruturação geométrica (\eg,
-reprojetando-se as curvas 3D na nova imagem e alinhando-as às curvas detectadas
-na imagem). Ademais, é bem sabido que representações basedas em bordas
-representam eficiente o conteúdo de uma imagem, o que motiva uma reconstrução de
-curvas 3D eficiente para armazenar a informação geométrica mais relevante de uma
-cena 3D. Curvas também têm maior invariância do que pontos de interesse a
-mudanças de iluminação, são mais estáveis sob uma maior separação entre as
-imagens, e são mais precisamente localizadas na direção normal. Ademais,
-estrutura de curvas de bordas em uma imagem é correlacionada com propriedades
-das superfícies subjacentes: curvas estacionárias (como as de reflectância) são
-condições de contorno para reconstrução de superfícies, e a variação de
-contornos de oclusão sob diferentes pontos de vista indica a curvatura da
-superfície.
-
 \section{Metas}
 \paragraph{Elaboração de Publicações}
-Como metas específica deste projeto, tem-se a elaboração de, ao menos, 3
-publicações por ano nas principais revistas e conferências da área. Dentre as
-revistas visadas, temos: International
-Journal of Computer Vision, IEEE Pattern Analysis and Machine Intelligence, IEEE
-Transactions in Image Processing, Pattern Recognition, ACM Computing Surveys, e
-Journal of Mathematical Imaging and Vision. Também pretende-se enviar trabalhos
-completos (arigos) às mais importantes conferências na área, a saber: IEEE CVPR
-(Computer Vision and Pattern Recognition), IEEE ECCV (European Conference in
-Computer Vision), IEEE ICCV (International Conference in Computer Vision),  ACM
-SIGGRAPH, e o IEEE SIBIGRAPI.
+Como metas específica deste projeto, tem-se a elaboração de uma publicação em
+congresso ou revista contendo um estudo comparativo das diferentes técnicas
+modernas de programação multi-plataforma.
+
+\paragraph{Programação de Software}
+Como meta deste projeto necessária à realização do estudo comparativo,
+tem-se a programação de um software multimídia usando-se tecnologias
+multi-plataformas e com software aberto ou livre. A princípio a comparação sera
+focada em (ao menos) HTML5/Javascript versus Google PlayN. O software completo
+deverá ser implementado em PlayN, sendo que HTML5 deverá ser aprendido de
+maneira secundária. Iremos escolher um \emph{videogame} que funcionará em Web
+bem como em Java nativo e em navegadores para celular, sendo que o aluno irá
+documentar as dificuldades ao longo do processo de desenvolvimento.
 
 \section{Metodologia}
 A execução do projeto será dividida nas seguintes frentes, visando atingir as
