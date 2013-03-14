@@ -241,111 +241,42 @@ ou ajudem uma maior conscientização de seus meios. Videogames ou simuladores são
 aplicativos interativos que constituem uma forma moderna de expressão humana,
 extendendo as possibilidades tradicionais dos filmes, livros, pintura, etc.
 
+% TODO
+% - falar sobre GWT e PlayN e tradutores pra javascript
+
 \section{Objetivos}
 
-\subsection{Desenvolvimento da Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
-Será dada continuidade ao paradigma teórico que foi iniciado no Ph.D. do pesquisador proponente -- um estudo completo da geometria local de curvas
-gerais em múltiplas vistas (curvas seccionalmente diferenciáveis).  A teoria é
-de importância fundamental para qualquer aplicação que requer relações entre
-imagens e a estrutura 3D de curvas, tais como o casamento estereoscópico,
-rastreamento (\emph{tracking}) de curvas, e estimação de câmeras. Anteriormente
-a este projeto, já foi
-produzida uma
-abordagem unificada para modelagem de estruturas curvilíneas em múltiplas
-vistas, cobrindo curvas fixas, de oclusão, e não-rígidas, para os casos de um
-número discreto de pontos de vista e movimento diferenciável de câmera. Esssa
-abordagem foi submetida ao prestigioso International Journal of Computer Vision,
-tendo o artigo sido aceito para publicação~\cite{Fabbri:Kimia:IJCV2010}.
-Também
-será continuado um estudo no caso da geometria diferencial de superfícies curvas,
-sua variação local de iluminação, bem como o comportamento local de curvas em
-superfícies.
+O presente projeto pretende fazer com que o aluno ganhe experiência com técnicas
+modernas de desenvolvimento de software multi-plataforma, desenvolvendo um
+estudo comparativo e, possívelmente, propondo novas soluçoes ou \emph{best
+practices}. Em particular, pretende-se estudar modos de se unir a força do Java
+e do Navegador Web, que avaliamos como sendo as mais modernas e mais utilizadas
+tecnologias multi-plataforma. Para explorar os limites dessas tecnologias,
+iremos abordar programação multimídia, incluindo audiovisual e interativa/tempo
+real. Apenas recentemtente têm-se desenvolvido padrões Web para tratar de
+processamento de áudio, vídeo e interatividade de forma multi-plataforma e
+consistente.
 
-Pretende-se dar continuidade a uma linha de pesquisa realizada junto ao prof.\
-Peter Giblin da Universidade de Liverpool
-em que um método foi desenvolvido para calibragem de câmera, dados
-medidas de geometria diferencial. Dada
-uma curva 3D, e uma projeção perspectiva 2D, bem como geometria diferencial
-(tangente, curvaturas, \etc) medida em ambas as curvas, o método 
-permite calibrar as câmeras, recuperando o centro de projeção relativo à curva
-3D, bem como a rotação da câmera, Figura~\ref{fig:pose:from:curves}. Este método é fundamental para o uso em um
-sistema de auto-calibração de grande escala, em que pontos de vista são
-calibrados um a um relativos a uma reconstrução inicial. Uma versão inicial
-deste método está sendo desenvolvida e será submetida à IEEE Pattern Analysis
-and Machine Intelligence (PAMI) durante este projeto.
-\begin{figure}[h]
-\centering
-  \includegraphics[width=0.35\linewidth]{figs/pose-from-curves.eps}
-  \includegraphics[width=0.35\linewidth]{figs/pose-from-curves-tangents.eps}
-\caption{% 
-(a) O problema de se determinar a pose da câmera, $\rot$, $\transl$, dadas curvas
-espaciais em um sistema global de coordenadas e suas projeções em um sistema de
-coordenados da imagem. A abordagem deste projeto consiste  em (b) determinar $\rot$,
-$\transl$, dados pontos-tangentes em (ou seja, geometria diferencial local) em
-um sistema de coordenadas global 3D e na imagem.
-}\label{fig:pose:from:curves}
-\end{figure}
-Durante este projeto, também será abordado um
-problema similar para três câmeras, sem exigir o conhecimento de modelo de curva
-3D. Dados pontos de curva atribuídos de geometria diferencial (\eg, tangente) em
-correspondência entre três imagens, o objetivo é determinar a pose relativa das
-câmeras, Figura~\ref{fig:trifocal:pose}. Pretende-se publicar este método em uma das
-principais revistas de computação: International Journal of Computer Vision
-(IJCV) ou
-IEEE Pattern Analysis and Machine Intelligence (PAMI).
-\begin{figure}
-\begin{center}
-   \centering
-   \includegraphics[height=2in]{figs/trifocal-pose-from-curves-tangents.eps}
-\end{center}
-   \vspace{-0.7truecm}
-   \caption{
-Determinando a pose de três câmeras a partir de geometria diferencial em
-correspondência.
-}
-\label{fig:trifocal:pose}
-\end{figure}
+Como explicado mais extensamente na Introdução, um dos aplicativos mais
+importantes no âmbito multimídia em tempo real são os \emph{videogames}. Os jogos
+de computador geralmente exercitam diversas tecnolgias simultâneamente: áudio,
+vídeo, interação, e processamento em tempo real. Como tais tecnologias têm sido
+padronizadas apenas recentemente em navegadores Web, vemos que \emph{videogames}
+constituem uma boa classe de aplicativos para o teste de dos limites das tecnologias
+multi-plataforma atuais.
 
-\subsection{Desenvolvimento do sistema 3D \emph{Curve Sketch}: Um Sistema de Reconstrução 3D e
-Calibragem com Curvas}
-Durante o Ph.D., o pesquisador proponente iniciou uma abordagem, o \emph{3D
-Curve Sketch}, para o \emph{matching} e reconstrução de curvas a partir de
-múltiplas vistas de cenas gerais, e para otimizar a calibracão dessas câmeras
-também a partir de curvas. As curvas utilizadas são fragmentos de bordas obtidos
-através de um \emph{edge linker}~\cite{Tamrakar:Kimia:ICCV07}, veja a
-Figura~\ref{fig:edgemaps:contours} para uma idéia geral de alguns aspectos
-práticos do sistema. Neste trabalho inicial, modelos iniciais de câmera são
-fornecidos, os quais típicamente são imprecisos, e produz uma coleção densa de
-curvas 3D, o \emph{3D Curve Sketch}. Pretende-se aplicar os métodos de
-autocalibragem da seção anterior para ajudar a produzir um sistema totalmente
-automático.
-
-\begin{figure}[h!]
-\begin{center}
-%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
-%\includegraphics[width=0.94\linewidth]{figs/3d-curve-sketch/capitol/capitol-edges3-nsf.eps}
-\includegraphics[width=0.98\linewidth]{figs/capitol-edges3-nsf-redux.eps}
-\end{center}
-   \vspace{-0.7truecm}
-   \caption{
-   (a) Um subconjunto de vistas da sequência ``Capitol''; 
-   (b) bordas sub-pixel com um limiar baixo, usadas para gerar 
-   curvas agrupadas, um limiar mais alto sendo usado em vistas de
-   confirmação; (c) curvas usadas para reconstrução; (d) uma curva é
-   selecionada na imagem 1 e as curvas candidatas na imagem 2 com suficiente
-   sobreposição epipolar são marcadas em azul. Nas próximas três imagens, a
-   hipótese de curva 3D reprojetada é mostrada em azul claro, confirmada em (e)
-   mas rejeitada em (f) e (g). O exemplo em (g) mostra a necessidade de
-   orientação (geometria diferencial) na presença de ruído.}
-\label{fig:edgemaps:contours}
-\end{figure}
-
-O sistema prático inicial foi publicado na conferência IEEE Computer Vision and Pattern
-Recognition (CVPR) 2010~\cite{Fabbri:Kimia:CVPR10}. Pretende-se realizar neste
-projeto
-um artigo
-relatando uma versão mais avançada deste sistema a ser enviado para
-publicação na IEEE Pattern Analysis and Machine Intelligence (PAMI).
+O objetivo concreto do aluno será explorar as tecnologias supracitadas para
+desenvolver \emph{videogames} em software livre, almejando o funcionamento do
+aplicativo nas seguintes plataformas: Linux, Windows, Mac OS, Android, iOS,
+Navegadores Firefox, Chrome e Safari (desktop e dispositivos móveis). Mais
+específicamente, neste projeto deverá ser determinado se é mais adequado programar
+para tais ambientes apenas usando HTML5+Javascript, Java, ou algum tipo de
+combinação como Google Web Toolkit (GWT) e Google PlayN. Pretende-se determinar
+qual tecnologia ou \emph{framework} multi-plataforma é mais adequada, e suas
+vantagens/desvantagens. A princípio a comparação sera focada em HTML5/Javascript
+versus Google PlayN, sendo essas as tecnologias mais promissoras de acordo com
+pesquisa preliminar realizada para este projeto involvendo listas de discussão e
+programação de um aplicativo simples.
 
 \section{Justificativa: as vantagens das curvas.}
 Além de possibilitarem as inúmeras aplicações do sistema proposto citadas no início da
@@ -455,7 +386,6 @@ Elaboração de Publicações &   & X & X & X\\
 \hline
 \end{tabular}
 \end{center}
-
 
 
 
