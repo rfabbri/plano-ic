@@ -1,5 +1,7 @@
 % Possíveis TODO
 % - linkar as seções de pesq à seção histórica
+% - quanto tempo dura a bolsa?
+
 \documentclass[a4paper,titlepage]{article}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -142,91 +144,104 @@
 
 \section{Contextualização}
 
-O presente plano de pesquisa se refere a atividades propostas para o Axílio à
-Pesquisa (APQ 1) da FAPERJ, a serem realizadas como professor de nível Adjunto
-IV no Instituto Politécnico -- IPRJ da UERJ, Departamento de Modelagem
-Computacional.  Pretende-se trabalhar em conjunto com o grupo de pesquisa do
-Prof.\ Francisco Moura Neto e com outros pesquisadores na realização de projetos
+O presente plano de pesquisa se refere a atividades propostas a nível de
+iniciação científica, a serem realizadas no Laboratório de Visualização do 
+Instituto Politécnico -- IPRJ da UERJ, Departamento de Modelagem
+Computacional. Pretende-se trabalhar em conjunto com o grupo de pesquisa do
+Prof.\ Roberto Pinheiro e com outros pesquisadores na realização de projetos
 e publicação de artigos, tanto no IPRJ como no ICMC (Instituto de Ciências
 Matemáticas e de Computação) e IFSC (Instituto de Física) da USP de São Carlos,
-bem como a Brown University (EUA), a Universidade de Liverpool (Reino Unido), e
-a UFRJ.
+bem como a Brown University (EUA). Também pretende-se colaborar de perto com
+coletivos de desenvolvedores de software livre como o
+LabMacambira.sourceforge.net para a tecnologia de software e PulaPirata.com
+para o design de jogos, dentre outros.
 
 
 \section{Introdução e Motivação}
-A calibragem de imagens tiradas a partir de múltiplos pontos de vista, como no caso de
-vídeo ou sistemas de múltiplas câmeras, e a reconstrução 3D de cenas a partir
-destas imagens são problemas fundamentais em Visão Computacional. Aplicações
-incluem a reconstrução de modelos 3D para uso em videogames~\cite{Ablan:3DPhoto:book},
-filmes~\cite{Ablan:3DPhoto:book},
-arqueologia,
-arquitetura, modelagem 3D urbana (\eg, Google
-Streetview); técnicas de \emph{match-moving} em cinematografia para fusão de
-conteúdo virtual e filmagem real~\cite{Dobbert:Matchmoving:book}, a organização
-de uma coleção de fotografias com relação a uma cena (\eg, o sistema
-\emph{Phototourism}~\cite{Argarwal:Snavely:etal:ICCV09} e a funcionalidade
-\emph{Look Around} do Google Panoramio e Steet View), manipulação
-robótica, e a metrologia a partir de câmeras na
-indústria automobilística e metal-mecânica.
 
-Uma tecnologia operacional tem evoluido, mais recentemente para sistemas de grande
-escala~\cite{Argarwal:Snavely:etal:ICCV09,Pollefeys:VanGool:etal:handheld:IJCV2004},
-a partir do desenvolvimento da detecção robusta de
-\emph{features}~\cite{mikolajczyk:schmid:IJCV04}, o
-\emph{fitting} robusto e seleção de correspondências baseados em \ransac, e o
-desenvolvimento de métodos de geometria projetiva para calibrar duas ou três
-imagens e progressivamente adicionar imagens e extrair estrutura 3D dessas
-\emph{features} na forma de nuvens de pontos. O pesquisador
-proponente reconhece a importância
-desses avanços, mas também identifica problemas que ocorrem na prática, como por
-exemplo a falta parcial ou total de \emph{features}. Esta pesquisa propõe,
-assim, desenvolver uma nova tecnologia baseada em fragmentos de curvas gerais,
-no lugar de pontos. Além de curvas, este projeto engloba também a reconstrução detalhada de
-superfícies gerais, em vez de apenas planos, como é comum na literatura em visão
-estéreo onde as câmeras já estão calibradas. O desenvolviento desta tecnologia
-requer uma mudança de foco além da tradicional geometria projetiva para a
-geometria diferencial, incluindo a geometria diferencial projetiva. A tecnologia
-desenvolvida nesta pesquisa para calibrar e reconstruir a partir de múltiplas
-vistas aumentará o arsenal atual da área, e é baseada na construção de um esboço
-de curvas 3D chamado o \emph{3D Curve Sketch}. Estas curvas delineam contornos e
-marcas das superfícies que formam a cena 3D a ser reconstruída, e formam uma
-estrutura de suporte sobre a qual as superfícies serão reconstruídas.
+A computação atual compreende uma ampla diversidade de ambientes de software e
+hardware, coexistindo, por exemplo, 
+computadores \emph{desktop} e \emph{smart phones} de diversas marcas, cada um com um sistema
+operacional diferente, ou mesmo com versões diferentes de um mesmo sistema.
+Mesmo dentro de uma mesma versão de sistema operacional existem diversas
+diferenças de bibliotecas instaladas e suas versões. Para minar a diferença
+entre esses sistemas e facilitar a programação, diversas abstrações foram
+propostas ao longo dos anos, dentre as quais:
+\begin{itemize}
+\item A linguagem C (e mais recentemente C++), que assume um modelo simples e razoavelmente genérico de um computador
+\item A linguagem Java (mais recentemente)
+\item O Navegador Web em seu estado moderno com seus padrões HTML, Javascript e CSS.
+\end{itemize}
+Os itens acima estão, de modo geral, em ordem crescente de abstração, bem como
+em ordem cronológica da época em que foram adotados em ampla escala. 
+
+A linguagem C permite
+uma boa portabilidade de programas, desde que as bibliotecas utilizadas sejam
+também portáveis, além de requerer recompilação e pequenos ajustes no código. As
+dificuldades de portabilidade geralmente decorrem de diversas diferenças
+oriundas de compiladores C (especialmente C++) em diferentes sistemas
+operacionais mas, mais fortemente, devido ao uso de bibliotecas dependentes do
+sistema operacional. Java e sua máquina virtual (bem como as linguagens
+interpretadas) são geralmente implementados em
+C, e facilitam o desenvolvimento multi-plataforma por fornecer um ambiente de
+\emph{execução} (não apenas compilação) razoavelmente uniforme e independente do
+sistema operacional. No entanto, nem todo dispositivo e sistema operacional de
+interesse geral contém uma máquina virtual Java facilmente disponível.  O
+Navegador web constitui uma abstração ainda mais profunda que Java, sendo
+inclusive base de sistemas inteiros como Chrome OS e Firefox OS.  De fato, o
+Navegador Web inclui (ou deveria incluir) Java como uma de suas tecnologias
+padrão. No entanto, o suporte a Java nos navegadores atuais não é bom, sendo um
+dos motivos uma famigerada disputa entre a Sun e Microsoft, fazendo com que esta
+última removesse a JVM (Java Virtual Machine) do popular navegador Internet
+Explorer. 
+
+Para superar problemas históricos com o Java, todo navegador moderno
+passou a suportar de fato linguagens de \emph{script} como Javascript para
+programação multi-plataforma. No entanto, Javacript é uma linguagem sub-ótima
+para programação de aplicativos de grande escala, não tendo sido desenvolvida
+para tanto.  Por outro lado, Java foi projetada desde o início para programação de software
+de grande porte, tendo sido aplicada com sucesso nesse nicho, além de ser
+razoavelmente portável.  Ademais, a tecnologia de navegadores modernos com
+Javascript também não permite uma portabilidade total, já que existem diferenças
+programáticas (intencionais ou não) entre navegadores diferentes, ou mesmo entre
+versões de um mesmo navegador, bem como entre um mesmo navegador em diferentes
+dispositivos e sistemas operacionais. 
+
+O presente projeto pretende fazer com que o aluno ganhe experiência com técnicas
+modernas de desenvolvimento de software multi-plataforma. Em particular, 
+pretende-se estudar modos de se unir a força do Java e do Navegador Web, que
+avaliamos como sendo as mais modernas e mais utilizadas tecnologias
+multi-plataforma. Para explorar os limites dessas tecnologias, iremos abordar
+programação multimídia, incluindo audiovisual e interativa/tempo real. Apenas
+recentemtente têm-se desenvolvido padrões Web para tratar de processamento de
+áudio, vídeo e interatividade de forma multi-plataforma e consistente.
+
+Um dos aplicativos mais importantes na linha multimídia em tempo real são os
+\emph{videogames}. Os jogos de computador geralmente exercitam diversas
+tecnolgias simultâneamente: áudio, vídeo, interação, e processamento em tempo real.
+Ademais, um \emph{videogame} é genericamente modelado como um simulador, sendo
+que a mesma tecnologia pode ser aplicada para o desenvolvimento de
+simuladores para qualquer sistema em geral, desde simulação de fluidos, aviões,
+navios, carros, esportes, até simulações de deposição de polímeros, simulações da
+mente humana, e assim por diante. Tradicionalmente, jogos têm exercitado tanto
+as diversas funcionalidades dos computadores, que eles têm sido uma das grandes
+forças motrizes por trás da lei de Moore, em especial na manutenção do
+crescimento exponencial do poder de processamento das modernas GPUs.
+
+Outra motivação para Jogos é que os mesmos podem ser alavancados para mudança
+social. Uma tendência atual é construir jogos como simuladores de situações que
+possam ser mais diretamente úteis para a sociedade, como simuladores de
+hospitais, etc. Assim, pretendemos focar este projeto na programação de
+jogos que simulem uma situação real, com por exemplo um simulador de um
+estabelecimento de negócios ou um simulador do desenvolvimento da personalidade
+humana. A idéia é que além de permitir a exploração das tecnologias modernas e
+avançadas de programação, os \emph{videogames} permitam também a criação de
+aplicativos que ajudem a treinar pessoas para alavancar uma mudança na sociedade
+ou ajudem uma maior conscientização de seus meios. Videogames ou simuladores são
+aplicativos interativos que constituem uma forma moderna de expressão humana,
+extendendo as possibilidades tradicionais dos filmes, livros, pintura, etc.
 
 \section{Objetivos}
-A pesquisa proposta tem como objetivo investigar e promover o uso de evidência de
-fragmentos de curvas 2D que são imagens de curvas 3D, para calibragem,
-casamento (\emph{matching}) e reconstrução na forma de uma estrutura eficiente
-de curvas 3D, o \emph{3D Curve Sketch}. Essa estrutura pode então ser usada para
-reconstruir fragmentos de superfícies, seguidos de superfícies mais completas.
-\textbf{Este projeto propõe o desenvolvimento de uma \emph{pipeline} completa para
-calibragem, reconstrução e visão estéreo de múltiplas vistas baseada em
-fragmentos de curvas gerais, as quais restringem e guiam a reconstrução de
-superfícies.} Enquanto a geometria projetiva clássica usada no atual estado da
-arte é adequada para a modelagem de pontos e, globalmente, retas, e outras
-curvas algébricas como cônicas, bem como superfícies planares, esta pesquisa
-continuará a extensão do poder de modelagem na área visão computacional 3D com o
-desenvolvimento de uma teoria de geometria diferencial para curvas e superfícies
-gerais em múltiplas vistas. Este projeto dará continuidade e grande
-desenvolvimento a idéias pioneiras semeadas durante o Ph.D.\ na Brown University do pesquisador
-proponente.
-\begin{figure}
-\begin{center}
-%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
-   \includegraphics[width=1.0\linewidth]{figs/mega-system-drawing-pt.eps}
-\end{center}
-\vspace{-0.7truecm}
-   \caption{%
-   Uma visão geral do sistema automático de reconstrução 3D envisado pela nossa
-   pesquisa. A entrada consite em um conjunto de $N$ imagens (fotos ou vídeo)
-   tiradas de uma imagem, com $N$ sendo ao menos 3, mas típicamente muito maior,
-   e a saída é um conjunto de curvas e superfícies reconstruídas, junto com
-   modelos de câmeras (posição, rotação, \emph{focallength}, etc) otimizados.
-   Na prática, há o feedback entre os módulos.$^1$
-   }\label{fig:system:diagram}
-\end{figure}
-\footnotetext[1]{Os
-   termos na figura não foram traduzidos pois contêm um número considerável de
-   jargões que atualmente não possuem equivalentes satisfatórios em português.}
 
 \subsection{Desenvolvimento da Teoria de Geometria Diferencial de Curvas em Múltiplas Perspectivas}
 Será dada continuidade ao paradigma teórico que foi iniciado no Ph.D. do pesquisador proponente -- um estudo completo da geometria local de curvas
