@@ -36,6 +36,15 @@ D.~B. Kirk and W.~H. Wen-mei, {\em Programming massively parallel processors: a
   hands-on approach}.
 \newblock Morgan Kaufmann, 2010.
 
+\bibitem{Paaper:WSL2013}
+R.~Fabbri, R.~Fabbri, V.~Vieira, and et.\ al., ``{AA} distributed software
+  development methodology,'' {\em Workshop de Software Livre -- FISL}, 2013.
+\newblock submitted.
+
+\bibitem{Oracle:Java:Tutorials}
+I.~Oracle, ``The java tutorials.''
+  \url{http://docs.oracle.com/javase/tutorial}.
+
 \bibitem{Fabbri:2002}
 R.~Fabbri, L.~Estrozi, and L.~Costa, ``On {V}oronoi diagrams and medial axes,''
   {\em Journal of Mathematical Imaging and Vision}, vol.~17, pp.~27--40, jul
