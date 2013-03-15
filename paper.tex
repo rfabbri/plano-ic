@@ -1,6 +1,5 @@
 % Possíveis TODO
 % - linkar as seções de pesq à seção histórica
-% - quanto tempo dura a bolsa?
 
 \documentclass[a4paper,titlepage]{article}
 \usepackage[latin1]{inputenc}
@@ -168,32 +167,48 @@ diferenças de bibliotecas instaladas e suas versões. Para minar a diferença
 entre esses sistemas e facilitar a programação, diversas abstrações foram
 propostas ao longo dos anos, dentre as quais:
 \begin{itemize}
-\item A linguagem C (e mais recentemente C++), que assume um modelo simples e razoavelmente genérico de um computador
-\item A linguagem Java (mais recentemente)
-\item O Navegador Web em seu estado moderno com seus padrões HTML, Javascript e CSS.
+\item A linguagem C~\cite{Kernighan:Ritchie:c:1988} e, mais
+recentemente, C++~\cite{Stroustrup:cpp:1997}, que assume um modelo simples e razoavelmente genérico de um
+computador.
+\item A linguagem Java~\cite{Arnold:etal:java:2000}.
+\item O Navegador Web em seu estado moderno com seus padrões HTML, Javascript e
+CSS.
 \end{itemize}
-Os itens acima estão, de modo geral, em ordem crescente de abstração, bem como
+As tecnologias acima estão, de modo geral, em ordem crescente de abstração, bem como
 em ordem cronológica da época em que foram adotados em ampla escala. 
+\begin{figure}[h]
+\centering
+	\includegraphics[width=0.7\linewidth]{figs/playn2.eps} 
+\caption{% 
+A interoperabilidade de diversos
+dispositivos é um dos grandes ideais almejados pela computação atual. (Fonte:~\cite{PlayN})
+}\label{fig:playn:crossplatform}
+\end{figure}
 
-A linguagem C permite
-uma boa portabilidade de programas, desde que as bibliotecas utilizadas sejam
-também portáveis, além de requerer recompilação e pequenos ajustes no código. As
-dificuldades de portabilidade geralmente decorrem de diversas diferenças
-oriundas de compiladores C (especialmente C++) em diferentes sistemas
-operacionais mas, mais fortemente, devido ao uso de bibliotecas dependentes do
-sistema operacional. Java e sua máquina virtual (bem como as linguagens
-interpretadas) são geralmente implementados em
-C, e facilitam o desenvolvimento multi-plataforma por fornecer um ambiente de
-\emph{execução} (não apenas compilação) razoavelmente uniforme e independente do
-sistema operacional. No entanto, nem todo dispositivo e sistema operacional de
-interesse geral contém uma máquina virtual Java facilmente disponível.  O
-Navegador web constitui uma abstração ainda mais profunda que Java, sendo
-inclusive base de sistemas inteiros como Chrome OS e Firefox OS.  De fato, o
-Navegador Web inclui (ou deveria incluir) Java como uma de suas tecnologias
-padrão. No entanto, o suporte a Java nos navegadores atuais não é bom, sendo um
-dos motivos uma famigerada disputa entre a Sun e Microsoft, fazendo com que esta
-última removesse a JVM (Java Virtual Machine) do popular navegador Internet
-Explorer. 
+As linguages C/C++~\cite{Kernighan:Ritchie:c:1988,Stroustrup:cpp:1997} permitem uma boa portabilidade de
+programas, desde que as bibliotecas utilizadas sejam também portáveis, além de
+ser necessária a recompilação e pequenos ajustes no código. As dificuldades de
+portabilidade geralmente decorrem de diversas diferenças oriundas de
+compiladores C (especialmente C++) em diferentes sistemas operacionais mas, mais
+fortemente, devido ao uso de bibliotecas dependentes do sistema operacional.
+Java e sua máquina virtual (bem como as linguagens interpretadas como
+Python~\cite{Rossum:Python:1991}) são geralmente
+implementados em C, e facilitam o desenvolvimento multi-plataforma por fornecer
+um ambiente de \emph{execução} (não apenas compilação) razoavelmente uniforme e
+independente do sistema operacional. Uma comunidade central de desenvolvedores
+se concentra em portar o código em C da máquina virtual ou interpretador
+para cada plataforma, e todo o software restante executa em uma camada acima,
+mais uniforme que o ambiente nativo.  No entanto, nem todo dispositivo e sistema
+operacional de interesse geral contém uma máquina virtual Java facilmente
+disponível.  O Navegador web constitui uma abstração ainda mais profunda que
+Java, sendo inclusive base de sistemas inteiros chamados Web
+OS~\cite{Wright:webOS:2009}, como Chrome OS~\cite{Pichai:Upson:ChromeOS:2009} e
+Firefox OS~\cite{Scott:FirefoxOS:2012}.  De
+fato, o Navegador Web inclui (ou deveria incluir) Java como uma de suas
+tecnologias padrão. No entanto, o suporte a Java nos navegadores atuais não é
+bom, sendo um dos motivos uma famigerada disputa entre a Sun e Microsoft,
+fazendo com que esta última removesse a JVM (Java Virtual Machine) do popular
+navegador Internet Explorer.
 
 Para superar problemas históricos com o Java, todo navegador moderno
 passou a suportar de fato linguagens de \emph{script} como Javascript para
@@ -228,7 +243,8 @@ navios, carros, esportes, até simulações de deposição de polímeros, simulações d
 mente humana, e assim por diante. Tradicionalmente, jogos têm exercitado tanto
 as diversas funcionalidades dos computadores, que eles têm sido uma das grandes
 forças motrizes por trás da lei de Moore, em especial na manutenção do
-crescimento exponencial do poder de processamento das modernas GPUs.
+crescimento exponencial do poder de processamento das modernas
+GPUs~\cite{Kirk:Hwu:cuda:2010}.
 
 Outra motivação para Jogos é que os mesmos podem ser alavancados para mudança
 social. Uma tendência atual é construir jogos como simuladores de situações que
@@ -243,8 +259,45 @@ ou ajudem uma maior conscientização de seus meios. Videogames ou simuladores são
 aplicativos interativos que constituem uma forma moderna de expressão humana,
 extendendo as possibilidades tradicionais dos filmes, livros, pintura, etc.
 
-% TODO
-% - falar sobre GWT e PlayN e tradutores pra javascript
+Algumas das tecnologias mais avançadas para programação multiplataforma têm sido
+desenvolvidas para jogos. Dentre elas, podemos citar a Google
+PlayN~\cite{PlayN}, que faz uso de uma engenharia de software bastante complexa
+de compilação e tradução de código para desenvolvimento verdadeiramente
+multi-plataforma. A tecnologia PlayN consiste na escrita de uma base de código
+multi-plataforma em Java e sua posterior compilação e tradução para o código
+nativo de inúmeras plataformas: Java nativo, Java para Android, iOS,
+HTML5/Javascript, dentre outros, como na Figura~\ref{fig:playn:modules}.
+\begin{figure}[h]
+\centering
+  \includegraphics[width=0.7\linewidth]{figs/playn.eps}
+\caption{% 
+A tecnologia Google PlayN consiste na escrita de uma base de código
+multi-plataforma em Java e sua posterior compilação e tradução para o código
+nativo de inúmeras plataformas: Java nativo, Java para Android, iOS,
+HTML5/Javascript, dentre outros. (Fonte:~\cite{PlayN})
+}\label{fig:playn:modules}
+\end{figure}
+
+A tecnologia PlayN é bastante recente e procura solucionar os problemas a serem
+estudados neste trabalho. No entanto, a tecnologia é bastante complexa e
+incipiente. Idealmente, ela deverá fornecer a interoperabilidade de diversos
+dispositivos, o que é uma das grandes ambições dos fundadores da empresa
+Google, Figura~\ref{fig:playn:crossplatform}.
+Apesar da biblioteca ser feita para jogos, a mesma tecnologia pode ser aplicada
+à programação verdadeiramente multiplataforma em geral.
+
+No caso especial da tradução do código Java para HTML5/Javascript, a bibliteca
+PlayN utiliza o sistema de compilação de uma outra tecnologia avançada do Google
+voltada para o desenvolvimento multi-browser, chamada Google Web Toolkit (GWT).
+Uma grande questão é se a tecnologia atual HTML5/Javascript já evoluiu o
+suficiente para ser uma solução multi-plataforma em si, sem necessidade de
+traduçao de outras linguagens como Java no caso do PlayN/GWT. Nossa pesquisa
+preliminar aponta para o fato de que uma tecnologia de solução abrangente como o PlayN
+sempre será útil, uma vez que ambientes heterogêneos são sempre inevitáveis. Com
+este projeto, pretende-se investigar a magnitude da utilidade dessas tecnologias
+de tradução de código para desenvolvimento multi-plataforma no contexto atual de
+HTML5/Javascript cada vez mais bem padronizado.
+
 
 \section{Objetivos}
 
@@ -297,63 +350,8 @@ bem como em Java nativo e em navegadores para celular, sendo que o aluno irá
 documentar as dificuldades ao longo do processo de desenvolvimento.
 
 \section{Metodologia}
-A execução do projeto será dividida nas seguintes frentes, visando atingir as
-metas descritas na seção anterior, na ordem descrita na próxima seção:
-\begin{itemize}
-\item \textbf{Estudo de Engenharia de Software.} O ambiente do aluno deverá ser
-em Linux, por ser um ambiente de software livre que compreende de maneira ótima todas as tecnologias de
-interesse. O aluno deverá iniciar por um estudo de linux básico, seguido por um
-sistema moderno de controle de versões -- Git, bem como o fluxo de trabalho
-proposto pelo orientador e adotado no Lab Macambira: sistema de tarefas Trac,
-e o sistema de Autoregulação Algorítmica de coordenação de times distribuídos.
-Este último será utilizado para coordenar as atividades de programação do aluno
-junto a colaboradores externos para viabilizar a programação de um jogo completo.
-O aluno deverá estudar uma IDE (integrated development environment) dentre as
-seguintes: Vim, Emacs ou Eclipse.
-\item \textbf{Estudo de Tecnologias Java.} O aluno deverá realizar um tutorial
-do Java, o ao menos revisar aquele disponível no site da Oracle~\cite{}, com
-foco em conceitos de programação orientada a objetos. Partes do ecosistema de
-tecnologias associadas ao Java como o sistema de montagem Maven e alguma IDE
-para desenvolvimento também deverá ser aprendida
-\item \textbf{Estudo de PlayN.} Tutorial do site e vídeos do orientador. GWT.
-\item \textbf{Estudo de outras tecnologias multiplataforma.} O
-aluno deverá ter contato mínimo com HTML5/Javascript, já que é a tecnologia
-multi-plataforma mais importante atualmente, além do Java. Para tanto o aluno
-deverá realizar tutoriais e aulas on-line na medida do possível.
-\item \textbf{Escrita de Software Livre.} Esta frente trata da programação
-em si, a qual será inicialmente em Java no \emph{framework} PlayN que traduz o
-código para múltiplas plataformas. Nesta frente o aluno deverá programar um
-simulador de comportamento humano ou de um estabelecimento de negócios,
-similar ao SimCity, mas simplificado para maior adaptabilidade a dispositivos móveis.
-O desenvolvimento será em ambiente Linux.
-\item \textbf{Elaboração de Publicações.} Pretende-se realizar a escrita de
-um estudo comparativo de Java/PlayN versus HTML5/Javascript para o
-desenvolvimento de aplicativos multimídia. 
-\end{itemize}
 
-\section{Cronograma das Atividades}
-A tabela abaixo mostra o cronograma para as principais frentes de atuação descritas na
-seção anterior. Para a execução deste projeto, o período foi dividido em etapas aproximadamente
-semestrais.
-\begin{center}
-\begin{tabular} {||r|c|c|c|c||}
-\hline
-\textbf{Etapas semestrais} & 1 & 2 & 3 & 4 \\
-\hline
-Estudo de Engenharia de Software & X & X &   & \\
-\hline
-Estudo de Tecnologias Java & X & X & X &  \\
-\hline
-Estudo do Google PlayN & X & X & X &   \\
-\hline
-Estudo de outras tecnologias &   &   & X & X\\
-\hline
-Escrita de Software Livre & X & X & X & X\\
-\hline
-Elaboração de Publicações &   &  & X & X\\
-\hline
-\end{tabular}
-\end{center}
+A Metodologia está descrita separadamente nos planos de trabalho para cada aluno.
 
 
 
@@ -375,20 +373,13 @@ Explorando-se esta questão com um aplicativo real e de código livre, pretende-se
 obter idéias acerca do futuro da computação e da Web. No decorrer deste trabalho, surgirão idéias de
 como melhorar a tecnologia atual para maximizar o benefício futuro à computação
 como um todo.
-\begin{figure}[h]
-\centering
-  \includegraphics[width=0.5\linewidth]{figs/playn.eps}
-\caption{% 
-Figura playN. Disponível em: https://developers.google.com/playn/overview.
-}\label{fig:playn:modules}
-\end{figure}
-\begin{figure}[h]
-\centering
-	\includegraphics[width=0.5\linewidth]{figs/playn2.eps} 
-\caption{% 
-Figura PlayN. Disponível em: https://developers.google.com/playn/overview.
-}\label{fig:playn:crossplatform}
-\end{figure}
+
+\paragraph{Bolsas requisitadas.} Para este projeto estamos requisitando duas bolsas de iniciação científica, 
+já que o assunto engloba muitos fatores, linguagens e ambientes que constituem
+um ecosistema de tecnologia que pode ser melhor assimilado por dois alunos. Cada
+aluno irá focar em um aspecto diferente: um em PlayN/GWT, e o outro em Web
+Standards/HTML5/Javascript.
+
 
 
 \vspace{0.7truecm}

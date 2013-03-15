@@ -1,4 +1,40 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Kernighan:Ritchie:c:1988}
+B.~W. Kernighan and D.~M. Ritchie, {\em The C programming language}.
+\newblock Prentice Hall, 1988.
+
+\bibitem{Stroustrup:cpp:1997}
+B.~Stroustrup, {\em The C++ programming language}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., 1997.
+
+\bibitem{Arnold:etal:java:2000}
+K.~Arnold, J.~Gosling, and D.~Holmes, {\em The Java programming language},
+  vol.~2.
+\newblock Addison-wesley Reading, MA, 2000.
+
+\bibitem{PlayN}
+G.~W.~T. Team, ``{PlayN} -- overview.''
+  \url{https://developers.google.com/playn}.
+
+\bibitem{Rossum:Python:1991}
+G.~van Rossum and et.\ al., ``Python programming language,'' 1991.
+
+\bibitem{Wright:webOS:2009}
+A.~Wright, ``Ready for a {Web OS}?,'' {\em Communications of the ACM}, vol.~52,
+  no.~12, pp.~16--17, 2009.
+
+\bibitem{Pichai:Upson:ChromeOS:2009}
+S.~Pichai and L.~Upson, ``Introducing the {Google} {Chrome OS},'' {\em The
+  Official Google Blog}, 2009.
+
+\bibitem{Scott:FirefoxOS:2012}
+P.~D. Scott, ``The {Firefox} smartphone {OS},'' 2012.
+
+\bibitem{Kirk:Hwu:cuda:2010}
+D.~B. Kirk and W.~H. Wen-mei, {\em Programming massively parallel processors: a
+  hands-on approach}.
+\newblock Morgan Kaufmann, 2010.
 
 \bibitem{Fabbri:2002}
 R.~Fabbri, L.~Estrozi, and L.~Costa, ``On {V}oronoi diagrams and medial axes,''
