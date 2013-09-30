@@ -1,0 +1,27 @@
+A execução do projeto será dividida nas seguintes frentes:
+(1) Estudo de Engenharia de Software. O ambiente do aluno deverá ser
+em Linux, por ser um ambiente de software livre que compreende de maneira ótima todas as tecnologias de
+interesse. O aluno deverá iniciar por um estudo de linux básico, seguido por um
+sistema moderno de controle de versões -- Git, bem como o fluxo de trabalho
+proposto pelo orientador: sistema de tarefas Trac,
+e o sistema de Autoregulação Algorítmica~\cite{Paaper:WSL2013} de coordenação de times distribuídos.
+O aluno deverá estudar uma IDE (integrated development environment) dentre as
+seguintes: Vim, Emacs ou Eclipse.
+(2) Estudo de Tecnologias Java. O aluno deverá realizar um tutorial
+do Java, o ao menos revisar aquele disponível no site da
+Oracle, com
+foco em conceitos de programação orientada a objetos. 
+(3) Estudo da tecnologia PlayN. Tutorial do site e vídeos do orientador. Google
+Web Tookit.
+(4) Estudo de outras tecnologias multiplataforma. O
+aluno deverá ter contato mínimo com HTML5/Javascript, já que é a tecnologia
+multi-plataforma mais importante atualmente, além do Java. Para tanto o aluno
+deverá realizar tutoriais e aulas on-line na medida do possível.
+(5) Escrita de Software Livre. Esta frente trata da programação
+em si, a qual será inicialmente em Java no framework PlayN que traduz o
+código para múltiplas plataformas. Nesta frente o aluno deverá programar um
+simulador de comportamento humano ou de um estabelecimento de negócios,
+similar ao SimCity, mas simplificado para maior adaptabilidade a dispositivos móveis.
+(6) Elaboração de Publicações. Pretende-se realizar a escrita de
+um estudo comparativo de Java/PlayN versus HTML5/Javascript para o
+desenvolvimento de aplicativos multimídia complexos.
