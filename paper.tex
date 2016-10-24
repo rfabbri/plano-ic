@@ -226,7 +226,7 @@ nuvem de pontos é reconstruída~\ref{fig:nuvem}. As câmeras podem então ser
 utilizadas para obter modelos mais detalhados de reconstrução, como algoritmos
 de densificação~\cite{pmvs} e interpolação~\cite{poisson} da nuvem de pontos,
 bem como demais algoritmos densos de visão estéreo
-multi-perspectiva/multi-ocular, como os do grupo de Michel Goesele~\cite{},
+multi-perspectiva/multi-ocular, como os do grupo de Michel Goesele~\cite{Goesele},
 também com código disponível. Tais algoritmos, no entanto, têm problemas, em
 particualar a reconstrução suaviza partes bem-delineadas do objeto, e pode
 conter buracos em áreas homogêneas. Pode-se, portanto, utilizar a reconstrução
@@ -242,13 +242,17 @@ flight), como no caso dos dispositivos Kinect, figura~\ref{fig:kinect}.
 \begin{figure}
 	\centering
 	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
-	\includegraphics[width=1\linewidth]{figs/kinect-vs-usual.png}
+	\includegraphics[width=0.45\linewidth]{figs/Xbox-360-Kinect-Standalone.png}(a)
+	\includegraphics[width=0.45\linewidth]{figs/kinect-internals.pdf}(b)
+  \includegraphics[width=0.45\linewidth]{figs/Xbox-One-Kinect.jpg}(c)
+  \includegraphics[width=0.45\linewidth]{figs/kinect-handheld1.png} (d)
 	\caption{%
-    Kinnect de primeira geração (câmeras e projetores infra-vermelho) e de
-    segunda geração (ToF). Ambos os kinnects são largamente utilizados para
-    escaneamento em tempo real, como base de scanners manuais, porém nem sempre
+    Kinnects de primeira geração (a)consistindo de câmeras e projetores
+    infra-vermelho (b) e de
+    segunda geração, consistindo de tecnologia ToF (c). Ambos os kinnects são largamente utilizados para
+    escaneamento em tempo real, formando a base de scanners manuais (d), porém nem sempre
     são úteis para preservação detalhada de patrimônio. Um dos objetivos deste
-    projeto é determinar os limites desta tecnologia.
+    projeto é explorar os limites desta tecnologia.
 	}\label{fig:kinect}
 \end{figure}
 
@@ -277,7 +281,7 @@ magnitude maior que o de câmeras convencionais.
 
 A preservação de patrimônio tem sido realizada tradicionamente com scanners
 dedicados de alto custo, como no projeto David~\ref{fig:david}.
-\todo{pedro: inserir aqui um resumo do projeto David}
+\todo{pedro: inserir aqui um resumo do projeto David e figuras}
 
 Seria de grande interesse explorar os dois paradigmas supracitados
 para avaliar as possibilidades disponíveis no estado da arte de reconstrução 3D
