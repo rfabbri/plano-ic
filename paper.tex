@@ -121,6 +121,22 @@
 \newcommand{\boldw}{\mathbf{w}}
 \newcommand{\tgtveloc}{\tilde\alpha} % real tangential velocity
 
+%%%%%%%%///Draftnote///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You have two versions of the draftnote macro
+% \draftnote{My note}. The first version puts notes (e.g. My note in the example)
+% into the margin of your document. The second formats the note as nothing. You
+% 'comment out' the version of the macro you don't want (using a % at the
+% beginning of the line).
+\newcommand{\draftnote}[1]{\marginpar{\tiny\raggedright\textsf{\hspace{0pt}#1}}} % Notas laterais
+%\newcommand{\draftnote}[1]{}%Se quiser tirar estas notas é só comentar o outro e descomentar este
+
+% This one is just for the comments for in-line text.
+\newcommand{\indraftnote}[1]{\textcolor{blue}{\footnotesize[#1]}} % Fazer notas para mim mesma.
+%\newcommand{\indraftnote}[1]{}%Se quiser tirar estas notas é só comentar o outro e descomentar este
+
+\newcommand{\todo}[1]{\indraftnote{To Do: #1}} % Este  "a fazer" é para eu não esquecer
+%\newcommand{\todo}[1] {}    %Se quiser tirar o \todo é só comentar o outro e descomentar este
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 %\input{titlepage1}
@@ -297,52 +313,41 @@ pesquisa de efetivo e alto impacto na prática.
 \paragraph{Elaboração de Publicações}
 Como metas específica deste projeto, tem-se a elaboração de uma publicação em
 congresso ou revista contendo um estudo comparativo das diferentes técnicas
-modernas de programação multi-plataforma.
+modernas de reconstrução 3D para preservação de patrimônio.
 
-\paragraph{Programação de Software}
+\paragraph{Programação e Uso de Software}
 Como meta deste projeto necessária à realização do estudo comparativo,
-tem-se a programação de um software multimídia usando-se tecnologias
-multi-plataformas e com software aberto ou livre. A princípio a comparação sera
-focada em (ao menos) HTML5/Javascript versus Google PlayN. O software completo
-deverá ser implementado em PlayN, sendo que HTML5 deverá ser aprendido de
-maneira secundária. Iremos escolher um \emph{videogame} que funcionará em Web
-bem como em Java nativo e em navegadores para celular, sendo que o aluno irá
-documentar as dificuldades ao longo do processo de desenvolvimento.
+tem-se o uso e a programação de software de reconstrução 3D, em especial
+VisualSFM~\cite{}, Visao estereo densa de Michel Goesele~\cite{}, e o sistema de
+reconstrução 3D do prof.\ proponente deste projeto~\cite{Fabbri:ECCV16}, e Kinnect
+Fusion~\cite{} \todo{Pedro: inserir outros que ja explorour}. Por se
+tratarem de sistemas grandes, esforço considerável é necessário para aprender
+e modificar esses softwares.
 
 \section{Metodologia}
 A execução do projeto será dividida nas seguintes frentes, visando atingir as
 metas descritas na seção anterior, na ordem descrita na próxima seção:
 \begin{itemize}
-\item \textbf{Estudo de Engenharia de Software.} O ambiente do aluno deverá ser
-em Linux, por ser um ambiente de software livre que compreende de maneira ótima todas as tecnologias de
-interesse. O aluno deverá iniciar por um estudo de linux básico, seguido por um
-sistema moderno de controle de versões -- Git, bem como o fluxo de trabalho
-proposto pelo orientador e adotado no Lab Macambira: sistema de tarefas Trac,
-e o sistema de Autoregulação Algorítmica~\cite{Paaper:WSL2013} de coordenação de times distribuídos.
-Este último será utilizado para coordenar as atividades de programação do aluno
-junto a colaboradores externos para viabilizar a programação de um jogo completo.
-O aluno deverá estudar uma IDE (integrated development environment) dentre as
-seguintes: Vim, Emacs ou Eclipse.
-\item \textbf{Estudo de Tecnologias Java.} O aluno deverá realizar um tutorial
-do Java, o ao menos revisar aquele disponível no site da
-Oracle~\cite{Oracle:Java:Tutorials}, com
-foco em conceitos de programação orientada a objetos. Partes do ecosistema de
-tecnologias associadas ao Java como o sistema de montagem Maven e alguma IDE
-para desenvolvimento também deverá ser aprendida
-\item \textbf{Estudo de PlayN.} Tutorial do site e vídeos do orientador. GWT.
-\item \textbf{Estudo de outras tecnologias multiplataforma.} O
-aluno deverá ter contato mínimo com HTML5/Javascript, já que é a tecnologia
-multi-plataforma mais importante atualmente, além do Java. Para tanto o aluno
-deverá realizar tutoriais e aulas on-line na medida do possível.
-\item \textbf{Escrita de Software Livre.} Esta frente trata da programação
-em si, a qual será inicialmente em Java no \emph{framework} PlayN que traduz o
-código para múltiplas plataformas. Nesta frente o aluno deverá programar um
-simulador de comportamento humano ou de um estabelecimento de negócios,
-similar ao SimCity, mas simplificado para maior adaptabilidade a dispositivos móveis.
-O desenvolvimento será em ambiente Linux.
-\item \textbf{Elaboração de Publicações.} Pretende-se realizar a escrita de
-um estudo comparativo de Java/PlayN versus HTML5/Javascript para o
-desenvolvimento de aplicativos multimídia. 
+  \item \textbf{Aquisição de Dados.} Esta etapa consiste na aquisição
+    \emph{in situ} de vídeo usando-se smartphone, bem como usando-se scanner de
+    mão baseado em Kinnect. Numa futura etapa, pretende-se realizar diversas
+    re-aquisições de forma a melhorar a resolução das reconstruções. Na medida
+    em que os dados forem crescendo, torna-se necessária estrátégias de
+    \emph{big data} para o processamento, como armazenamento e processamento distribuído.
+\item \textbf{Escrita e Uso de Software Livre.} Uso e a programação de software
+  de reconstrução 3D, em especial VisualSFM~\cite{}, Visao estereo densa de
+  Michel Goesele~\cite{}, e o sistema de reconstrução 3D do prof.\ proponente
+  deste projeto~\cite{Fabbri:ECCV16}, e Kinnect Fusion~\cite{} 
+\item \textbf{Estudo de Tecnologias 3D.} Estudo junto ao orientador acerca do
+  funcionamento dos sistemas de software sendo explorados.
+\item \textbf{Escalabilidade.} Na medida em que o número de imagens cresce,
+  torna-se necessário estudar opções disponíveis para processamento
+  distribuído/paralelo. Esta linha pode se tornar uma via de aprofundamento pelo
+  aluno, se desejado, porém a princípio, num contexto de Iniciação Científica,
+  trata-se de estudar soluções já existentes para uso no Cluster do IPRJ/UERJ.
+\item \textbf{Elaboração de Publicações.} Elaboração de uma publicação em
+  congresso ou revista contendo um estudo comparativo das diferentes técnicas
+  modernas de reconstrução 3D para preservação de patrimônio.
 \end{itemize}
 
 \section{Cronograma das Atividades}
@@ -354,17 +359,15 @@ semestrais.
 \hline
 \textbf{Etapas semestrais} & 1 & 2 & 3 & 4 \\
 \hline
-Estudo de Engenharia de Software & X & X &   & \\
+Aquisição de Dados (etapas 1 e 2) & X &   & X & \\
 \hline
-Estudo de Tecnologias Java & X & X & X &  \\
+Escrita e Uso de Software Livre & X  & X & X & X \\
 \hline
-Estudo do Google PlayN & X & X & X &   \\
+Estudo de Tecnologias 3D & X & X & X &  \\
 \hline
-Estudo de outras tecnologias &   &   & X & X\\
+Escalabilidade &   &   & X  & X  \\
 \hline
-Escrita de Software Livre & X & X & X & X\\
-\hline
-Elaboração de Publicações &   &  & X & X\\
+Elaboração de Publicações &   & X & X & X\\
 \hline
 \end{tabular}
 \end{center}
@@ -372,23 +375,22 @@ Elaboração de Publicações &   &  & X & X\\
 
 
 \section{Conclusão}
-Este projeto da área de computação propõe a exploração e comparação das principais técnicas modernas de
-desenvolvimento avançado multi-plataforma, com foco em Java e \emph{framework}
-PlayN/GWT do
-Google, versus HTML5/Javascript puro em navegadores web. Para tanto é adequado a
-programação de aplicativos multimídia, audiovisuais e em tempo real, os quais
-exploram os limites da tecnologia multi-plataforma atual. Alguns dos melhores
-representantes desses aplicativos são \emph{videogames}, os quais podem ser
-considerados verdadeiros simuladores de sistemas dinâmicos. Dessa forma, a
-comparação das tecnologias multi-plataforma será realizada no âmbito de um
-\emph{videogame} que será desenvolvido neste projeto colaborativamente na
-internet. Com isso, pretende-se abordar um dos grandes problemas da computação
-atual -- como melhor programar para dispositivos móveis e ao mesmo tempo para computadores
-\emph{desktop} com diferentes sistemas operacionais, diferentes versões e diferentes navegadores? 
-Explorando-se esta questão com um aplicativo real e de código livre, pretende-se
-obter idéias acerca do futuro da computação e da Web. No decorrer deste trabalho, surgirão idéias de
-como melhorar a tecnologia atual para maximizar o benefício futuro à computação
-como um todo.
+
+Este projeto da área de visão computacional propõe a exploração e comparação das
+principais técnicas modernas de escaneamento 3D, no contexto bem-definido de
+preservação de patrimônio. Além da importância em obter experiência prática no
+estado da arte em de visão computacional 3D, o projeto atende a uma demanda real
+de preservação de patrimônio cultural e de outros objetos em áreas propensas a
+desastres naturais, como Nova Friburgo, onde tal preservanção toma uma
+importância imediata. As esculturas do Jardim do Nêgo, escolhidas para este
+projeto, fornecem uma geometria única e desafiadora, permitindo explorar os
+limites das técnicas atuais de reconstrução 3D. Pretende-se, assim, gerar uma
+publicação acerca da experiência prática com técnicas modernas para preservação
+de patrimônio cultural, além de gerar um arquivo digital das esculturas, bem
+como uma metodologia conveniente e de baixo custo para digitalização que possa
+ser utilizada em qualquer situação. Aplicações mais amplas incluem a monitoração
+contínua de encostas, reconstrução urbana e de interiores a partir de câmeras e
+scanners de baixo custo.
 
 
 \vspace{0.7truecm}
