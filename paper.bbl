@@ -1,5 +1,40 @@
 \begin{thebibliography}{1}
 
+\bibitem{Ablan:3DPhoto:book}
+D.~Ablan, {\em {Digital photography for 3D imaging and animation}}.
+\newblock Wiley, 2007.
+
+\bibitem{Dobbert:Matchmoving:book}
+T.~Dobbert, {\em {Matchmoving: The Invisible Art of Camera Tracking}}.
+\newblock Sybex, 2005.
+
+\bibitem{Furukawa:Ponce:CVPR2007}
+Y.~Furukawa and J.~Ponce, ``Accurate, dense, and robust multi-view
+  stereopsis,'' in {\em Proceedings of the IEEE Computer Society Conference on
+  Computer Vision and Pattern Recognition}, pp.~1--8, IEEE Computer Society,
+  2007.
+
+\bibitem{Usumezbas:Fabbri:Kimia:ECCV16}
+A.~Usumezbas, R.~Fabbri, and B.~B. Kimia, ``From multiview image curves to {3D}
+  drawings,'' in {\em Proceedings of the European Conference on Computer
+  Vision}, Lecture Notes in Computer Science, Springer, 2016.
+
+\bibitem{Fabbri:Kimia:IJCV2016}
+R.~Fabbri and B.~B. Kimia, ``Multiview differential geometry of curves,'' {\em
+  International Journal of Computer Vision}, vol.~117, pp.~1--23, 2016.
+
+\bibitem{Fabbri:Kimia:CVPR10}
+R.~Fabbri and B.~B. Kimia, ``{3D} curve sketch: Flexible curve-based stereo
+  reconstruction and calibration,'' in {\em Proceedings of the IEEE Conference
+  on Computer Vision and Pattern Recognition}, (San Francisco, California,
+  USA), IEEE Computer Society Press, 2010.
+
+\bibitem{Fabbri:Giblin:Kimia:ECCV12}
+R.~Fabbri, P.~J. Giblin, and B.~B. Kimia, ``Camera pose estimation using
+  first-order curve differential geometry,'' in {\em Proceedings of the IEEE
+  European Conference in Computer Vision}, Lecture Notes in Computer Science,
+  Springer, 2012.
+
 \bibitem{Fabbri:2002}
 R.~Fabbri, L.~Estrozi, and L.~Costa, ``On {V}oronoi diagrams and medial axes,''
   {\em Journal of Mathematical Imaging and Vision}, vol.~17, pp.~27--40, jul

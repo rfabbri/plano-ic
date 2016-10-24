@@ -219,18 +219,36 @@ ao sistema VisualSFM~\cite{VisualSFM}, é possível utilizar este sistema para a
 reconstrução de patrimônio. 
 
 No paradigma usando-se apenas imagens convencionais -- denominado
-\textbf{reconstrução 
-estéreo multiocular passiva} --  a posição das câmeras são
+\textbf{reconstrução estéreo multiocular passiva} --  a posição das câmeras são
 estimadas a partir apenas de imagens, usando pontos de interesse, em seguida uma
-nuvem de pontos é reconstruída~\ref{fig:nuvem}. As câmeras podem então ser
+nuvem de pontos é reconstruída~\ref{fig:rec3d}. 
+\begin{figure}
+	\centering
+	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
+	\includegraphics[width=1\linewidth]{figs/rec3d.png}
+	\includegraphics[width=0.95\linewidth]{figs/rec3d-curves-pmvs.pdf}
+	\caption{%
+    A reconstrução usando-se apenas imagens, sem controle de aquisição, 
+    como em um vídeo de um smartphone filmado em torno do objeto, fornece uma
+    nuvem de pontos, que pode ser
+    densificada~\cite{Bundler,VisualSFM,Furukawa:Ponce:CVPR2007,Goesele}, ou
+    atribuída de
+    curvas~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, de forma a preservar a resolução
+    em áreas de alto conteúdo informativo. Tais representações estão sendo
+    atualmente unificadas na pesquisa da área. Este projeto propõe explorar os
+    limites da reconstrução 3D usando-se apenas imagens, no contexto de
+    preservação de patrimônio.
+	}\label{fig:rec3d}
+\end{figure}
+As câmeras podem então ser
 utilizadas para obter modelos mais detalhados de reconstrução, como algoritmos
-de densificação~\cite{pmvs} e interpolação~\cite{poisson} da nuvem de pontos,
+de densificação~\cite{Furukawa:Ponce:CVPR2007} e interpolação~\cite{poisson} da nuvem de pontos,
 bem como demais algoritmos densos de visão estéreo
 multi-perspectiva/multi-ocular, como os do grupo de Michel Goesele~\cite{Goesele},
 também com código disponível. Tais algoritmos, no entanto, têm problemas, em
 particualar a reconstrução suaviza partes bem-delineadas do objeto, e pode
 conter buracos em áreas homogêneas. Pode-se, portanto, utilizar a reconstrução
-3D de curvas do pesquisador proponente~\cite{fabbri:eccv2016} para auxiliar na
+3D de curvas do pesquisador proponente~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12} para auxiliar na
 reconstrução mais bem-delinada nesses casos problemáticos, bem como para ajudar
 no problema de escalabilidade quando a reconstrução 3D se torna muito grande.
 
@@ -350,7 +368,7 @@ modernas de reconstrução 3D para preservação de patrimônio.
 Como meta deste projeto necessária à realização do estudo comparativo,
 tem-se o uso e a programação de software de reconstrução 3D, em especial
 VisualSFM~\cite{}, Visao estereo densa de Michel Goesele~\cite{}, e o sistema de
-reconstrução 3D do prof.\ proponente deste projeto~\cite{Fabbri:ECCV16}, e Kinnect
+reconstrução 3D do prof.\ proponente deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, e Kinnect
 Fusion~\cite{} \todo{Pedro: inserir outros que ja explorour}. Por se
 tratarem de sistemas grandes, esforço considerável é necessário para aprender
 e modificar esses softwares.
@@ -368,7 +386,7 @@ metas descritas na seção anterior, na ordem descrita na próxima seção:
 \item \textbf{Escrita e Uso de Software Livre.} Uso e a programação de software
   de reconstrução 3D, em especial VisualSFM~\cite{}, Visao estereo densa de
   Michel Goesele~\cite{}, e o sistema de reconstrução 3D do prof.\ proponente
-  deste projeto~\cite{Fabbri:ECCV16}, e Kinnect Fusion~\cite{} 
+  deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, e Kinnect Fusion~\cite{} 
 \item \textbf{Estudo de Tecnologias 3D.} Estudo junto ao orientador acerca do
   funcionamento dos sistemas de software sendo explorados.
 \item \textbf{Escalabilidade.} Na medida em que o número de imagens cresce,
