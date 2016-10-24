@@ -10,14 +10,20 @@
 
 latex_file = paper
 
-pdf: dvi
-	dvipdf $(latex_file)
-
-dvi:
-	latex $(latex_file)
+pdf:
+	pdflatex $(latex_file)
 	bibtex $(latex_file)
-	latex $(latex_file)
-	latex $(latex_file)
+	pdflatex $(latex_file)
+	pdflatex $(latex_file)
+
+# pdf: dvi
+#   dvipdf $(latex_file)
+
+# dvi:
+#   latex $(latex_file)
+#   bibtex $(latex_file)
+#   latex $(latex_file)
+#   latex $(latex_file)
 
 clean:
 	rm -f *.aux *.bbl *.blg *.log
