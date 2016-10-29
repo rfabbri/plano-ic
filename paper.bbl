@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Ablan:3DPhoto:book}
 D.~Ablan, {\em {Digital photography for 3D imaging and animation}}.
@@ -8,7 +8,7 @@ D.~Ablan, {\em {Digital photography for 3D imaging and animation}}.
 T.~Dobbert, {\em {Matchmoving: The Invisible Art of Camera Tracking}}.
 \newblock Sybex, 2005.
 
-\bibitem{VisualSFM}
+\bibitem{Changchang:VisualSFM}
 C.~Wu, ``{VisualSFM} -- visual structure from motion system.''
   \url{http://ccwu.me/vsfm/}.
 
@@ -38,6 +38,10 @@ R.~Fabbri, P.~J. Giblin, and B.~B. Kimia, ``Camera pose estimation using
   first-order curve differential geometry,'' in {\em Proceedings of the IEEE
   European Conference in Computer Vision}, Lecture Notes in Computer Science,
   Springer, 2012.
+
+\bibitem{Goesele:MVE:2014}
+M.~G. Simon~Fuhrmann, Fabian~Langguth, ``Mve – a multi-view reconstruction
+  environment,'' 2014.
 
 \bibitem{Fabbri:2002}
 R.~Fabbri, L.~Estrozi, and L.~Costa, ``On {V}oronoi diagrams and medial axes,''

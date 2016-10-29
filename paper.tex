@@ -214,8 +214,8 @@ a partir do desenvolvimento da detecção robusta de
 desenvolvimento de métodos de geometria projetiva para calibrar duas ou três
 imagens e progressivamente adicionar imagens e extrair estrutura 3D dessas
 \emph{features} na forma de nuvens de pontos. Com o código fonte do sistema
-Bundler~\cite{Bundler} liberado por Noah Snavely, e sua subsequente incorporação
-ao sistema VisualSFM~\cite{VisualSFM}, é possível utilizar este sistema para a
+Bundler~\cite{Noah:Bundler,Noah:Steven:Bundler} liberado por Noah Snavely, e sua subsequente incorporação
+ao sistema VisualSFM~\cite{Changchang:VisualSFM}, é possível utilizar este sistema para a
 reconstrução de patrimônio. 
 
 No paradigma usando-se apenas imagens convencionais -- denominado
@@ -231,7 +231,7 @@ nuvem de pontos é reconstruída~\ref{fig:rec3d}.
     A reconstrução usando-se apenas imagens, sem controle de aquisição, 
     como em um vídeo de um smartphone filmado em torno do objeto, fornece uma
     nuvem de pontos, que pode ser
-    densificada~\cite{Bundler,VisualSFM,Furukawa:Ponce:CVPR2007,Goesele}, ou
+    densificada~\cite{Noah:Bundler,Noah:Steven:Bundler,Changchang:VisualSFM,Furukawa:Ponce:CVPR2007,Goesele:MVE:2014}, ou
     atribuída de
     curvas~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, de forma a preservar a resolução
     em áreas de alto conteúdo informativo. Tais representações estão sendo
@@ -244,7 +244,7 @@ As câmeras podem então ser
 utilizadas para obter modelos mais detalhados de reconstrução, como algoritmos
 de densificação~\cite{Furukawa:Ponce:CVPR2007} e interpolação~\cite{poisson} da nuvem de pontos,
 bem como demais algoritmos densos de visão estéreo
-multi-perspectiva/multi-ocular, como os do grupo de Michel Goesele~\cite{Goesele},
+multi-perspectiva/multi-ocular, como os do grupo de Michel Goesele~\cite{Goesele:MVE:2014},
 também com código disponível. Tais algoritmos, no entanto, têm problemas, em
 particualar a reconstrução suaviza partes bem-delineadas do objeto, e pode
 conter buracos em áreas homogêneas. Pode-se, portanto, utilizar a reconstrução
@@ -380,7 +380,7 @@ modernas de reconstrução 3D para preservação de patrimônio.
 \paragraph{Programação e Uso de Software}
 Como meta deste projeto necessária à realização do estudo comparativo,
 tem-se o uso e a programação de software de reconstrução 3D, em especial
-VisualSFM~\cite{}, Visao estereo densa de Michel Goesele~\cite{}, e o sistema de
+VisualSFM~\cite{Changchang:VisualSFM}, Visao estereo densa de Michel Goesele~\cite{Goesele:MVE:2014}, e o sistema de
 reconstrução 3D do prof.\ proponente deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, e Kinnect
 Fusion~\cite{} \todo{RANSAC, LUZ ESTRUTURADA...}. Por se
 tratarem de sistemas grandes, esforço considerável é necessário para aprender
@@ -397,8 +397,8 @@ metas descritas na seção anterior, na ordem descrita na próxima seção:
     em que os dados forem crescendo, torna-se necessária estrátégias de
     \emph{big data} para o processamento, como armazenamento e processamento distribuído.
 \item \textbf{Escrita e Uso de Software Livre.} Uso e a programação de software
-  de reconstrução 3D, em especial VisualSFM~\cite{}, Visao estereo densa de
-  Michel Goesele~\cite{}, e o sistema de reconstrução 3D do prof.\ proponente
+  de reconstrução 3D, em especial VisualSFM~\cite{Changchang:VisualSFM}, Visao estereo densa de
+  Michel Goesele~\cite{Goesele:MVE:2014}, e o sistema de reconstrução 3D do prof.\ proponente
   deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, e Kinnect Fusion~\cite{} 
 \item \textbf{Estudo de Tecnologias 3D.} Estudo junto ao orientador acerca do
   funcionamento dos sistemas de software sendo explorados.

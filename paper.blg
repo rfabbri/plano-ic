@@ -7,36 +7,38 @@ Warning--I didn't find a database entry for "Argarwal:Snavely:etal:ICCV09"
 Warning--I didn't find a database entry for "Pollefeys:VanGool:etal:handheld:IJCV2004"
 Warning--I didn't find a database entry for "mikolajczyk:schmid:IJCV04"
 Warning--I didn't find a database entry for "Bundler"
+Warning--I didn't find a database entry for "VisualSFM"
 Warning--I didn't find a database entry for "Goesele"
 Warning--I didn't find a database entry for "poisson"
 Warning--I didn't find a database entry for "Cui:Theobalt:etal:PAMI2013"
 Warning--I didn't find a database entry for "Pajdla:etal:ICCV2011"
-You've used 9 entries,
+Warning--empty journal in Goesele:MVE:2014
+You've used 10 entries,
             1876 wiz_defined-function locations,
-            569 strings with 6179 characters,
-and the built_in function-call counts, 1839 in all, are:
-= -- 167
-> -- 69
+            577 strings with 6362 characters,
+and the built_in function-call counts, 1971 in all, are:
+= -- 177
+> -- 73
 < -- 0
-+ -- 27
-- -- 18
-* -- 119
-:= -- 272
-add.period$ -- 11
-call.type$ -- 9
-change.case$ -- 7
++ -- 29
+- -- 19
+* -- 126
+:= -- 295
+add.period$ -- 12
+call.type$ -- 10
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 105
-empty$ -- 212
-format.name$ -- 18
-if$ -- 449
+cite$ -- 11
+duplicate$ -- 114
+empty$ -- 229
+format.name$ -- 19
+if$ -- 479
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 10
-newline$ -- 32
-num.names$ -- 9
-pop$ -- 42
+int.to.str$ -- 10
+missing$ -- 11
+newline$ -- 35
+num.names$ -- 10
+pop$ -- 48
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -48,8 +50,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 18
-width$ -- 10
-write$ -- 87
-(There were 8 warnings)
+warning$ -- 1
+while$ -- 19
+width$ -- 12
+write$ -- 94
+(There were 10 warnings)

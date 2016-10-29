@@ -54,10 +54,10 @@
   author = "Fabbri, R and O. M. Bruno and L. da F. Costa and J. C. 
     Torelli",
   howpublished = "\url{http://cyvision.if.sc.usp.br/~rfabbri/edt}",
-  title = "Resultados completos e implementaÁ„o de algoritmos 
-    relativos ao trabalho `{C}omparaÁ„o e desenvolvimento de 
-    algoritmos de transformada de dist‚ncia euclidiana e 
-    aplicaÁıes'.",
+  title = "Resultados completos e implementa√ß√£o de algoritmos 
+    relativos ao trabalho `{C}ompara√ß√£o e desenvolvimento de 
+    algoritmos de transformada de dist√¢ncia euclidiana e 
+    aplica√ß√µes'.",
 }
 
 @misc{sip, author = "Fabbri, R",
@@ -202,7 +202,7 @@
 	address = "Belgique",
 	author = "Cuisenaire, O",
 	month = "oct",
-	school = "UniversitÈ Catholique de Louvain",
+	school = "Universit√© Catholique de Louvain",
 	title = "Distance Transformations: Fast Algorithms and Applications to Medical Image Processing",
 	year = "1999",
 }
@@ -328,7 +328,7 @@
 }
 
 @article{Borgefors:1997,
-    author = "Borgefors, G and Nystrˆm, I",
+    author = "Borgefors, G and Nystr√∂m, I",
     journal = "Pattern Recognition Letters",
     pages = "465--472",
     title = "Efficient shape representation by minimizing the set of centres of maximal discs/spheres",
@@ -386,7 +386,7 @@
 }
 
 @article{Kovacs:1995,
-    author = "Zs. M. Kov·cs-V. and R. Guerrieri",
+    author = "Zs. M. Kov√°cs-V. and R. Guerrieri",
     journal = "Pattern Recognition",
     month = "mar",
     number = "3",
@@ -417,7 +417,7 @@
 }
 
 @article{Toivanen:1999,
-    author = "Pekka J. Toivanen and Ari M. Veps‰l‰inen and And Jussi P. S. Parkkinen",
+    author = "Pekka J. Toivanen and Ari M. Veps√§l√§inen and And Jussi P. S. Parkkinen",
     journal = "Pattern Recognition Letters",
     month = "oct",
     number = "10",
@@ -696,7 +696,7 @@
 }
 
 @article{KovacsNature,
-    author = "Kov·cs, I and Julesz, B",
+    author = "Kov√°cs, I and Julesz, B",
     journal = "Nature",
     number = "6491",
     pages = "644-646",
@@ -965,12 +965,12 @@ Image Processing, IEEE Transactions On",
     author = "F. A. Zampirolli",
     month = "jun",
     school = "UNICAMP",
-    title = "Transformada de Dist‚ncia por Morfologia Matem·tica",
+    title = "Transformada de Dist√¢ncia por Morfologia Matem√°tica",
     year = "2003",
 }
 
 @article{Ogniewicz:1995,
-    author = "R. L. Ogniewicz and O.K¸bler",
+    author = "R. L. Ogniewicz and O.K√ºbler",
     title = "{V}oronoi Tessellation of Points with Integer Coordinates: Time-Efficient Implementation and Online Edge-List Generation",
     journal = "Pattern Recognition, Pergamon Press",
     volume = "28",
@@ -1050,7 +1050,7 @@ Image Processing, IEEE Transactions On",
 
 @inproceedings{Lotufo:2001,
     author = "R. Lotufo and F. Zampirolli",
-    booktitle = "Proccedings of SIBGRAPI, XIV Brazilian Sympo≠ sium on Computer Graphics and Image Processing",
+    booktitle = "Proccedings of SIBGRAPI, XIV Brazilian Sympo¬≠ sium on Computer Graphics and Image Processing",
     pages = "100-105",
     publisher = "IEEE Computer Society",
     title = "Fast multi-dimensional parallel Euclidean distance transform based on mathematical morphology",
@@ -1153,7 +1153,7 @@ Image Processing, IEEE Transactions On",
 
 @booklet{Teixeira:2001,
 	author = "Teixeira, R",
-	title = "IntroduÁ„o aos espaÁos de escala - {EDP}'s em Processamento de Imagens",
+	title = "Introdu√ß√£o aos espa√ßos de escala - {EDP}'s em Processamento de Imagens",
 	year = "2001",
 }
 
@@ -1165,7 +1165,7 @@ Image Processing, IEEE Transactions On",
 }
 
 @article{Pizer:2002,
-	author = "Pizer, SM and  Siddiqi, K and  SzÈkely, G and  Damon, JN and  Zucker, SW",
+	author = "Pizer, SM and  Siddiqi, K and  Sz√©kely, G and  Damon, JN and  Zucker, SW",
 	journal = "Special Unc-midag Issue of International Journal of Computer Vision",
 	title = "Multiscale Medial Loci and Their Properties",
 	year = "2002",
@@ -1335,7 +1335,7 @@ Image Processing, IEEE Transactions On",
 }
 
 @article{Falcao:1999,
-	author = "Falc„o, A and  Lotufo, R",
+	author = "Falc√£o, A and  Lotufo, R",
 	journal = "IEEE Transactions on Pattern Analysis and Machine Intelligence",
 	note = "accepted",
 	title = "The Image Foresting Transform",
@@ -1507,7 +1507,7 @@ Image Processing, IEEE Transactions On",
 
 
 @MISC(FLift,
-   author = "A. Falc„o and R. Lotufo et. al.",
+   author = "A. Falc√£o and R. Lotufo et. al.",
    title = "The Image Foresting Transform",
    journal = "IEEE T. Patt. Analysis and Mach. Intell.",
    note = "submitted",
@@ -1613,10 +1613,10 @@ morphological dilation-erosion",
 
 @BOOKLET(rT2001,
    author = "R. Teixeira",
-   title = "IntroduÁ„o aos espaÁos de escala -
+   title = "Introdu√ß√£o aos espa√ßos de escala -
        EDP's em Processamento de Imagens",
-   howpublished = "Livro--texto de minicurso do 23o. ColÛquio
-   Brasileiro de Matem·tica",
+   howpublished = "Livro--texto de minicurso do 23o. Col√≥quio
+   Brasileiro de Matem√°tica",
    address = "IMPA--Rio de Janeiro",
    year = 2001,
 )
@@ -1673,7 +1673,7 @@ morphological dilation-erosion",
 
 @BOOK(elon1993espacosmetricos,
    author = "E. L. Lima",
-   title = "EspaÁos MÈtricos",
+   title = "Espa√ßos M√©tricos",
    publisher = "IMPA",
    edition = 3,
    year = 1993,
@@ -1789,7 +1789,7 @@ morphological dilation-erosion",
    booktitle = {Proceedings of the 14$^{th}$ Brazilian Symposium on Computer
    Graphics and Image Processing},
    publisher = {IEEE Computer Society},
-   address   = {FlorianÛpolis-Brazil},
+   address   = {Florian√≥polis-Brazil},
    pages     = {112-119},
    year      = {2001},
 )
@@ -1801,7 +1801,7 @@ morphological dilation-erosion",
    booktitle = {Proceedings of the 10$^{th}$ Brazilian Symposium on Computer
    Graphics and Image Processing},
    publisher = {IEEE Computer Society},
-   address   = {Campos do Jord„o-Brazil},
+   address   = {Campos do Jord√£o-Brazil},
    pages     = {140-146},
    year      = {1997},
 )
@@ -2070,4 +2070,31 @@ morphological dilation-erosion",
   booktitle = {Proceedings of the IEEE Computer Society Conference on Computer Vision
     and Pattern Recognition},
   key = {CVPR2006}
+}
+
+@MISC{Changchang:VisualSFM,
+   author = {Changchang Wu},
+   title = {VisualSFM -- Visual Structure from Motion System},
+   howpublished = {\url{http://ccwu.me/vsfm/}},
+}
+
+@article{Goesele:MVE:2014,
+  author = {Simon Fuhrmann, Fabian Langguth, Michael Goesele},
+  title = {MVE-- A Multi-view Reconstruction Environment},
+  year = {2014},
+  publisher = {EUROGRAPHICS}
+}
+
+@article{Bundler,
+   author = {Noah Snavely, Steven M. Seitz, Richard Szeliski},
+   title = {Photo Tourism: Exploring image collections in 3D},
+   year = {2006},
+   publisher = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2006)}
+}
+
+@article{BundlerM,
+   author = {Noah Snavely, Steven M. Seitz, Richard Szeliski},
+   title = {Modeling the World from Internet Photo Collections},
+   year = {2007},
+   publisher = {International Journal of Computer Vision}
 }
