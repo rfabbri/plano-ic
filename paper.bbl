@@ -8,6 +8,10 @@ D.~Ablan, {\em {Digital photography for 3D imaging and animation}}.
 T.~Dobbert, {\em {Matchmoving: The Invisible Art of Camera Tracking}}.
 \newblock Sybex, 2005.
 
+\bibitem{VisualSFM}
+C.~Wu, ``{VisualSFM} -- visual structure from motion system.''
+  \url{http://ccwu.me/vsfm/}.
+
 \bibitem{Furukawa:Ponce:CVPR2007}
 Y.~Furukawa and J.~Ponce, ``Accurate, dense, and robust multi-view
   stereopsis,'' in {\em Proceedings of the IEEE Computer Society Conference on
