@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.28)  29 OCT 2016 16:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.28)  5 NOV 2016 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,129 +565,139 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.220 
-       [1]
+       [1] <figs/rec3d.jpg, id=34, 973.6375pt x 572.1375pt>
+File: figs/rec3d.jpg Graphic file (type jpg)
 
-LaTeX Warning: Reference `fig:rec3d' on page 2 undefined on input line 224.
+<use figs/rec3d.jpg>
+Package pdftex.def Info: figs/rec3d.jpg used on input line 229.
+(pdftex.def)             Requested size: 452.9679pt x 266.17213pt.
 
 
-LaTeX Warning: Citation `Noah:Bundler' on page 2 undefined on input line 234.
+LaTeX Warning: Citation `Noah:Bundler' on page 2 undefined on input line 242.
 
 
 LaTeX Warning: Citation `Noah:Steven:Bundler' on page 2 undefined on input line
- 234.
+ 242.
 
 
-LaTeX Warning: Citation `poisson' on page 2 undefined on input line 245.
+LaTeX Warning: Citation `Noah:Bundler' on page 2 undefined on input line 242.
 
-<figs/Xbox-360-Kinect-Standalone.png, id=47, 2569.6pt x 888.31876pt>
+
+LaTeX Warning: Citation `Noah:Steven:Bundler' on page 2 undefined on input line
+ 242.
+
+
+LaTeX Warning: Citation `poisson' on page 2 undefined on input line 247.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 256.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 256.
+[2 <./figs/rec3d.jpg>]
+<figs/Xbox-360-Kinect-Standalone.png, id=69, 2569.6pt x 888.31876pt>
 File: figs/Xbox-360-Kinect-Standalone.png Graphic file (type png)
 
 <use figs/Xbox-360-Kinect-Standalone.png>
 Package pdftex.def Info: figs/Xbox-360-Kinect-Standalone.png used on input line
- 263.
+ 265.
 (pdftex.def)             Requested size: 203.83417pt x 70.45699pt.
 
-<figs/kinect-internals.pdf, id=49, 598.235pt x 284.06125pt>
+<figs/kinect-internals.pdf, id=71, 598.235pt x 284.06125pt>
 File: figs/kinect-internals.pdf Graphic file (type pdf)
 
 <use figs/kinect-internals.pdf>
-Package pdftex.def Info: figs/kinect-internals.pdf used on input line 264.
+Package pdftex.def Info: figs/kinect-internals.pdf used on input line 266.
 (pdftex.def)             Requested size: 203.83417pt x 96.78758pt.
 
-<figs/Xbox-One-Kinect.jpg, id=50, 5119.125pt x 3131.7pt>
+<figs/Xbox-One-Kinect.jpg, id=72, 5119.125pt x 3131.7pt>
 File: figs/Xbox-One-Kinect.jpg Graphic file (type jpg)
 
 <use figs/Xbox-One-Kinect.jpg>
-Package pdftex.def Info: figs/Xbox-One-Kinect.jpg used on input line 265.
+Package pdftex.def Info: figs/Xbox-One-Kinect.jpg used on input line 267.
 (pdftex.def)             Requested size: 203.83417pt x 124.67323pt.
 
-<figs/kinect-handheld1.png, id=51, 2007.5pt x 1005.7575pt>
+<figs/kinect-handheld1.png, id=73, 2007.5pt x 1005.7575pt>
 File: figs/kinect-handheld1.png Graphic file (type png)
 
 <use figs/kinect-handheld1.png>
-Package pdftex.def Info: figs/kinect-handheld1.png used on input line 266.
+Package pdftex.def Info: figs/kinect-handheld1.png used on input line 268.
 (pdftex.def)             Requested size: 203.83417pt x 102.1163pt.
 
-<figs/kinect-vs-usual.png, id=53, 1236.62pt x 358.33875pt>
+<figs/kinect-vs-usual.png, id=75, 1236.62pt x 358.33875pt>
 File: figs/kinect-vs-usual.png Graphic file (type png)
 
 <use figs/kinect-vs-usual.png>
-Package pdftex.def Info: figs/kinect-vs-usual.png used on input line 289.
+Package pdftex.def Info: figs/kinect-vs-usual.png used on input line 291.
 (pdftex.def)             Requested size: 452.9679pt x 131.26006pt.
 
 
-LaTeX Warning: Citation `Cui:Theobalt:etal:PAMI2013' on page 2 undefined on inp
-ut line 297.
+LaTeX Warning: Citation `Cui:Theobalt:etal:PAMI2013' on page 3 undefined on inp
+ut line 299.
 
 
-LaTeX Warning: Citation `Pajdla:etal:ICCV2011' on page 2 undefined on input lin
-e 297.
+LaTeX Warning: Citation `Pajdla:etal:ICCV2011' on page 3 undefined on input lin
+e 299.
 
 
-LaTeX Warning: Citation `Cui:Theobalt:etal:PAMI2013' on page 2 undefined on inp
-ut line 297.
+LaTeX Warning: Citation `Cui:Theobalt:etal:PAMI2013' on page 3 undefined on inp
+ut line 299.
 
 
-LaTeX Warning: Citation `Pajdla:etal:ICCV2011' on page 2 undefined on input lin
-e 297.
+LaTeX Warning: Citation `Pajdla:etal:ICCV2011' on page 3 undefined on input lin
+e 299.
 
 
-LaTeX Warning: Reference `fig:david' on page 2 undefined on input line 301.
+LaTeX Warning: Reference `fig:david' on page 3 undefined on input line 303.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 311.
+(babel)             in language  on input line 313.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 311.
-[2]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 311.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 311.
- [3 <./figs/Xbox-360-Kinect-Standalone.png> <./figs/kinect-internals.pdf> <./fi
-gs/Xbox-One-Kinect.jpg> <./figs/kinect-handheld1.png> <./figs/kinect-vs-usual.p
-ng>] <figs/jardim-do-nego.jpg, id=155, 552.0625pt x 414.54875pt>
+(babel)             in language  on input line 313.
+[3 <./figs/Xbox-360-Kinect-Standalone.png> <./figs/kinect-internals.pdf> <./fig
+s/Xbox-One-Kinect.jpg> <./figs/kinect-handheld1.png>]
+<figs/jardim-do-nego.jpg, id=165, 552.0625pt x 414.54875pt>
 File: figs/jardim-do-nego.jpg Graphic file (type jpg)
 
 <use figs/jardim-do-nego.jpg>
-Package pdftex.def Info: figs/jardim-do-nego.jpg used on input line 322.
+Package pdftex.def Info: figs/jardim-do-nego.jpg used on input line 324.
 (pdftex.def)             Requested size: 135.89174pt x 102.0429pt.
 
-<figs/jardim-do-nego22.jpg, id=156, 552.0625pt x 413.545pt>
+<figs/jardim-do-nego22.jpg, id=166, 552.0625pt x 413.545pt>
 File: figs/jardim-do-nego22.jpg Graphic file (type jpg)
 
 <use figs/jardim-do-nego22.jpg>
-Package pdftex.def Info: figs/jardim-do-nego22.jpg used on input line 323.
+Package pdftex.def Info: figs/jardim-do-nego22.jpg used on input line 325.
 (pdftex.def)             Requested size: 135.89174pt x 101.79582pt.
 
-<figs/jardim-do-nego32.jpg, id=157, 552.0625pt x 310.15875pt>
+<figs/jardim-do-nego32.jpg, id=167, 552.0625pt x 310.15875pt>
 File: figs/jardim-do-nego32.jpg Graphic file (type jpg)
 
 <use figs/jardim-do-nego32.jpg>
-Package pdftex.def Info: figs/jardim-do-nego32.jpg used on input line 324.
+Package pdftex.def Info: figs/jardim-do-nego32.jpg used on input line 326.
 (pdftex.def)             Requested size: 158.54152pt x 89.07292pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 364.
+(babel)             in language  on input line 347.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 364.
- [4 <./figs/jardim-do-nego.jpg> <./figs/jardim-do-nego22.jpg> <./figs/jardim-do
--nego32.jpg>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 393.
+(babel)             in language  on input line 347.
+ [4 <./figs/kinect-vs-usual.png> <./figs/jardim-do-nego.jpg> <./figs/jardim-do-
+nego22.jpg> <./figs/jardim-do-nego32.jpg>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 391.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 391.
 
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 395.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 393.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 395.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 399.
+(babel)             in language  on input line 437.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 399.
- [5]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 456.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 456.
+(babel)             in language  on input line 437.
  [6] (./paper.bbl
 (./paper.brf)
 \tf@brf=\write3
@@ -697,6 +707,11 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 29.
+ [7]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `latin1'.
@@ -723,37 +738,38 @@ l.45
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 475.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 50.
+(babel)             in language  on input line 475.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 50.
-[7])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 473.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 473.
+(babel)             in language  on input line 475.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 475.
  (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
-Package rerunfilecheck Info: File `paper.brf' has not changed.
-(rerunfilecheck)             Checksum: EFC328327CF8BC6203314C427A6E6C22;1665.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 475.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 475.
 
+
+Package rerunfilecheck Warning: File `paper.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `paper.brf':
+(rerunfilecheck)             Before: A218B1E56F17DFE71328B37E3FD6195C;1707
+(rerunfilecheck)             After:  0AA7A9C88D7AB44C011B9C0971B99515;1707.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 475.
  ) 
 Here is how much of TeX's memory you used:
- 9284 strings out of 493304
- 139776 string characters out of 6139870
- 236114 words of memory out of 5000000
- 12553 multiletter control sequences out of 15000+600000
+ 9290 strings out of 493304
+ 139876 string characters out of 6139870
+ 234828 words of memory out of 5000000
+ 12557 multiletter control sequences out of 15000+600000
  14687 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,9n,40p,584b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,9n,47p,894b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-supe
@@ -765,10 +781,10 @@ share/texmf/fonts/type1/public/cm-super/sfss1728.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on paper.pdf (9 pages, 9781536 bytes).
+Output written on paper.pdf (9 pages, 10015933 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 33 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

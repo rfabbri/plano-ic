@@ -218,16 +218,18 @@ Bundler~\cite{Noah:Bundler,Noah:Steven:Bundler} liberado por Noah Snavely, e sua
 ao sistema VisualSFM~\cite{Changchang:VisualSFM}, é possível utilizar este sistema para a
 reconstrução de patrimônio. 
 
+
 No paradigma usando-se apenas imagens convencionais -- denominado
 \textbf{reconstrução estéreo multiocular passiva} --  a posição das câmeras são
 estimadas a partir apenas de imagens, usando pontos de interesse, em seguida uma
-nuvem de pontos é reconstruída~\ref{fig:rec3d}. 
-%\begin{figure}
-%	\centering
-%	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
-%	\includegraphics[width=1\linewidth]{figs/rec3d.png}
+nuvem de pontos é reconstruída~\ref{fig:rec3d}.
+
+\begin{figure}
+	\centering
+	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
+	\includegraphics[width=1\linewidth]{figs/rec3d.jpg}
 %	\includegraphics[width=0.95\linewidth]{figs/rec3d-curves-pmvs.pdf}
-%	\caption{%
+	\caption{%
     A reconstrução usando-se apenas imagens, sem controle de aquisição, 
     como em um vídeo de um smartphone filmado em torno do objeto, fornece uma
     nuvem de pontos, que pode ser
@@ -238,8 +240,9 @@ nuvem de pontos é reconstruída~\ref{fig:rec3d}.
     atualmente unificadas na pesquisa da área. Este projeto propõe explorar os
     limites da reconstrução 3D usando-se apenas imagens, no contexto de
     preservação de patrimônio.
-%	}\label{fig:rec3d}
-%\end{figure}
+	}\label{fig:rec3d}
+\end{figure}
+
 As câmeras podem então ser
 utilizadas para obter modelos mais detalhados de reconstrução, como algoritmos
 de densificação~\cite{Furukawa:Ponce:CVPR2007} e interpolação~\cite{poisson} da nuvem de pontos,
