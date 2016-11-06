@@ -2085,16 +2085,37 @@ morphological dilation-erosion",
   publisher = {EUROGRAPHICS}
 }
 
-@article{Bundler,
+@article{Noah:Bundler,
    author = {Noah Snavely, Steven M. Seitz, Richard Szeliski},
    title = {Photo Tourism: Exploring image collections in 3D},
    year = {2006},
    publisher = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2006)}
 }
 
-@article{BundlerM,
+@article{Noah:Steven:Bundler,
    author = {Noah Snavely, Steven M. Seitz, Richard Szeliski},
    title = {Modeling the World from Internet Photo Collections},
    year = {2007},
    publisher = {International Journal of Computer Vision}
+}
+
+@article{KinectFusion, 
+title = {Kinect Fusion improvement using depth camera calibration},
+author = {D. Pagliari,F. Menna,R. Roncella, F. Remondino, L. Pinto}, 
+publisher = {The International Archives of Photogrammetry, Remote Sensing and Spatial Information Sciences XL.5: 479-485. Gottingen: Copernicus GmbH},
+year = {2014}
+}
+
+@misc{Taubin:StructuredLight,
+title = {Surround Structured Lighting: 3-D Scanning with Orthographic Illumination},
+author = {Douglas Lanman, Daniel Crispel, Gabriel Taubin}, 
+Publisher = {Computer Vision and Image Understanding (CVIU), Volume 113, Issue 11, Pages 1107-1117, Special issue on New Advances in 3D Imaging and Modeling},
+year = {November 2009}
+}
+
+@MISC{JardimDoNego:TheGuardian,
+   author = {Guardian Witness,
+   year = {Monday 23 June 2014 12.29 BSTu},
+   title = {Best of Brazil -- readers' tips},
+   howpublished = {\url{https://www.theguardian.com}}
 }
