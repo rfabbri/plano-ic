@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: ieeetr.bst
+Database file #1: personal.bib
+Warning--I didn't find a database entry for "Argarwal:Snavely:etal:ICCV09"
+Warning--I didn't find a database entry for "Pollefeys:VanGool:etal:handheld:IJCV2004"
+Warning--I didn't find a database entry for "mikolajczyk:schmid:IJCV04"
+Warning--I didn't find a database entry for "Bundler"
+Warning--I didn't find a database entry for "VisualSFM"
+Warning--I didn't find a database entry for "Goesele"
+Warning--I didn't find a database entry for "poisson"
+Warning--I didn't find a database entry for "Cui:Theobalt:etal:PAMI2013"
+Warning--I didn't find a database entry for "Pajdla:etal:ICCV2011"
+Warning--empty journal in Goesele:MVE:2014
+You've used 10 entries,
+            1876 wiz_defined-function locations,
+            577 strings with 6362 characters,
+and the built_in function-call counts, 1971 in all, are:
+= -- 177
+> -- 73
+< -- 0
++ -- 29
+- -- 19
+* -- 126
+:= -- 295
+add.period$ -- 12
+call.type$ -- 10
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 114
+empty$ -- 229
+format.name$ -- 19
+if$ -- 479
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 11
+newline$ -- 35
+num.names$ -- 10
+pop$ -- 48
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 48
+stack$ -- 0
+substring$ -- 59
+swap$ -- 22
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 19
+width$ -- 12
+write$ -- 94
+(There were 10 warnings)
