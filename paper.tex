@@ -13,6 +13,7 @@
 \usepackage[bf]{caption}
 \usepackage{amsmath, amssymb, algorithm, algorithmic,fullpage,setspace}
 \usepackage{mathtools,empheq}
+\usepackage{subcaption}
 \usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
 
 \newtheorem{definition}{Definição}
@@ -214,24 +215,26 @@ a partir do desenvolvimento da detecção robusta de
 desenvolvimento de métodos de geometria projetiva para calibrar duas ou três
 imagens e progressivamente adicionar imagens e extrair estrutura 3D dessas
 \emph{features} na forma de nuvens de pontos. Com o código fonte do sistema
-Bundler~\cite{Bundler} liberado por Noah Snavely, e sua subsequente incorporação
-ao sistema VisualSFM~\cite{VisualSFM}, é possível utilizar este sistema para a
+Bundler~\cite{Noah:Bundler,Noah:Steven:Bundler} liberado por Noah Snavely, e sua subsequente incorporação
+ao sistema VisualSFM~\cite{Changchang:VisualSFM}, é possível utilizar este sistema para a
 reconstrução de patrimônio. 
+
 
 No paradigma usando-se apenas imagens convencionais -- denominado
 \textbf{reconstrução estéreo multiocular passiva} --  a posição das câmeras são
 estimadas a partir apenas de imagens, usando pontos de interesse, em seguida uma
-nuvem de pontos é reconstruída~\ref{fig:rec3d}. 
-\begin{figure}
+nuvem de pontos é reconstruída~\ref{fig:rec3d}.
+
+\begin{figure} [H]
 	\centering
 	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
-	\includegraphics[width=1\linewidth]{figs/rec3d.png}
-	\includegraphics[width=0.95\linewidth]{figs/rec3d-curves-pmvs.pdf}
+	\includegraphics[width=1\linewidth]{figs/rec3d.jpg}
+%	\includegraphics[width=0.95\linewidth]{figs/rec3d-curves-pmvs.pdf}
 	\caption{%
     A reconstrução usando-se apenas imagens, sem controle de aquisição, 
     como em um vídeo de um smartphone filmado em torno do objeto, fornece uma
     nuvem de pontos, que pode ser
-    densificada~\cite{Bundler,VisualSFM,Furukawa:Ponce:CVPR2007,Goesele}, ou
+    densificada~\cite{Noah:Bundler,Noah:Steven:Bundler,Changchang:VisualSFM,Furukawa:Ponce:CVPR2007,Goesele:MVE:2014}, ou
     atribuída de
     curvas~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, de forma a preservar a resolução
     em áreas de alto conteúdo informativo. Tais representações estão sendo
@@ -240,11 +243,12 @@ nuvem de pontos é reconstruída~\ref{fig:rec3d}.
     preservação de patrimônio.
 	}\label{fig:rec3d}
 \end{figure}
+
 As câmeras podem então ser
 utilizadas para obter modelos mais detalhados de reconstrução, como algoritmos
 de densificação~\cite{Furukawa:Ponce:CVPR2007} e interpolação~\cite{poisson} da nuvem de pontos,
 bem como demais algoritmos densos de visão estéreo
-multi-perspectiva/multi-ocular, como os do grupo de Michel Goesele~\cite{Goesele},
+multi-perspectiva/multi-ocular, como os do grupo de Michel Goesele~\cite{Goesele:MVE:2014},
 também com código disponível. Tais algoritmos, no entanto, têm problemas, em
 particualar a reconstrução suaviza partes bem-delineadas do objeto, e pode
 conter buracos em áreas homogêneas. Pode-se, portanto, utilizar a reconstrução
@@ -257,7 +261,7 @@ ativa}, tem se tornado viável devido à indústria de videogames, e consiste na
 utilização de sistemas que alteram o funcionamento de câmeras convencionais,
 típicamente usando-se projetores infra-vermelho, laser ou câmeras ToF (time of
 flight), como no caso dos dispositivos Kinect, figura~\ref{fig:kinect}. 
-\begin{figure}
+\begin{figure} [H]
 	\centering
 	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
 	\includegraphics[width=0.45\linewidth]{figs/Xbox-360-Kinect-Standalone.png}(a)
@@ -265,11 +269,11 @@ flight), como no caso dos dispositivos Kinect, figura~\ref{fig:kinect}.
   \includegraphics[width=0.45\linewidth]{figs/Xbox-One-Kinect.jpg}(c)
   \includegraphics[width=0.45\linewidth]{figs/kinect-handheld1.png} (d)
 	\caption{%
-    Kinnects de primeira geração (a)consistindo de câmeras e projetores
-    infra-vermelho (b) e de
-    segunda geração, consistindo de tecnologia ToF (c). Ambos os kinnects são largamente utilizados para
-    escaneamento em tempo real, formando a base de scanners manuais (d), porém nem sempre
-    são úteis para preservação detalhada de patrimônio. Um dos objetivos deste
+    Kinnects de primeira geração (a) consistindo de câmeras e projetores
+    infra-vermelho (b) e de segunda geração, consistindo de tecnologia ToF (c). 
+    Ambos os kinnects são largamente utilizados para escaneamento em tempo real, 
+    formando a base de scanners manuais (d), porém nem sempre são úteis para 
+    preservação detalhada de patrimônio. Um dos objetivos deste
     projeto é explorar os limites desta tecnologia.
 	}\label{fig:kinect}
 \end{figure}
@@ -283,7 +287,8 @@ reconstruções 3D com precisão razoável, mesmo que aquém dos sistemas de alto
 custo, figura~\ref{fig:rec3d:comparacao}.  No entanto, comparando-se com câmeras convencionais,
 o hardware ainda é especializado e o custo, apesar de baixo, é uma ordem de
 magnitude maior que o de câmeras convencionais.
-\begin{figure}
+
+\begin{figure}[H]
 	\centering
 	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
 	\includegraphics[width=1\linewidth]{figs/kinect-vs-usual.png}
@@ -299,7 +304,57 @@ magnitude maior que o de câmeras convencionais.
 
 A preservação de patrimônio tem sido realizada tradicionamente com scanners
 dedicados de alto custo, como no projeto David~\ref{fig:david}.
-\todo{pedro: inserir aqui um resumo do projeto David e figuras}
+
+O projeto teve início em 1992 e tem como objetivo a utilização de scanners a laser de profundidade
+({\it rangefinder scanners}), aliado com algoritmos que combinam diferentes profundidades e cores da imagem, 
+para realizar uma digitalização da parte externa e da superficie de forma acurada da estátua de David 
+(porém, esse método pode ser utilizado em diferentes objetos no mundo real, 
+como partes de máquinas, artefatos culturais e na indústria de video games, por exemplo). 
+Para as partes mais detalhadas, foi utilizado um scanner de menor escala que faz uma pequena 
+triangulação com laser de profundidade.\\
+
+\begin{figure}[H]
+\centering
+\subfigure[]{\label{fig:davida}\includegraphics[width=0.18\linewidth]{figs/Proto+Inka+Egypt_light-s.jpg}}
+% \vspace{2ex}
+\subfigure[]{\label{fig:davidb}\includegraphics[width=0.18\linewidth]{figs/gantry-with-david-s.jpg}}
+\subfigure[]{\label{fig:davidc}\includegraphics[width=0.18\linewidth]{figs/scanner-head-and-david-head-s.jpg}}
+% \vspace{2ex}
+\subfigure[]{\label{fig:davidd}\includegraphics[width=0.18\linewidth]{figs/david-classic-leftlight-s.jpg}}
+\caption{%
+    Protótipo do scanner a laser de triangulação. O objeto a ser escaneado é uma réplica em tamanho real
+    de um sarcófago egípcio (a). O scanner foi reconfigurado para escanear objetos maiores, pois 
+    a escultura possui 517 centímetros (b), o da cabeça também sofreu uma reconfiguração, este scanner gira em 90 graus, 
+    que faz o laser rotacionar, da posição horizontal para a vertical e também roda em torno da cabeça como um todo (c).
+    Para a reconstrucão, o primeiro passo foi alinhar cerca de 100 scans em diversas posicoes, após isso, utilizado um 
+    alinhamento automatico em pares dos scans, utilizando um algoritmo modificado de iteracoes de pontos próximos 
+    (ICP - \emph {iterated-closest-points}). Após isso, faz-se um processo de relaxação global a fim de minimizar erros 
+    de alinhamento por toda a estátua. Depois de alinhados, usa-se o algoritmo de profundidade volumétrica de 
+    processamento de imagens (VRIP - \emph {volumetric range image processing} - do Brian Curless) (d).
+	}\label{fig:david}
+\end{figure}
+
+% \begin{figure}
+% 	\centering
+% 	%   \includegraphics[width=1.0\linewidth]{figs/3d-curve-sketch/system-diagram.eps}
+% 	\includegraphics[width=0.3\linewidth]{figs/Proto+Inka+Egypt_light-s.jpg}(a)
+% 	\vspace{4ex}
+% 	\includegraphics[width=0.25\linewidth]{figs/gantry-with-david-s.jpg}(b)
+%   \includegraphics[width=0.3\linewidth]{figs/scanner-head-and-david-head-s.jpg}(c)
+%   \vspace{4ex}
+%   \includegraphics[width=0.25\linewidth]{figs/david-classic-leftlight-s.jpg} (d)
+% 	\caption{%
+%     Protótipo do scanner a laser de triangulação. O objeto a ser escaneado é uma réplica em tamanho real
+%     de um sarcófago egípcio (a). O scanner teve que ser reconfigurado para escanear objetos maiores, pois 
+%     a escultura possui 517 centímetros (b), o da cabeça também sofreu uma reconfiguração, este scanner gira em 90 graus, 
+%     que faz o laser rotacionar, da posição horizontal para a vertical e também roda em torno da cabeça como um todo (c).
+%     Para a reconstrucão, o primeiro passo foi alinhar cerca de 100 scans em diversas posicoes, após isso, utilizado um 
+%     alinhamento automatico em pares dos scans, utilizando um algoritmo modificado de iteracoes de pontos próximos 
+%     (ICP - {\it iterated-closets-points}). Após isso, faz-se um processo de relaxação global a fim de minimizar erros 
+%     de alinhamento por toda a estátua. Depois de alinhados, usa-se o algoritmo de profundidade volumétrica de 
+%     processamento de imagens (VRIP - {\it volumetric range image processing} - do Brian Curless) (d).
+% 	}\label{fig:david}
+% \end{figure}
 
 Seria de grande interesse explorar os dois paradigmas supracitados
 para avaliar as possibilidades disponíveis no estado da arte de reconstrução 3D
@@ -313,13 +368,25 @@ scanner padrão basedado em Kinnect?
 No caso de Nova Friburgo, há a necessidade redobrada de preservação do
 patrimônio, em especial devido às chuvas e deslizamentos inerentes à região.  O
 Jardim do Nêgo consiste em grandes esculturas em encostas, cobertas por um tapete de
-vegetação,
-as quais desfrutam de grande reconhecimento regional e internacional~\cite{},
+vegetação, as quais desfrutam de grande reconhecimento regional e internacional~\cite{JardimDoNego:TheGuardian},
 figura~\ref{fig:esculturas}.
 
-\todo{pedro: inserir aqui um resumo do jardim do Nego, da sua abrangencia
-internacional, bem como reconhecimento. dizer que houve concordancia do Nego a
-respeito desta pesquisa}
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.3\linewidth]{figs/jardim-do-nego.jpg}
+	\includegraphics[width=0.3\linewidth]{figs/jardim-do-nego22.jpg}
+	\includegraphics[width=0.35\linewidth]{figs/jardim-do-nego32.jpg}
+	\caption{%
+	Algumas esculturas do Jardim do Nêgo}\label{fig:esculturas}
+\end{figure}
+
+Idealizado e criado por Geraldo Simplicio (Nêgo), artista cearense que mora no 
+local a mais de 30 anos, ganhou notoriedade por suas esculturas de barro, com traços 
+singulares e técnicas únicas. Hoje, trabalha para reconstruir o Jardim da tragédia de 
+2011 na região serrana, onde algumas estruturas foram destruídas. Portanto, com o 
+consentimento do Nêgo, surgiu a motivação desta pesquisa: além de explorar métodos de 
+reconstrucão, também tem o objetivo de eternizar um patrimônio que é reconhecido no mundo
+todo.
 
 A preservação das esculturas do Jardim do Nego se torna um desafio à pesquisa em
 recontrução 3D, pois apresentam curvas bem delineadas, que são 
@@ -367,9 +434,9 @@ modernas de reconstrução 3D para preservação de patrimônio.
 \paragraph{Programação e Uso de Software}
 Como meta deste projeto necessária à realização do estudo comparativo,
 tem-se o uso e a programação de software de reconstrução 3D, em especial
-VisualSFM~\cite{}, Visao estereo densa de Michel Goesele~\cite{}, e o sistema de
-reconstrução 3D do prof.\ proponente deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, e Kinnect
-Fusion~\cite{} \todo{Pedro: inserir outros que ja explorour}. Por se
+VisualSFM~\cite{Changchang:VisualSFM}, Visão estereo densa de Michel Goesele~\cite{Goesele:MVE:2014}, o sistema de
+reconstrução 3D do prof.\ proponente deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, Kinnect
+Fusion~\cite{KinectFusion}, e técnicas por Luz Estruturada~\cite{Taubin:StructuredLight}. Por se
 tratarem de sistemas grandes, esforço considerável é necessário para aprender
 e modificar esses softwares.
 
@@ -384,9 +451,10 @@ metas descritas na seção anterior, na ordem descrita na próxima seção:
     em que os dados forem crescendo, torna-se necessária estrátégias de
     \emph{big data} para o processamento, como armazenamento e processamento distribuído.
 \item \textbf{Escrita e Uso de Software Livre.} Uso e a programação de software
-  de reconstrução 3D, em especial VisualSFM~\cite{}, Visao estereo densa de
-  Michel Goesele~\cite{}, e o sistema de reconstrução 3D do prof.\ proponente
-  deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, e Kinnect Fusion~\cite{} 
+  de reconstrução 3D, em especial VisualSFM~\cite{Changchang:VisualSFM}, Visao estereo densa de
+  Michel Goesele~\cite{Goesele:MVE:2014}, e o sistema de reconstrução 3D do prof.\ proponente
+  deste projeto~\cite{Usumezbas:Fabbri:Kimia:ECCV16,Fabbri:Kimia:IJCV2016,Fabbri:Kimia:CVPR10,Fabbri:Giblin:Kimia:ECCV12}, 
+  e Kinnect Fusion~\cite{KinectFusion} 
 \item \textbf{Estudo de Tecnologias 3D.} Estudo junto ao orientador acerca do
   funcionamento dos sistemas de software sendo explorados.
 \item \textbf{Escalabilidade.} Na medida em que o número de imagens cresce,
